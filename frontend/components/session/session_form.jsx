@@ -7,10 +7,16 @@ class SessionForm extends React.Component {
 
     this.state = {
       username: '',
-      password: ''
+      password: '',
     };
-
+    debugger
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.history.push('/');
+    }
   }
 
   handleChange(field) {
@@ -25,22 +31,42 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  renderErrors() {
+    const errors = this.props.errors.map( (error, idx) => {
+      return (
+        <li key={`error-${idx}`}>
+          {error}
+        </li>
+      );
+    });
+
+    return (
+      <ul>
+        {errors}
+      </ul>
+    );
+  }
+
   render() {
     const processFormText = this.props.formType === 'signup' ? 'Sign Up' : 'Log In';
+    const altProcessFormText = this.props.formType === 'signup' ? 'Log In' : 'Sign Up';
 
     let link;
     let altText;
     if (this.props.formType === 'signup') {
-      link = <Link to='/#/login' />;
-      altText = `Already have an account? ${link}`;
+      link = '/login';
+      altText = 'Already have an account? ';
     } else {
-      link = <Link to='/#/signup' />;
-      altText = `Don't have an account? ${link}`;
+      link = '/signup';
+     altText = "Don't have an account? ";
     }
 
     return (
       <div className='session-form-contents'>
         <h2>{processFormText} to ISO</h2>
+        <div className='session-errors'>
+          {this.renderErrors()}
+        </div>
 
         <form className='session-form' onSubmit={this.handleSubmit}>
           <label>Username
@@ -63,9 +89,8 @@ class SessionForm extends React.Component {
         </form>
 
         <div className='alt-signup-login'>
-          <p>
-            {altText}
-          </p>
+          {altText}
+          <Link to={link}>{altProcessFormText}</Link>
         </div>
       </div>
     );
