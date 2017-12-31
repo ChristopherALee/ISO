@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div id='iso-app'>
       <header>
-        <h1>Welcome to ISO</h1>
+        {/* <h1>Welcome to ISO</h1> */}
         <Route exact path='/' component={GreetingContainer} />
       </header>
 

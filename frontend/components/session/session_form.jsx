@@ -9,7 +9,7 @@ class SessionForm extends React.Component {
       username: '',
       password: '',
     };
-    
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const processFormText = this.props.formType === 'signup' ? 'Sign Up' : 'Log In';
+    const processFormText = this.props.formType === 'signup' ? 'Join' : 'Log In to';
     const altProcessFormText = this.props.formType === 'signup' ? 'Log In' : 'Sign Up';
 
     let link;
@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className='session-form-contents'>
-        <h2>{processFormText} to ISO</h2>
+        <h2>{processFormText} ISO</h2>
         <div className='session-errors'>
           {this.renderErrors()}
         </div>
