@@ -1,9 +1,16 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import SessionFormContainer from './session/session_form_container';
 
 const App = () => {
   return (
     <div id='iso-app'>
-      <h1>Welcome to ISO</h1>
+      <header>
+        <h1>Welcome to ISO</h1>
+      </header>
+
+      <Route path='/signup' container={SessionFormContainer} />
+      <Route path='/login' container={SessionFormContainer} />
     </div>
   );
 };

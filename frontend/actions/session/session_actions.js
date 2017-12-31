@@ -17,6 +17,14 @@ export const receiveErrors = (errors) => {
   };
 };
 
+export const signUp = user => dispatch => {
+  return (
+    SessionApiUtil.signUp(user).then(
+      user => dispatch(receiveCurrentUser(user))
+    )
+  );
+};
+
 export const login = user => dispatch => {
   return (
     SessionApiUtil.login(user).then(
