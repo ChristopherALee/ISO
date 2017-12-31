@@ -9,8 +9,8 @@ const App = () => {
         <h1>Welcome to ISO</h1>
       </header>
 
-      <Route path='/signup' container={SessionFormContainer} />
-      <Route path='/login' container={SessionFormContainer} />
+      <Route path='/signup' component={SessionFormContainer} />
+      <Route path='/login' component={SessionFormContainer} />
     </div>
   );
 };
