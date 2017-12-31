@@ -12,7 +12,16 @@ window.logout = SessionApiUtil.logout;
 // TESTING ENDS
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+  let store;
+  if (window.currentUser) {
+    const preloadedState = { session: { currentUser: window.currentUser } };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+
+  // const store = configureStore();
   // TESTING
   window.getState = store.getState;
   window.dispatch = store.dispatch;
