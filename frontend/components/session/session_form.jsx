@@ -48,8 +48,9 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const processFormText = this.props.formType === 'signup' ? 'Join' : 'Log In';
+    const processFormText = this.props.formType === 'signup' ? 'Join' : 'Log In to';
     const altProcessFormText = this.props.formType === 'signup' ? 'Log In' : 'Sign Up';
+    const buttonText = this.props.formType === 'signup' ? 'Sign Up' : 'Log In';
 
     let link;
     let altText;
@@ -64,13 +65,14 @@ class SessionForm extends React.Component {
     return (
       <div className='session-form-contents'>
         <h2>{processFormText} ISO</h2>
+
         <div className='session-errors'>
           {this.renderErrors()}
         </div>
 
         <form className='session-form' onSubmit={this.handleSubmit}>
           <div className='session-form-username'>
-            <label>Username</label>
+            <label>Email or Username</label>
             <input
               type='text'
               value={this.state.username}
@@ -87,7 +89,7 @@ class SessionForm extends React.Component {
             />
           </div>
 
-          <input type='submit' value={processFormText}/>
+          <input type='submit' value={buttonText}/>
         </form>
 
         <div className='alt-signup-login'>
