@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const processFormText = this.props.formType === 'signup' ? 'Join' : 'Log In to';
+    const processFormText = this.props.formType === 'signup' ? 'Join' : 'Log In';
     const altProcessFormText = this.props.formType === 'signup' ? 'Log In' : 'Sign Up';
 
     let link;
@@ -69,21 +69,23 @@ class SessionForm extends React.Component {
         </div>
 
         <form className='session-form' onSubmit={this.handleSubmit}>
-          <label>Username
+          <div className='session-form-username'>
+            <label>Username</label>
             <input
               type='text'
               value={this.state.username}
               onChange={this.handleChange('username')}
             />
-          </label>
+          </div>
 
-          <label>Password
+          <div className='session-form-password'>
+            <label>Password</label>
             <input
               type='password'
               value={this.state.password}
               onChange={this.handleChange('password')}
             />
-          </label>
+          </div>
 
           <input type='submit' value={processFormText}/>
         </form>

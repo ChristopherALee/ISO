@@ -7,23 +7,93 @@
 }
 
 .session-form-contents {
-  border: 1px solid black;
+  border: 1px solid #eeeff2;
   border-radius: 3px;
   display: flex;
   align-items:center;
-  justify-content: center;
   flex-direction: column;
-  width: 30%;
-  padding-bottom: 20px;
+  min-width: 30%;
+  min-height: 440px;
+  padding-bottom: 30px;
   background-color: white;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, TeXGyreHeros, FreeSans, "Nimbus Sans L", "Liberation Sans", Arial, sans-serif;
 
   .session-form {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 20px 40px 20px 40px;
+    min-width: 320px;
+    // min-height: 430px;
+    border-bottom: 1px solid #eeeff2;
 
-    label {
-      padding: 20px 0;
+    .session-form-username {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      color: #71767a;
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        height: 30px;
+        border: 1px solid #dce0e3;
+        border-radius: 3px;
+        transition: border-color 0.2s;
+      }
+    }
+
+    .session-form-password {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+      color: #71767a;
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        height: 30px;
+        height: 30px;
+        border: 1px solid #dce0e3;
+        border-radius: 3px;
+      }
+    }
+
+    input[type='submit'] {
+      padding: 8px 10px 8px 10px;
+      margin-bottom: 50px;
+      background-color: #34bf49;
+      border-color: #2fab41;
+      border-radius: 3px;
+      text-shadow: 0px 1px 0px #2fab41;
+      color: white;
+      font-size: 18px;
+      min-width: 300px;
+    }
+  }
+
+  .alt-signup-login {
+    font-size: 12px;
+    padding-top: 25px;
+
+    // .alt-signup-login-link {
+    //   text-decoration: none;
+    //   color: #0099e5;
+    // }
+  }
+
+  .session-errors {
+    color: red;
+    font-size: 10px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding: 0;
     }
   }
 }
