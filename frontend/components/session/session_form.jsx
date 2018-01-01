@@ -92,7 +92,7 @@ class SessionForm extends React.Component {
 
         <div className='alt-signup-login'>
           {altText}
-          <Link to={link}>{altProcessFormText}</Link>
+          <Link to={link} className='alt-signup-login-link'>{altProcessFormText}</Link>
         </div>
       </div>
     );

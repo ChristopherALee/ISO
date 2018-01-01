@@ -24,7 +24,7 @@
     padding: 20px 40px 20px 40px;
     min-width: 320px;
     // min-height: 430px;
-    border-bottom: 1px solid #eeeff2;
+    border-bottom: 2px solid #eeeff2;
 
     .session-form-username {
       display: flex;
@@ -40,7 +40,14 @@
         height: 30px;
         border: 1px solid #dce0e3;
         border-radius: 3px;
-        transition: border-color 0.2s;
+        padding-left: 5px;
+      }
+
+      input:focus {
+        outline: 1px solid #0099e5;
+        transition: outline-color 0.2s;
+        outline: none;
+        border: 1px solid #0099e5;
       }
     }
 
@@ -59,6 +66,15 @@
         height: 30px;
         border: 1px solid #dce0e3;
         border-radius: 3px;
+        padding-left: 5px;
+      }
+
+      input:focus {
+        // outline: 1px solid #0099e5;
+        // transition: outline-color 0.2s;
+        outline: none;
+        border: 1px solid #0099e5;
+
       }
     }
 
@@ -79,10 +95,10 @@
     font-size: 12px;
     padding-top: 25px;
 
-    // .alt-signup-login-link {
-    //   text-decoration: none;
-    //   color: #0099e5;
-    // }
+    .alt-signup-login-link {
+      text-decoration: none;
+      color: #0099e5;
+    }
   }
 
   .session-errors {
