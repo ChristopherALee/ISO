@@ -29,7 +29,8 @@ class Greeting extends React.Component {
       );
     } else {
       return (
-        this.notLoggedIn()
+        // this.notLoggedIn()
+        null
       );
     }
   }

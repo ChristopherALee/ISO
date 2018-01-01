@@ -24,20 +24,24 @@ class NavBar extends React.Component {
       <nav id='navbar-alt'>
         <p>LOGO PLACEHOLDER</p>
         {/* <img src='/assets/images/navbar/gallery'></img> */}
-        <input
-          type='search'
-          placeholder='Search for photos, location, or people'
-        />
-        <button className='navbar-alt-signup'>
-          <Link to='/signup'>Sign Up</Link>
-        </button>
+
+        <div className='navbar-alt-right'>
+          <input
+            type='search'
+            placeholder='Search for photos, location, or people'
+          />
+          <button className='navbar-alt-signup'>
+            <Link to='/signup'>Sign Up</Link>
+          </button>
+        </div>
       </nav>
     );
   }
 
   render() {
     let currentNavBar;
-    if (this.props.isAlt) {
+    // debugger
+    if (this.props.isAlt.isAlt) {
       currentNavBar = this.altNav();
     } else {
       currentNavBar = this.mainNav();
