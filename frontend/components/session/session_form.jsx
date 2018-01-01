@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className='session-form-contents'>
-        <h2>{processFormText} ISO</h2>
+        <p>{processFormText} ISO</p>
 
         <div className='session-errors'>
           {this.renderErrors()}
