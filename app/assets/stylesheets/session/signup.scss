@@ -89,6 +89,11 @@
       color: white;
       font-size: 18px;
       min-width: 300px;
+
+      &:hover {
+        cursor:pointer;
+        background-color: #38cf4f;
+      }
     }
   }
 
