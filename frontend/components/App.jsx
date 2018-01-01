@@ -15,8 +15,10 @@ const App = () => {
 
       <Route path='/' component={NavBarContainer}/>
 
-      <AuthRoute path='/signup' component={SessionFormContainer} />
-      <AuthRoute path='/login' component={SessionFormContainer} />
+      <div id='session-form'>
+        <AuthRoute path='/signup' component={SessionFormContainer} />
+        <AuthRoute path='/login' component={SessionFormContainer} />
+      </div>
     </div>
   );
 };

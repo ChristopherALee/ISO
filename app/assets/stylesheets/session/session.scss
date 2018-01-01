@@ -1,9 +1,16 @@
 #iso-app {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   height: 1000px;
   background-color: #f7f8fa;
+}
+
+#session-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:auto;
 }
 
 .session-form-contents {
@@ -86,6 +93,7 @@
         // transition: outline-color 0.2s;
         outline: none;
         border: 1px solid #0099e5;
+        transition: outline-color 0.2s;
 
       }
     }

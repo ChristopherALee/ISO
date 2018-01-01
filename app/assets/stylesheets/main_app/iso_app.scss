@@ -5,10 +5,25 @@
   #navbar-alt {
     display: flex;
     align-self:flex-start;
-    min-width: 1000px;
+    min-width: 3000px;
+    margin-bottom: 200px;
+    background-color: white;
+    align-items: center;
 
     input {
-      margin-left: 600px;
+      margin-left: 800px;
+      padding-left: 10px;
+      width: 275px;
+      height: 30px;
+      font-size: 12px;
+      border: 1px solid #eeeff2;
+      border-radius: 20px;
+
+      &:focus {
+        outline: none;
+        border: 1px solid #0099e5;
+        transition: border-color 0.2s;
+      }
     }
   }
 }
