@@ -10,7 +10,7 @@ class NavBar extends React.Component {
     return (
       <nav id='navbar-main'>
         <p>LOGO PLACEHOLDER</p>
-        <img src='../../../app/assets/images/navbar/gallery'></img>
+        {/* <img src='../../../app/assets/images/navbar/gallery.png'></img> */}
         <input
           type='search'
           placeholder='Search for photos, location, or people'
@@ -23,11 +23,14 @@ class NavBar extends React.Component {
     return (
       <nav id='navbar-alt'>
         <p>LOGO PLACEHOLDER</p>
-        <img src='../../../app/images/navbar/gallery.png'></img>
+        {/* <img src='/assets/images/navbar/gallery'></img> */}
         <input
           type='search'
           placeholder='Search for photos, location, or people'
         />
+        <button className='navbar-alt-signup'>
+          <Link to='/signup'>Sign Up</Link>
+        </button>
       </nav>
     );
   }
