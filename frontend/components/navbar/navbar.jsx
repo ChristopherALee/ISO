@@ -54,10 +54,6 @@ class NavBar extends React.Component {
         </div>
 
         <div className='navbar-right'>
-          <input
-            type='search'
-            placeholder='Search for photos, location, or people'
-          />
 
             <Link to='/login' className='navbar-login'>Log In</Link>
 
