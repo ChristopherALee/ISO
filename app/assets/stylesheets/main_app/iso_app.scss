@@ -7,7 +7,75 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  -webkit-animation: fadein 1s;
+  -webkit-animation: fadein 1.3s;
+
+  #navbar-main-logged-in {
+    display: flex;
+    align-self:flex-start;
+    min-width: 600px;
+    width: 100%;
+    margin-bottom: 200px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+
+      #logo {
+        color: black;
+        margin-left: 50px;
+      }
+
+      .navbar-links {
+        margin-left: 30px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+
+    .navbar-right {
+      display: flex;
+      margin-right: 20px;
+
+      input {
+        padding-left: 10px;
+        width: 275px;
+        height: 30px;
+        font-size: 12px;
+        border: 1px solid #eeeff2;
+        border-radius: 20px;
+        background-color: #f7f8fa;
+
+        &:focus {
+          outline: none;
+          border: 1px solid #0099e5;
+          transition: border-color 0.2s;
+        }
+      }
+
+      .navbar-upload {
+        display: flex;
+        margin-left: 30px;
+
+        // .upload-icon {
+        //   color: transparent;
+        //   background-image: url('/assets/icons/cloud-computing.png');
+        //   background-size: 20px 20px;
+        //   background-repeat: no-repeat;
+        // }
+
+        i {
+          color: green;
+        }
+      }
+    }
+  }
 
   #navbar-main {
     display: flex;
@@ -29,7 +97,7 @@
         margin-left: 50px;
       }
 
-      .navbar-links {
+      .navbar-links-main {
         margin-left: 30px;
 
         a {

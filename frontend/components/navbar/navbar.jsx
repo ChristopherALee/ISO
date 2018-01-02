@@ -6,6 +6,40 @@ class NavBar extends React.Component {
     super(props);
   }
 
+  mainNavLoggedIn() {
+    return (
+      <nav id='navbar-main-logged-in'>
+        <div className='navbar-left'>
+          <div id='logo'>
+            <p>ISO</p>
+          </div>
+
+          <div className='navbar-links'>
+            <Link to='/discover'>Discover</Link>
+          </div>
+        </div>
+
+        <div className='navbar-right'>
+          <input
+            type='search'
+            placeholder='Search for photos, location, or people'
+          />
+
+          <button onClick={this.props.logout} className='navbar-right-logout'>
+            Log Out
+          </button>
+
+          <button className='navbar-upload'>
+            {/* <div className='upload-icon fa fa-cloud-upload'>upload</div> */}
+            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+            <p>Upload</p>
+            {/* <Link to='/signup'>Sign Up</Link> */}
+          </button>
+        </div>
+      </nav>
+    );
+  }
+
   mainNav() {
     return (
       <nav id='navbar-main'>
@@ -15,7 +49,7 @@ class NavBar extends React.Component {
             <p>ISO</p>
           </div>
 
-          <div className='navbar-links'>
+          <div className='navbar-links-main'>
             <Link to='/discover'>Discover</Link>
           </div>
         </div>
@@ -39,7 +73,7 @@ class NavBar extends React.Component {
   altNav() {
     return (
       <nav id='navbar-alt'>
-        <p>LOGO PLACEHOLDER</p>
+        <Link to='/'>ISO</Link>
         {/* <img src='/assets/images/navbar/gallery'></img> */}
 
         <div className='navbar-alt-right'>
@@ -58,7 +92,9 @@ class NavBar extends React.Component {
   render() {
     let currentNavBar;
     // debugger
-    if (this.props.isAlt.isAlt) {
+    if (this.props.currentUser) {
+      currentNavBar = this.mainNavLoggedIn();
+    } else if (this.props.isAlt.isAlt) {
       currentNavBar = this.altNav();
     } else {
       currentNavBar = this.mainNav();

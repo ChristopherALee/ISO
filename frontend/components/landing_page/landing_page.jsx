@@ -8,6 +8,10 @@ const LandingPage = (props) => {
         <p>Find your home among the world's best photographers.</p>
         <button className='landing-page-signup-button'>Join ISO</button>
       </div>
+
+      <div className='landing-page-photos'>
+        <p>Take a look at photos that photographers have shared.</p>
+      </div>
     </div>
   );
 };
