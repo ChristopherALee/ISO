@@ -5,7 +5,7 @@
   #navbar-alt {
     display: flex;
     align-self:flex-start;
-    // max-width: 3000px;
+    min-width: 600px;
     width: 100%;
     margin-bottom: 200px;
     background-color: white;
@@ -13,7 +13,7 @@
     justify-content: space-between;
 
     .navbar-alt-right {
-
+      margin-right: 20px;
     }
 
     input {
@@ -24,6 +24,7 @@
       font-size: 12px;
       border: 1px solid #eeeff2;
       border-radius: 20px;
+      background-color: #f7f8fa;
 
       &:focus {
         outline: none;
