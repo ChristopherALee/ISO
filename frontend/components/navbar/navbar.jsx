@@ -30,10 +30,9 @@ class NavBar extends React.Component {
           </button>
 
           <button className='navbar-upload'>
-            {/* <div className='upload-icon fa fa-cloud-upload'>upload</div> */}
-            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+            <div className='upload-icon'>upload</div>
+            {/* <i class="fa fa-cloud-upload" aria-hidden="true"></i> */}
             <p>Upload</p>
-            {/* <Link to='/signup'>Sign Up</Link> */}
           </button>
         </div>
       </nav>

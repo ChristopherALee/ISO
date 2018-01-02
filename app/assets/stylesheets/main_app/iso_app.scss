@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0 10px 0;
+    height: auto;
 
     .navbar-left {
       display: flex;
@@ -63,12 +64,12 @@
         display: flex;
         margin-left: 30px;
 
-        // .upload-icon {
-        //   color: transparent;
-        //   background-image: url('/assets/icons/cloud-computing.png');
-        //   background-size: 20px 20px;
-        //   background-repeat: no-repeat;
-        // }
+        .upload-icon {
+          color: transparent;
+          background-image: url('/assets/icons/cloud-computing.png');
+          background-size: 20px 20px;
+          background-repeat: no-repeat;
+        }
 
         i {
           color: green;
