@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import NavBarContainer from './navbar/navbar_container';
+import LandingPageContainer from './landing_page/landing_page_container';
 import SessionFormContainer from './session/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
 
@@ -14,6 +15,7 @@ const App = () => {
       </header>
 
       <Route path='/' component={NavBarContainer}/>
+      <Route exact path='/' component={LandingPageContainer} />
 
       <div id='session-form'>
         <AuthRoute path='/signup' component={SessionFormContainer} />

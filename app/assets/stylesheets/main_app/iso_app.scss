@@ -17,6 +17,27 @@
     background-color: transparent;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+
+      #logo {
+        color: white;
+        margin-left: 50px;
+      }
+
+      .navbar-links {
+        margin-left: 30px;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 13px;
+        }
+      }
+    }
 
     .navbar-right {
       margin-right: 20px;
@@ -30,6 +51,7 @@
         width: 80px;
         height: 30px;
         margin-left: 30px;
+        color: white;
 
         a {
           text-decoration: none;
@@ -43,6 +65,7 @@
         width: 80px;
         height: 30px;
         margin-left: 30px;
+        padding: 0;
 
         a {
           display: flex;
