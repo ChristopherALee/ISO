@@ -56,13 +56,13 @@
         height: 30px;
         border: 1px solid #dce0e3;
         border-radius: 3px;
-        padding-left: 5px;
+        padding-left: 10px;
         font-size: 13px;
       }
 
       input:focus {
         outline: 1px solid #0099e5;
-        transition: outline-color 0.2s;
+        transition: border-color 0.2s;
         outline: none;
         border: 1px solid #0099e5;
       }
@@ -84,7 +84,7 @@
         height: 30px;
         border: 1px solid #dce0e3;
         border-radius: 3px;
-        padding-left: 5px;
+        padding-left: 10px;
         font-size: 13px;
       }
 
@@ -93,7 +93,7 @@
         // transition: outline-color 0.2s;
         outline: none;
         border: 1px solid #0099e5;
-        transition: outline-color 0.2s;
+        transition: border-color 0.2s;
 
       }
     }
