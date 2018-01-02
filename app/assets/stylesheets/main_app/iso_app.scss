@@ -10,7 +10,68 @@
   -webkit-animation: fadein 1s;
 
   #navbar-main {
-    
+    display: flex;
+    align-self:flex-start;
+    min-width: 600px;
+    width: 100%;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar-right {
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      .navbar-login {
+        width: 80px;
+        height: 30px;
+        margin-left: 30px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .navbar-signup {
+        background-color: #e6065f;
+        border: 1px solid #e6065f;
+        border-radius: 20px;
+        width: 80px;
+        height: 30px;
+        margin-left: 30px;
+
+        a {
+          display: flex;
+          justify-content: center;
+          text-decoration: none;
+          color: white;
+          font-size: 13px;
+        }
+      }
+    }
+
+    input {
+      // margin-left: 800px;
+      padding-left: 10px;
+      width: 275px;
+      height: 30px;
+      font-size: 12px;
+      border: 1px solid #eeeff2;
+      border-radius: 20px;
+      background-color: #f7f8fa;
+
+      &:focus {
+        outline: none;
+        border: 1px solid #0099e5;
+        transition: border-color 0.2s;
+      }
+    }
+
+
   }
 
   #navbar-alt {

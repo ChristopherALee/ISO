@@ -11,10 +11,19 @@ class NavBar extends React.Component {
       <nav id='navbar-main'>
         <p>LOGO PLACEHOLDER</p>
         {/* <img src='../../../app/assets/images/navbar/gallery.png'></img> */}
-        <input
-          type='search'
-          placeholder='Search for photos, location, or people'
-        />
+
+        <div className='navbar-right'>
+          <input
+            type='search'
+            placeholder='Search for photos, location, or people'
+          />
+          
+            <Link to='/login'>Log In</Link>
+
+          <button className='navbar-signup'>
+            <Link to='/signup'>Sign Up</Link>
+          </button>
+        </div>
       </nav>
     );
   }
