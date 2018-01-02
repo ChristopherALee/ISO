@@ -13,5 +13,9 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 200px rgba(0,0,0,1) inset;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
