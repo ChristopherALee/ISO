@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleLogOut = this.handleLogOut.bind(this);
+  }
+
+  handleLogOut(e) {
+    e.preventDefault();
+    this.props.logout();
+    this.props.history.push('/');
   }
 
   mainNavLoggedIn() {
@@ -25,7 +33,7 @@ class NavBar extends React.Component {
             placeholder='Search for photos, location, or people'
           />
 
-          <button onClick={this.props.logout} className='navbar-right-logout'>
+          <button onClick={this.handleLogOut} className='navbar-right-logout'>
             Log Out
           </button>
 
