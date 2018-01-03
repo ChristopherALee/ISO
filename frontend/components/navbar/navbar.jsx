@@ -38,7 +38,7 @@ class NavBar extends React.Component {
             Log Out
           </button> */}
 
-          <i class="fa fa-lg fa-user navbar-right-logout" aria-hidden="true" onClick={this.handleLogOut}></i>
+          <i className="fa fa-lg fa-user navbar-right-logout" aria-hidden="true" onClick={this.handleLogOut}></i>
 
           <button className='navbar-upload'>
             {/* <div className='upload-icon'>upload</div> */}

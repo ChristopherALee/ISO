@@ -17,5 +17,27 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    .landing-page-image-text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      p:nth-child(1) {
+        padding: 40px 40px;
+      }
+
+      button {
+        margin-top: 40px;
+        padding: 0 30px;
+        background-color: #e7065e;
+        color: white;
+        border: 1px solid #e7065e;
+        border-radius: 20px;
+        font-size: 18px;
+        height: 40px;
+      }
+    }
+
   }
 }
