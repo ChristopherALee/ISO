@@ -1,19 +1,47 @@
 #feed {
-  ul {
+
+  .all-images {
+    max-width: 1600px;
     display: flex;
-    height: 500px;
-    width: 1800px;
-    margin: 0 20px;
 
-    li {
-      width: 33.33%;
-      margin: 0 5px;
+    div {
+      width: 523px;
+      height: 348px;
+      margin-right: 10px;
 
-      img {
-      width: 100%;
-      height: 98%;
-      object-fit: cover;
+      .photo-upload {
+        // object-fit: cover;
+        background-size: cover;
       }
     }
+
+    div:last-child {
+      margin: 0;
+    }
   }
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // ul {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   // height: 500px;
+  //   width: 100%;
+  //   margin: 0 20px;
+  //
+  //   li {
+  //     display: flex;
+  //     justify-content: center;
+  //     flex-direction: row;
+  //     // width: 33.33%;
+  //     margin: 0 5px;
+  //
+  //     img {
+  //     width: 50%;
+  //     height: 98%;
+  //     object-fit: cover;
+  //     }
+  //   }
+  // }
 }

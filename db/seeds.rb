@@ -26,3 +26,18 @@ photo3 = Photo.create({
   description: 'test_description',
   author_id: user1.id
   })
+photo4 = Photo.create({
+  title: 'test_photo_4',
+  description: 'test_description',
+  author_id: user1.id
+  })
+photo5 = Photo.create({
+  title: 'test_photo_5',
+  description: 'test_description',
+  author_id: user1.id
+  })
+photo6 = Photo.create({
+  title: 'test_photo_6',
+  description: 'test_description',
+  author_id: user1.id
+  })
