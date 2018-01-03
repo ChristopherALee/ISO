@@ -13,21 +13,29 @@ class Feed extends React.Component {
 
     const allPhotos = this.props.photos.map( (photo, idx) => {
       return (
-        <div>
+        <div key={idx}>
           <div key={idx}
             className='photo-upload'
-            style={{
-              backgroundImage: `url(${photo.image_url})`
-            }}>
+            style={{ backgroundImage: `url(${photo.image_url})`
+            }} >
           </div>
         </div>
       );
     });
 
+    const firstPhotos = allPhotos.slice(0, 3);
+    const lastPhotos = allPhotos.slice(3);
+    
     return (
       <div id='feed'>
         <div className='all-images'>
-          {allPhotos}
+          <div className='all-images-1'>
+            {firstPhotos}
+          </div>
+          <div className='all-images-2'>
+            {lastPhotos}
+          </div>
+          {/* {allPhotos} */}
         </div>
       </div>
     );
