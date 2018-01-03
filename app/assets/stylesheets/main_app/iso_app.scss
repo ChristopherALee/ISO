@@ -42,7 +42,10 @@
 
     .navbar-right {
       display: flex;
+      // justify-content: space-between;
+      align-items: center;
       margin-right: 20px;
+      height: 100%;
 
       input {
         padding-left: 10px;
@@ -60,19 +63,33 @@
         }
       }
 
+      .navbar-right-logout {
+        margin-left: 60px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
       .navbar-upload {
         display: flex;
+        margin: 0;
         margin-left: 30px;
-
-        .upload-icon {
-          color: transparent;
-          background-image: url('/assets/icons/cloud-computing.png');
-          background-size: 20px 20px;
-          background-repeat: no-repeat;
-        }
+        align-items: center;
+        height: 30px;
+        color: white;
+        font-weight: bold;
+        // .upload-icon {
+        //   color: transparent;
+        // }
+        background-color: #34bf49;
 
         i {
-          color: green;
+          color: white;
+        }
+
+        p {
+          margin-left: 5px;
         }
       }
     }

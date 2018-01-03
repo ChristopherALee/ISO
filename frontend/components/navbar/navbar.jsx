@@ -34,13 +34,15 @@ class NavBar extends React.Component {
             placeholder='Search for photos, location, or people'
           />
 
-          <button onClick={this.handleLogOut} className='navbar-right-logout'>
+          {/* <button onClick={this.handleLogOut} className='navbar-right-logout'>
             Log Out
-          </button>
+          </button> */}
+
+          <i class="fa fa-lg fa-user navbar-right-logout" aria-hidden="true" onClick={this.handleLogOut}></i>
 
           <button className='navbar-upload'>
-            <div className='upload-icon'>upload</div>
-            {/* <i class="fa fa-cloud-upload" aria-hidden="true"></i> */}
+            {/* <div className='upload-icon'>upload</div> */}
+            <i className="fa fa-2x fa-cloud-upload" aria-hidden="true"></i>
             <p>Upload</p>
           </button>
         </div>
