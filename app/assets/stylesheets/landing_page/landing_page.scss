@@ -2,7 +2,7 @@
 
   .landing-page-image {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     // width: 100%;
     // height: 100%;
     background-image: image_url('landing_page/landing_page2.jpg');
@@ -25,9 +25,17 @@
 
       p:nth-child(1) {
         padding: 40px 40px;
+        font-size: 48px;
+        text-align: center;
       }
 
-      button {
+      p:nth-child(2) {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .landing-page-signup-button {
+        text-decoration: none;
         margin-top: 40px;
         padding: 0 30px;
         background-color: #e7065e;
@@ -36,6 +44,8 @@
         border-radius: 20px;
         font-size: 18px;
         height: 40px;
+        display: flex;
+        align-items: center;
       }
     }
 

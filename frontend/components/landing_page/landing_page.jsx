@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = (props) => {
   return (
@@ -7,7 +8,7 @@ const LandingPage = (props) => {
         <div className='landing-page-image-text'>
           <p>Get Inspired and Share Your Best Photos</p>
           <p>Find your home among the world's best photographers.</p>
-          <button className='landing-page-signup-button'>Join ISO</button>
+          <Link to='/signup' className='landing-page-signup-button'>Join ISO</Link>
         </div>
       </div>
 
