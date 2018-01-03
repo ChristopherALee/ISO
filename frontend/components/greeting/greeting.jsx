@@ -5,7 +5,15 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = this.props.currentUser;
+
     // this.notLoggedIn = this.notLoggedIn.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.currentUser !== this.state.currentUser) {
+      this.setState(null);
+    }
   }
 
   notLoggedIn() {
@@ -21,7 +29,7 @@ class Greeting extends React.Component {
       return (
         <div className='session-greeting'>
           <p>
-            Hi, {this.props.currentUser}!
+            Hi, {this.state.currentUser}!
           </p>
 
           <button onClick={this.props.logout}>Log Out</button>
