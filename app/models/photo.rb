@@ -16,12 +16,12 @@
 #
 
 class Photo < ApplicationRecord
-  validates :title, :author_id, presence: true
+  validates :title, presence: true
+  validates :author, presence: true
   has_attached_file :image, default_url: "missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  belongs_to :user {
-    class_name 'user'
-    foreign_key :author_id
-  }
+  belongs_to :author,
+    class_name: 'User',
+    foreign_key: :author_id
 end

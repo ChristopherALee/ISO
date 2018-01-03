@@ -15,10 +15,9 @@ class User < ApplicationRecord
   validates :username, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  has_many :photos {
-    class_name 'photo'
-    foreign_key :author_id
-  }
+  has_many :photos,
+    class_name: 'Photo',
+    foreign_key: :author_id
 
   attr_reader :password
 

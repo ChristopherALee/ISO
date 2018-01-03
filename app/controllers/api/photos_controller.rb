@@ -14,6 +14,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def update
+    @photo = Photo.find_by(id: params[:id])
   end
 
   def destroy
@@ -21,6 +22,6 @@ class Api::PhotosController < ApplicationController
 
   private
   def photo_params
-    params.require(:photo).permit(:title, :image)
+    params.require(:photo).permit(:title, :image, :author_id)
   end
 end
