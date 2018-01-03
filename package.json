@@ -32,13 +32,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChristopherALee/Aperture.git"
+    "url": "git+https://github.com/ChristopherALee/ISO.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ChristopherALee/Aperture/issues"
+    "url": "https://github.com/ChristopherALee/ISO/issues"
   },
-  "homepage": "https://github.com/ChristopherALee/Aperture#readme"
+  "homepage": "https://github.com/ChristopherALee/ISO#readme"
 }
