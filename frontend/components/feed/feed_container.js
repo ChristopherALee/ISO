@@ -4,7 +4,7 @@ import { fetchAllPhotos } from '../../actions/photos/photo_actions';
 
 const mapStateToProps = (state) => {
   return {
-    photos: state.photos
+    photos: Object.values(state.photos)
   };
 };
 

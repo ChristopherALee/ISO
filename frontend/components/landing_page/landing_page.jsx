@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FeedContainer from '../feed/feed_container';
 
 const LandingPage = (props) => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = (props) => {
       <div className='landing-page-photos'>
         <p>Take a look at photos that photographers have shared.</p>
         <p>Discover what's trending according to photographers around the world.</p>
+        <FeedContainer />
       </div>
     </div>
   );
