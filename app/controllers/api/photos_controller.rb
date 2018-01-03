@@ -1,6 +1,10 @@
 class Api::PhotosController < ApplicationController
   before_action :logged_in?, only: [:create, :update, :destroy]
 
+  def index
+    @photos = Photo.all
+  end
+
   def create
     @photo = Photo.new(photo_params)
 
