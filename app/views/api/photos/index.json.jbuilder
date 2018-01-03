@@ -1,3 +1,6 @@
-json.extract! @photos do |photo|
-  json.id :id, :title, :description, :image, :author_id, :comment_ids
+@photos.each do |photo|
+  json.set! photo.id do
+    json.extract! photo, :id, :title, :description, :author_id, :comment_ids
+    json.image_url asset_path(photo.image)
+  end
 end
