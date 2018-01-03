@@ -48,6 +48,22 @@
         align-items: center;
       }
     }
+  }
 
+  .landing-page-photos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+
+    p:nth-child(1) {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    p:nth-child(2) {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
   }
 }
