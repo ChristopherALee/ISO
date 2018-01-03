@@ -79,8 +79,9 @@ class NavBar extends React.Component {
   altNav() {
     return (
       <nav id='navbar-alt'>
-        <Link to='/'>ISO</Link>
-        {/* <img src='/assets/images/navbar/gallery'></img> */}
+        <div className='navbar-alt-left'>
+          <Link to='/'>ISO</Link>
+        </div>
 
         <div className='navbar-alt-right'>
           <input

@@ -127,7 +127,7 @@
     }
 
     .navbar-right {
-      margin-right: 20px;
+      margin-right: 50px;
 
       a {
         text-decoration: none;
@@ -195,8 +195,16 @@
     justify-content: space-between;
     padding: 10px 0 10px 0;
 
+    .navbar-alt-left {
+      margin-left: 50px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
     .navbar-alt-right {
-      margin-right: 20px;
+      margin-right: 50px;
     }
 
     input {
