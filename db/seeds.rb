@@ -8,10 +8,21 @@
 
 User.destroy_all
 user1 = User.create({username: 'batman', password: 'robin123'})
+user2 = User.create({username: 'joker', password: 'harley123'})
 
 Photo.destroy_all
 photo1 = Photo.create({
   title: 'test_photo_1',
+  description: 'test_description',
+  author_id: user1.id
+  })
+photo2 = Photo.create({
+  title: 'test_photo_2',
+  description: 'test_description',
+  author_id: user1.id
+  })
+photo3 = Photo.create({
+  title: 'test_photo_3',
   description: 'test_description',
   author_id: user1.id
   })
