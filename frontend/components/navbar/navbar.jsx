@@ -7,6 +7,7 @@ class NavBar extends React.Component {
     super(props);
 
     this.state = { modalOpen: false };
+
     this.handleLogOut = this.handleLogOut.bind(this);
     this.handleModal = this.handleModal.bind(this);
 
@@ -32,6 +33,20 @@ class NavBar extends React.Component {
 
   closeModal() {
     this.setState({modalOpen: false});
+  }
+
+  readFile(e) {
+    const reader = new FileReader();
+    const file = e.currentTarget.files[0];
+
+    reader.onloadend = () =>
+      this.setState({ modalOpen: true, imageUrl: reader.result, imageFile: file});
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ modalOpen: true, imageUrl: "", imageFile: null });
+    }
   }
 
   mainNavLoggedIn() {
@@ -70,6 +85,7 @@ class NavBar extends React.Component {
             <p>Upload</p>
           </button>
 
+          {/* Upload Modal */}
           <Modal
             className={{
               base: 'upload-modal',
@@ -89,7 +105,7 @@ class NavBar extends React.Component {
               <p className='close-modal-x' onClick={this.closeModal}>X</p>
             </div>
 
-            <div className='upload-form'>
+            <div className='upload-form' onChange={this.readFile}>
               <button>Select Photos</button>
             </div>
           </Modal>

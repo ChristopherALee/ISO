@@ -67,10 +67,6 @@
         position: relative;
         display: inline-block;
 
-        &:hover .user-profile-dropdown {
-          display: block;
-        }
-
         .user-profile-dropdown {
           display: none;
           position: absolute;
@@ -78,19 +74,20 @@
           margin-top: 15px;
           margin-left: 35px;
           padding: 10px;
-          // z-index: 1;
+          z-index: 1;
 
-          &:hover {
+          ul {
             display: block;
-          }
-
-
-          ul li {
-            // margin: 10px 0;
+            li {
+              margin: 10px 0;
+            }
           }
         }
-      }
 
+        &:hover .user-profile-dropdown {
+          display: block;
+        }
+      }
 
       .navbar-right-logout {
         margin-left: 60px;
