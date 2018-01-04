@@ -63,7 +63,7 @@
         }
       }
 
-      .user-profile-options {
+      .fa-user {
         position: relative;
         display: inline-block;
 
@@ -71,10 +71,14 @@
           display: none;
           position: absolute;
           border: 1px solid black;
-          margin-top: 15px;
+          // margin-top: 15px;
           margin-left: 35px;
           padding: 10px;
           z-index: 1;
+
+          &:hover {
+            display: block
+          }
 
           ul {
             display: block;
