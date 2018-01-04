@@ -17,8 +17,8 @@
     background-color: white;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0 10px 0;
-    height: auto;
+    // padding: 10px 0 10px 0;
+    height: 50px;
     position:fixed;
 
     .navbar-left {
@@ -63,13 +63,29 @@
         }
       }
 
+      .user-profile-options {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
       .fa-user {
-        position: relative;
-        display: inline-block;
+        // position: relative;
+        // display: inline-block;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 50px;
+
+        &:before {
+          padding: 17px 0;
+        }
 
         .user-profile-dropdown {
           display: none;
-          position: absolute;
+          // position: absolute;
           // border: 1px solid black;
           padding-top: 50px;
           font-family: 'Comfortaa', cursive;
@@ -78,9 +94,9 @@
           right: -38px;
           z-index: 1;
           background-color: white;
-          box-shadow: 1px 1px 5px black;
+          border: 1px solid black;
 
-          &:hover {
+          &:before:hover {
             display: block;
           }
 
