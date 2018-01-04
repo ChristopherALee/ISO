@@ -14,12 +14,12 @@
     align-self:flex-start;
     min-width: 600px;
     width: 100%;
-    margin-bottom: 50px;
     background-color: white;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0 10px 0;
     height: auto;
+    position:fixed;
 
     .navbar-left {
       display: flex;
