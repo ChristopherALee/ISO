@@ -25,16 +25,16 @@ class Feed extends React.Component {
 
     const firstPhotos = allPhotos.slice(0, 3);
     const lastPhotos = allPhotos.slice(3);
-    
+
     return (
       <div id='feed'>
         <div className='all-images'>
           <div className='all-images-1'>
             {firstPhotos}
           </div>
-          <div className='all-images-2'>
+          {/* <div className='all-images-2'>
             {lastPhotos}
-          </div>
+          </div> */}
           {/* {allPhotos} */}
         </div>
       </div>

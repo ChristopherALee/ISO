@@ -1,11 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = { modalOpen: false };
     this.handleLogOut = this.handleLogOut.bind(this);
+    this.handleModal = this.handleModal.bind(this);
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleLogOut(e) {
@@ -13,6 +19,19 @@ class NavBar extends React.Component {
     this.props.logout().then(
       () => this.props.history.push('/')
     );
+  }
+
+  handleModal(boolean = false) {
+    // debugger
+    this.setState({modalOpen: boolean});
+  }
+
+  openModal() {
+    this.setState({modalOpen: true});
+  }
+
+  closeModal() {
+    this.setState({modalOpen: false});
   }
 
   mainNavLoggedIn() {
@@ -40,11 +59,18 @@ class NavBar extends React.Component {
 
           <i className="fa fa-lg fa-user navbar-right-logout" aria-hidden="true" onClick={this.handleLogOut}></i>
 
-          <button className='navbar-upload'>
-            {/* <div className='upload-icon'>upload</div> */}
+          <button className='navbar-upload' onClick={this.openModal}>
             <i className="fa fa-2x fa-cloud-upload" aria-hidden="true"></i>
             <p>Upload</p>
           </button>
+
+          <Modal
+            className={{base: 'upload-modal'}}
+            ariaHideApp={false}
+            isOpen={this.state.modalOpen}
+            >
+            <button className='close-modal' onClick={this.closeModal}>X</button>
+          </Modal>
         </div>
       </nav>
     );
