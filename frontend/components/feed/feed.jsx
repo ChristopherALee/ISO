@@ -13,11 +13,8 @@ class Feed extends React.Component {
 
     const allPhotos = this.props.photos.map( (photo, idx) => {
       return (
-          <li key={idx}
-            className='photo-upload'
-            style={{ backgroundImage: `url(${photo.medium_image_url})`
-            }} >
-            Image
+          <li key={idx} className='photo-upload'>
+            <img src={photo.medium_image_url}></img>
           </li>
       );
     });
