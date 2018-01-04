@@ -17,7 +17,7 @@ class NavBar extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (this.props.history.location.pathname !== newProps.histry.location.pathname) {
+    if (this.props.history.location.pathname !== this.props.location.pathname) {
       this.setState({ modalOpen: false });
     }
   }
@@ -47,7 +47,7 @@ class NavBar extends React.Component {
       <nav id='navbar-main-logged-in'>
         <div className='navbar-left'>
           <div id='logo'>
-            <p>ISO</p>
+            <Link to='/feed'>ISO</Link>
           </div>
 
           <div className='navbar-links'>
@@ -99,7 +99,6 @@ class NavBar extends React.Component {
             </div>
 
             <div className='upload-form-container' onChange={this.readFile}>
-              {/* UploadFormContainer goes here */}
               <UploadFormContainer />
             </div>
           </Modal>

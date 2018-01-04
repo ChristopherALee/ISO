@@ -7,7 +7,7 @@ class UploadForm extends React.Component {
     super(props);
 
     this.state = { title: '', imageUrl: "", imageFile: null };
-    debugger
+    
     this.readFile = this.readFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
