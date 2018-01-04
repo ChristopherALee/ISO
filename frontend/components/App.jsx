@@ -6,6 +6,7 @@ import NavBarContainer from './navbar/navbar_container';
 import LandingPageContainer from './landing_page/landing_page_container';
 import SessionFormContainer from './session/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
+import FeedContainer from './feed/feed_container';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
 
       <Route path='/' component={NavBarContainer}/>
       <Route exact path='/' component={LandingPageContainer} />
+      <Route exact path='/feed' component={FeedContainer} />
 
       <div id='session-form'>
         <AuthRoute path='/signup' component={SessionFormContainer} />
