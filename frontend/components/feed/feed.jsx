@@ -29,13 +29,13 @@ class Feed extends React.Component {
     return (
       <div id='feed'>
         <div className='all-images'>
-          <div className='all-images-1'>
+          {/* <div className='all-images-1'>
             {firstPhotos}
-          </div>
+          </div> */}
           {/* <div className='all-images-2'>
             {lastPhotos}
           </div> */}
-          {/* {allPhotos} */}
+          {allPhotos}
         </div>
       </div>
     );

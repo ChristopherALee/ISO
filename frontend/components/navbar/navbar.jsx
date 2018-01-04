@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
+import UploadFormContainer from '../upload/upload_form_container';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -91,9 +92,9 @@ class NavBar extends React.Component {
               <p className='close-modal-x' onClick={this.closeModal}>X</p>
             </div>
 
-            <div className='upload-form' onChange={this.readFile}>
-              <button>Select Photos</button>
+            <div className='upload-form-container' onChange={this.readFile}>
               {/* UploadFormContainer goes here */}
+              <UploadFormContainer />
             </div>
           </Modal>
         </div>

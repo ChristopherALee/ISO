@@ -1,3 +1,5 @@
+import * as PhotoActions from '../../actions/photos/photo_actions';
+
 export const fetchAllPhotos = () => {
   return $.ajax({
     method: 'GET',
@@ -16,11 +18,30 @@ export const createPhoto = (photo) => {
   return $.ajax({
     method: 'POST',
     url: 'api/photos',
-    data: {
-      photo
+    processData: false,
+    contentType: false,
+    dataType: 'json',
+    data: photo
+  }).then(
+    (photo) => {
+      PhotoActions.receiveSinglePhoto(photo);
+      return photo;
     }
-  });
+  );
 };
+// export const createPhoto = (photo) => {
+//   return $.ajax({
+//     method: 'POST',
+//     url: 'api/photos',
+//     processData: false,
+//     contentType: false,
+//     dataType: 'json',
+//     data: photo,
+//     success: function(photo) {
+//       PhotoActions.receiveSinglePhoto(photo);
+//     }
+//   });
+// };
 
 export const updatePhoto = (photo) => {
   return $.ajax({
