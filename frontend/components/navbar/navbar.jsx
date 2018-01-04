@@ -17,9 +17,10 @@ class NavBar extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (this.props.history.location.pathname !== this.props.location.pathname) {
-      this.setState({ modalOpen: false });
-    }
+    this.setState({ modalOpen: false });
+    // if (this.props.history.location.pathname !== this.props.location.pathname) {
+    //   this.setState({ modalOpen: false });
+    // }
   }
 
   handleLogOut(e) {
