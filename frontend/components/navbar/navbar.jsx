@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import UploadFormContainer from '../upload/upload_form_container';
 
@@ -14,6 +14,12 @@ class NavBar extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.props.history.location.pathname !== newProps.histry.location.pathname) {
+      this.setState({ modalOpen: false });
+    }
   }
 
   handleLogOut(e) {
@@ -165,4 +171,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);
