@@ -71,7 +71,16 @@ class NavBar extends React.Component {
           </button>
 
           <Modal
-            className={{base: 'upload-modal'}}
+            className={{
+              base: 'upload-modal',
+              afterOpen: 'upload-modal-after-open',
+              beforeClose: 'upload-modal-before-close'
+            }}
+            overlayClassName={{
+              base: 'upload-modal-overlay',
+              afterOpen: 'upload-modal-overlay_after-open',
+              beforeClose: 'upload-modal-overlay_before-close'
+            }}
             ariaHideApp={false}
             isOpen={this.state.modalOpen}
             >
@@ -81,7 +90,7 @@ class NavBar extends React.Component {
             </div>
 
             <div className='upload-form'>
-              <button>Upload An Image</button>
+              <button>Select Photos</button>
             </div>
           </Modal>
         </div>

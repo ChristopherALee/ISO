@@ -63,22 +63,34 @@
         }
       }
 
-      .user-profile-dropdown {
-        position: absolute;
-        border: 1px solid black;
-        margin-top: 15px;
-        margin-left: 35px;
-        padding: 10px;
-        visibility:hidden;
+      .user-profile-options {
+        position: relative;
+        display: inline-block;
 
-        &:hover {
-          visibility:visible;
+        &:hover .user-profile-dropdown {
+          display: block;
         }
 
-        ul li {
-          margin: 10px 0;
+        .user-profile-dropdown {
+          display: none;
+          position: absolute;
+          border: 1px solid black;
+          margin-top: 15px;
+          margin-left: 35px;
+          padding: 10px;
+          // z-index: 1;
+
+          &:hover {
+            display: block;
+          }
+
+
+          ul li {
+            // margin: 10px 0;
+          }
         }
       }
+
 
       .navbar-right-logout {
         margin-left: 60px;
