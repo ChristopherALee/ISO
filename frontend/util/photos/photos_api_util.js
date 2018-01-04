@@ -47,9 +47,7 @@ export const updatePhoto = (photo) => {
   return $.ajax({
     method: 'PATCH',
     url: `api/photos/${photo.id}`,
-    data: {
-      photo
-    }
+    data: photo
   });
 };
 
