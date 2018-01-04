@@ -13,11 +13,12 @@ class Feed extends React.Component {
 
     const allPhotos = this.props.photos.map( (photo, idx) => {
       return (
-          <div key={idx}
+          <li key={idx}
             className='photo-upload'
             style={{ backgroundImage: `url(${photo.medium_image_url})`
             }} >
-          </div>
+            Image
+          </li>
       );
     });
 
@@ -26,7 +27,7 @@ class Feed extends React.Component {
 
     return (
       <div id='feed'>
-        <div className='all-images'>
+        <ul className='all-images'>
           {/* <div className='all-images-1'>
             {firstPhotos}
           </div> */}
@@ -34,7 +35,7 @@ class Feed extends React.Component {
             {lastPhotos}
           </div> */}
           {allPhotos}
-        </div>
+        </ul>
       </div>
     );
   }
