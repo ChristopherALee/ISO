@@ -7,10 +7,11 @@ class UploadForm extends React.Component {
     super(props);
 
     this.state = { title: '', imageUrl: "", imageFile: null };
-    
+
     this.readFile = this.readFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.image = this.image.bind(this);
   }
 
   handleChange(field) {
@@ -52,10 +53,23 @@ class UploadForm extends React.Component {
     );
   }
 
+  image() {
+    if (this.state.imageUrl) {
+      return (
+        <img src={this.state.imageUrl} />
+      );
+    } else {
+      return (
+        null
+      );
+    }
+  }
+
   render() {
+
     return (
       <form className='upload-form' onSubmit={this.handleSubmit}>
-        <img src={this.state.imageUrl} />
+        {this.image()}
 
         <input
           type='file'
