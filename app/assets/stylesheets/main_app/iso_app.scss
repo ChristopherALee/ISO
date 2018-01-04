@@ -20,6 +20,7 @@
     // padding: 10px 0 10px 0;
     height: 50px;
     position:fixed;
+    border-bottom: 1px solid #eeeff2;
 
     .navbar-left {
       display: flex;
@@ -80,7 +81,7 @@
         width: 50px;
 
         &:before {
-          padding: 17px 0;
+          padding: 17.5px 0;
         }
 
         .user-profile-dropdown {
@@ -94,7 +95,9 @@
           right: -38px;
           z-index: 1;
           background-color: white;
-          border: 1px solid black;
+          border-bottom: 1px solid #eeeff2;
+          border-right: 1px solid #eeeff2;
+          border-left: 1px solid #eeeff2;
 
           &:before:hover {
             display: block;
@@ -111,6 +114,10 @@
             li {
               margin: 10px 0;
               width: max-content;
+
+              &:hover {
+                color: #e7065e;
+              }
             }
           }
         }
