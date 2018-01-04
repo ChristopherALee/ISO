@@ -15,7 +15,7 @@ class Feed extends React.Component {
       return (
           <div key={idx}
             className='photo-upload'
-            style={{ backgroundImage: `url(${photo.image_url})`
+            style={{ backgroundImage: `url(${photo.medium_image_url})`
             }} >
           </div>
       );

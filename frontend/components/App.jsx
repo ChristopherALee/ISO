@@ -18,7 +18,7 @@ const App = () => {
 
       <Route path='/' component={NavBarContainer}/>
       <Route exact path='/' component={LandingPageContainer} />
-      <Route exact path='/feed' component={FeedContainer} />
+      <ProtectedRoute exact path='/feed' component={FeedContainer} />
 
       <div id='session-form'>
         <AuthRoute path='/signup' component={SessionFormContainer} />
