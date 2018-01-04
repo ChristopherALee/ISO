@@ -70,20 +70,31 @@
         .user-profile-dropdown {
           display: none;
           position: absolute;
-          border: 1px solid black;
-          // margin-top: 15px;
-          margin-left: 35px;
-          padding: 10px;
+          // border: 1px solid black;
+          padding-top: 50px;
+          font-family: 'Comfortaa', cursive;
+          font-size: 12px;
+          padding: 10px 20px;
+          right: -38px;
           z-index: 1;
+          background-color: white;
+          box-shadow: 1px 1px 5px black;
 
           &:hover {
-            display: block
+            display: block;
+          }
+
+          .dropdown-break {
+            background-color: white;
+            width: 1px;
+            height: 10px;
           }
 
           ul {
             display: block;
             li {
               margin: 10px 0;
+              width: max-content;
             }
           }
         }

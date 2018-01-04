@@ -64,10 +64,10 @@ class NavBar extends React.Component {
 
           <div className='user-profile-options'>
             <i className="fa fa-lg fa-user navbar-right-logout" aria-hidden="true" onClick={this.handleLogOut}>
+              <div className='dropdown-break'></div>
               <div className='user-profile-dropdown'>
                 <ul>
                   <li>Profile</li>
-                  <li>Settings</li>
                   <li>Log Out</li>
                 </ul>
               </div>
