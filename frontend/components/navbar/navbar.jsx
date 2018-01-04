@@ -35,20 +35,6 @@ class NavBar extends React.Component {
     this.setState({modalOpen: false});
   }
 
-  readFile(e) {
-    const reader = new FileReader();
-    const file = e.currentTarget.files[0];
-
-    reader.onloadend = () =>
-      this.setState({ modalOpen: true, imageUrl: reader.result, imageFile: file});
-
-    if (file) {
-      reader.readAsDataURL(file);
-    } else {
-      this.setState({ modalOpen: true, imageUrl: "", imageFile: null });
-    }
-  }
-
   mainNavLoggedIn() {
     return (
       <nav id='navbar-main-logged-in'>
@@ -107,6 +93,7 @@ class NavBar extends React.Component {
 
             <div className='upload-form' onChange={this.readFile}>
               <button>Select Photos</button>
+              {/* UploadFormContainer goes here */}
             </div>
           </Modal>
         </div>
