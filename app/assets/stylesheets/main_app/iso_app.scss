@@ -75,14 +75,19 @@
         display: flex;
         margin: 0;
         margin-left: 30px;
+        padding: 0 18px;
         align-items: center;
         height: 30px;
         color: white;
         font-weight: bold;
-        // .upload-icon {
-        //   color: transparent;
-        // }
+        border: 1px solid #34bf49;
+        border-radius: 20px;
         background-color: #34bf49;
+        outline: none;
+
+        &:hover {
+          background-color: #38cf4f;
+        }
 
         i {
           color: white;

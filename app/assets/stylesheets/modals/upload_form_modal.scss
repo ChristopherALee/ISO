@@ -1,0 +1,32 @@
+.ReactModal__Overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .close-modal {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+
+    &:hover {
+      cursor: pointer;
+      color: #e7065e;
+    }
+  }
+
+  .upload-modal {
+    width: 90vw;
+    height: 90vh;
+    margin: 20px;
+    outline: none;
+    border: 1px solid #eeeff2;
+
+    .upload-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+
+}

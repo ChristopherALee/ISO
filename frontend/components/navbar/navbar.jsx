@@ -69,7 +69,14 @@ class NavBar extends React.Component {
             ariaHideApp={false}
             isOpen={this.state.modalOpen}
             >
-            <button className='close-modal' onClick={this.closeModal}>X</button>
+
+            <div className='close-modal'>
+              <p className='close-modal-x' onClick={this.closeModal}>X</p>
+            </div>
+
+            <div className='upload-form'>
+              <button>Upload An Image</button>
+            </div>
           </Modal>
         </div>
       </nav>
