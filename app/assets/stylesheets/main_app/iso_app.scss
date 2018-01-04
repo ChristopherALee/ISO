@@ -63,6 +63,23 @@
         }
       }
 
+      .user-profile-dropdown {
+        position: absolute;
+        border: 1px solid black;
+        margin-top: 15px;
+        margin-left: 35px;
+        padding: 10px;
+        visibility:hidden;
+
+        &:hover {
+          visibility:visible;
+        }
+
+        ul li {
+          margin: 10px 0;
+        }
+      }
+
       .navbar-right-logout {
         margin-left: 60px;
 

@@ -53,11 +53,17 @@ class NavBar extends React.Component {
             placeholder='Search for photos, location, or people'
           />
 
-          {/* <button onClick={this.handleLogOut} className='navbar-right-logout'>
-            Log Out
-          </button> */}
+          <div className='user-profile-options'>
+            <i className="fa fa-lg fa-user navbar-right-logout" aria-hidden="true" onClick={this.handleLogOut}></i>
 
-          <i className="fa fa-lg fa-user navbar-right-logout" aria-hidden="true" onClick={this.handleLogOut}></i>
+            <div className='user-profile-dropdown'>
+              <ul>
+                <li>Profile</li>
+                <li>Settings</li>
+                <li>Log Out</li>
+              </ul>
+            </div>
+          </div>
 
           <button className='navbar-upload' onClick={this.openModal}>
             <i className="fa fa-2x fa-cloud-upload" aria-hidden="true"></i>
