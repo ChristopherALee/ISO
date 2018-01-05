@@ -58,7 +58,6 @@ export const createPhoto = (photo) => dispatch => {
       }
     ).fail(
       errors => {
-        debugger
         dispatch(receivePhotoErrors(errors));
         return errors;
       }

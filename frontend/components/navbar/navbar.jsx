@@ -33,7 +33,6 @@ class NavBar extends React.Component {
   }
 
   closeModal() {
-    debugger
     this.setState({modalOpen: false});
   }
 

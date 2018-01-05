@@ -59,7 +59,6 @@ class UploadForm extends React.Component {
       }
     ).fail(
       (errors) => {
-        debugger
         return (
           this.setState({
             ['errors']: errors.responseJSON,

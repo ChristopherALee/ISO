@@ -3,9 +3,8 @@ import UploadForm from './upload_form';
 import { createPhoto } from '../../actions/photos/photo_actions';
 
 const mapStateToProps = (state) => {
-  debugger
   return {
-    errors: state.errors.photo.errors
+
   };
 };
 
