@@ -61,7 +61,9 @@ class UploadForm extends React.Component {
   image() {
     if (this.state.imageUrl) {
       return (
-        <img src={this.state.imageUrl} />
+        <div className='uploaded-image-preview'>
+          <img src={this.state.imageUrl} />
+        </div>
       );
     } else {
       return (
@@ -76,6 +78,7 @@ class UploadForm extends React.Component {
       <form className='upload-form' onSubmit={this.handleSubmit}>
         <div className='upload-form-image'>
           {this.image()}
+
           <input
             type='submit'
             className='fake-select-photo'
@@ -90,7 +93,7 @@ class UploadForm extends React.Component {
         </div>
 
         <div className='upload-form-contents'>
-          <input type='submit' value='Upload' />
+          <input type='submit' value='Submit' />
 
           <label className='upload-form-contents-title'>
             <p>Title</p>

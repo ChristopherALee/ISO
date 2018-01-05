@@ -1,7 +1,8 @@
 // Modal
 .upload-modal {
   -webkit-animation: pop-in 0.3s;
-
+  min-width: 1800px;
+  min-height: 800px;
 }
 .upload-modal-overlay {
   display: flex;
@@ -74,9 +75,9 @@
 // Actual form
 .upload-form {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 80% 20%;
   // align-items: center;
-  height: 96%;
+  height: 100%;
 
   .upload-form-image {
     display: flex;
@@ -117,8 +118,14 @@
     }
   }
 
-  img {
-    width: 70%;
-    height: auto;
+  .uploaded-image-preview {
+    height: 700px;
+    min-height: 700px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
+
 }
