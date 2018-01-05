@@ -93,14 +93,16 @@ class UploadForm extends React.Component {
         </div>
 
         <div className='upload-form-contents'>
-          <input type='submit' value='Submit' />
+          <label for='submit'>
+            <input type='submit' value='Submit' />
+          </label>
 
-          <label className='upload-form-contents-title'>
+          <label for='upload-form-contents-title'>
             <p>Title</p>
             <input type='text' value={this.state.title} onChange={this.handleChange('title')}/>
           </label>
 
-          <label className='upload-form-contents-description'>
+          <label for='upload-form-contents-description'>
             <p>Description</p>
             <textarea value='Tell us more about your photo.'></textarea>
           </label>
