@@ -27,11 +27,26 @@ export const receiveSignUpErrors = (errors) => {
 export const signUp = user => dispatch => {
   return (
     SessionApiUtil.signUp(user).then(
-      user => (dispatch(receiveCurrentUser(user))),
-      errors => (dispatch(receiveSignUpErrors(errors.responseJSON)))
+      user => {
+        return (
+          dispatch(receiveCurrentUser(user))
+        );
+      },
+      errors => {
+        dispatch(receiveSignUpErrors(errors.responseJSON));
+        return errors;
+      }
     )
   );
 };
+// export const signUp = user => dispatch => {
+//   return (
+//     SessionApiUtil.signUp(user).then(
+//       user => (dispatch(receiveCurrentUser(user))),
+//       errors => (dispatch(receiveSignUpErrors(errors.responseJSON)))
+//     )
+//   );
+// };
 
 export const login = user => dispatch => {
   return (

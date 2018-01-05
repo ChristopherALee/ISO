@@ -11,9 +11,12 @@
 #
 
 class User < ApplicationRecord
-  validates :username, :password_digest, :session_token, presence: true
-  validates :username, :session_token, uniqueness: true
+  validates :password_digest, :session_token, presence: true
+  validates :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
+
+  validates :username, presence: { message: 'Please enter a username.'}, uniqueness: { message: 'This username has already been taken.'}
+  validates :password, presence: { message: 'Please enter a password.'}
 
   has_many :photos,
     class_name: 'Photo',

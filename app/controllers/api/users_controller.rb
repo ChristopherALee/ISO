@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render '/api/users/show'
     else
-      render json: ['Invalid requirements for Username/Password'], status: 422
+      render json: @user.errors.messages, status: 422
     end
   end
 

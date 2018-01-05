@@ -12,6 +12,10 @@
   width:auto;
 }
 
+.invalid {
+  border: 1px solid red;
+}
+
 .session-form-contents {
   border: 1px solid #eeeff2;
   border-radius: 3px;
@@ -64,6 +68,12 @@
         outline: none;
         border: 1px solid #0099e5;
       }
+
+      .session-form-username-errors {
+        margin-top: 8px;
+        color: red;
+        font-size: 12px;
+      }
     }
 
     .session-form-password {
@@ -92,7 +102,12 @@
         outline: none;
         border: 1px solid #0099e5;
         transition: border-color 0.2s;
+      }
 
+      .session-form-password-errors {
+        margin-top: 8px;
+        color: red;
+        font-size: 12px;
       }
     }
 
