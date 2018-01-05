@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import UploadForm from './upload_form';
 
 const mapStateToProps = (state) => {
+  // debugger
   return {
 
   };

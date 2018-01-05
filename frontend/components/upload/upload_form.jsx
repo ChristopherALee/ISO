@@ -10,7 +10,9 @@ class UploadForm extends React.Component {
       title: '',
       description: '',
       imageUrl: "",
-      imageFile: null
+      imageFile: null,
+      isValid: 'true',
+      errors: []
     };
 
     this.readFile = this.readFile.bind(this);
@@ -55,6 +57,16 @@ class UploadForm extends React.Component {
           this.props.history.push('/discover')
         );
       }
+    ).fail(
+      (errors) => {
+        // debugger
+        return (
+          this.setState({
+            ['errors']: errors.responseJSON,
+            ['isValid']: 'false'
+          })
+        );
+      }
     );
   }
 
@@ -68,6 +80,18 @@ class UploadForm extends React.Component {
     } else {
       return (
         null
+      );
+    }
+  }
+
+  titleErrors() {
+    if (this.state.errors.title) {
+      return (
+        this.state.errors.title.map( (error, idx) => {
+          return (
+            <li key={idx}>{error}</li>
+          );
+        })
       );
     }
   }
@@ -99,12 +123,16 @@ class UploadForm extends React.Component {
 
           <label for='upload-form-contents-title'>
             <p>Title</p>
-            <input type='text' value={this.state.title} onChange={this.handleChange('title')}/>
+            <input type='text' className={this.state.isValid} value={this.state.title} onChange={this.handleChange('title')}/>
+            <ul className={'upload-form-contents-title-errors'}>{this.titleErrors()}</ul>
           </label>
 
           <label for='upload-form-contents-description'>
             <p>Description</p>
-            <textarea value='Tell us more about your photo.'></textarea>
+            <textarea
+              onChange={this.handleChange('description')}
+              value='Tell us more about your photo.'>
+            </textarea>
           </label>
         </div>
       </form>

@@ -16,7 +16,8 @@
 #
 
 class Photo < ApplicationRecord
-  validates :title, presence: true
+  validates :title, presence: { message: 'Please enter a title.' }
+  validates :image, attachment_presence: { message: 'No photo uploaded.'}
   validates :author, presence: true
   has_attached_file :image, styles: { thumb: ['32x32#', :png], medium: ['500x', :png]}, default_url: "missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

@@ -137,7 +137,17 @@
         padding: 10px 0;
         border-radius: 3px;
         font-size: 15px;
+
+        &:hover {
+          background-color: #fa2076;
+          cursor: pointer;
+        }
+
       }
+    }
+    
+    .false {
+      border: 1px solid red;
     }
 
     label[for=upload-form-contents-title] {

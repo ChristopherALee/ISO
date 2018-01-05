@@ -27,6 +27,11 @@ export const createPhoto = (photo) => {
       PhotoActions.receiveSinglePhoto(photo);
       return photo;
     }
+  ).fail(
+    (errors) => {
+      PhotoActions.receivePhotoErrors(errors);
+      return errors;
+    }
   );
 };
 // export const createPhoto = (photo) => {
