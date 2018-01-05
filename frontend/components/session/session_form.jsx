@@ -15,9 +15,12 @@ class SessionForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.deleteErrors = this.deleteErrors.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
+    this.demoLoginButton = this.demoLoginButton.bind(this);
   }
 
   componentDidMount() {
+    debugger
     return null;
   }
 
@@ -124,6 +127,61 @@ class SessionForm extends React.Component {
     );
   }
 
+  demoLogin(e) {
+    e.preventDefault();
+    if (this.props.location.pathname === '/signup') {
+      this.props.history.push('/login');
+    }
+
+    const login = this;
+
+    this.state = {
+      username: '',
+      password: '',
+      usernameValidInput: "valid",
+      passwordValidInput: "valid"
+    };
+
+    const guest = { username: 'batman', password: 'robin123' };
+    const username = {
+      strings: [guest.username],
+      typeSpeed: 100
+    };
+    const password = {
+      strings: [guest.password],
+      typeSpeed: 100
+    };
+
+    this.setState({
+      typeUsername: setTimeout(() => {
+        new Typed('.session-form-username-input', username);
+      }, 50),
+      typePassword: setTimeout(() => {
+        new Typed('.session-form-password-input', password);
+      }, 800),
+      typeSubmit: setTimeout(() => {
+        login.props.login(guest) ;
+      }, 2200)
+    });
+  }
+
+
+  demoLoginButton() {
+    // if (this.props.formType === 'login') {
+      return (
+        <a href='#' className='demo-login' onClick={this.demoLogin}>Demo Log In</a>
+      );
+    // } else {
+    //   this.demoLoginButtonOnSignUp();
+    // }
+  }
+
+  demoLoginButtonOnSignUp() {
+    return (
+      <a href='#' className='demo-login' onClick={this.demoLogin}>Demo Log In</a>
+    );
+  }
+
   render() {
     const processFormText = this.props.formType === 'signup' ? 'Join' : 'Log In to';
     const altProcessFormText = this.props.formType === 'signup' ? 'Log In' : 'Sign Up';
@@ -154,7 +212,7 @@ class SessionForm extends React.Component {
               type='text'
               value={this.state.username}
               onChange={this.handleChange('username')}
-              className={this.state.usernameValidInput}
+              className={`${this.state.usernameValidInput} session-form-username-input`}
             />
             <div className='session-form-username-errors'>{this.renderUsernameErrors()}</div>
           </div>
@@ -165,7 +223,7 @@ class SessionForm extends React.Component {
               type='password'
               value={this.state.password}
               onChange={this.handleChange('password')}
-              className={this.state.passwordValidInput}
+              className={`${this.state.passwordValidInput} session-form-password-input`}
             />
             <div className='session-form-password-errors'>{this.renderPasswordErrors()}</div>
           </div>
@@ -182,7 +240,9 @@ class SessionForm extends React.Component {
             >
             {altProcessFormText}
           </Link>
+
         </div>
+        {this.demoLoginButton()}
       </div>
     );
   }

@@ -21,7 +21,7 @@
   flex-direction: column;
   width: 400px;
   height: 450px;
-  padding: 10px 0 30px 0;
+  padding: 10px 0 20px 0;
   background-color: white;
 
   p {
@@ -152,8 +152,15 @@
       text-decoration: none;
       color: #0099e5;
     }
+
   }
 
+  .demo-login {
+    padding-top: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #0099e5;
+  }
   .session-errors {
     color: red;
     font-size: 10px;
