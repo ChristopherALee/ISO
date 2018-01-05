@@ -94,15 +94,16 @@ class NavBar extends React.Component {
             }}
             ariaHideApp={false}
             isOpen={this.state.modalOpen}
+            shouldCloseOnOverlayClick={true}
             >
 
             <div className='close-modal'>
               <p className='close-modal-x' onClick={this.closeModal}>X</p>
             </div>
 
-            <div className='upload-form-container' onChange={this.readFile}>
+            {/* <div className='upload-form-container' onChange={this.readFile}> */}
               <UploadFormContainer />
-            </div>
+            {/* </div> */}
           </Modal>
         </div>
       </nav>

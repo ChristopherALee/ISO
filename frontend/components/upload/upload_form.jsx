@@ -6,7 +6,12 @@ class UploadForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { title: '', imageUrl: "", imageFile: null };
+    this.state = {
+      title: '',
+      description: '',
+      imageUrl: "",
+      imageFile: null
+    };
 
     this.readFile = this.readFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -69,17 +74,34 @@ class UploadForm extends React.Component {
 
     return (
       <form className='upload-form' onSubmit={this.handleSubmit}>
-        {this.image()}
+        <div className='upload-form-image'>
+          {this.image()}
+          <input
+            type='submit'
+            className='fake-select-photo'
+            value='Select Photo'
+          />
+          <input
+            type='file'
+            accept='.jpg, .jpeg, .png'
+            onChange={this.readFile}
+            multiple
+          />
+        </div>
 
-        <input
-          type='file'
-          accept='.jpg, .jpeg, .png'
-          onChange={this.readFile}
-          multiple
-      />
+        <div className='upload-form-contents'>
+          <input type='submit' value='Upload' />
 
-        <input type='text' value={this.state.title} onChange={this.handleChange('title')}/>
-        <input type='submit' value='Upload' />
+          <label className='upload-form-contents-title'>
+            <p>Title</p>
+            <input type='text' value={this.state.title} onChange={this.handleChange('title')}/>
+          </label>
+
+          <label className='upload-form-contents-description'>
+            <p>Description</p>
+            <textarea value='Tell us more about your photo.'></textarea>
+          </label>
+        </div>
       </form>
     );
   }

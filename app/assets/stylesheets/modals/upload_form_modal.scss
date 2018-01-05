@@ -15,6 +15,7 @@
     display: flex;
     justify-content: flex-end;
     padding: 10px;
+    position: absolute;
 
     &:hover {
       cursor: pointer;
@@ -39,17 +40,17 @@
       height: 90%;
 
       button {
-        background-color: #34bf49;
+        background-color: #e7065e;
         color: white;
         padding: 10px 20px;
         outline: none;
-        border: 1px solid #34bf49;
+        border: 1px solid #e7065e;
         border-radius: 20px;
         font-weight: bold;
         font-size: 16px;
 
         &:hover {
-          background-color: #38cf4f;
+          background-color: #e7065e;
           cursor: pointer;
         }
       }
@@ -59,12 +60,52 @@
 
 // Actual form
 .upload-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  // align-items: center;
+  height: 96%;
+
+  .upload-form-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid black;
+
+    input[type=file] {
+      margin-top: 20px;
+      background-color: #e7065e;
+      color: white;
+      padding: 10px 20px;
+      outline: none;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 16px;
+      width: 111px;
+      margin-top: -42px;
+      opacity: 0;
+    }
+
+    .fake-select-photo {
+      margin-top: 20px;
+      background-color: #e7065e;
+      color: white;
+      padding: 10px 20px;
+      outline: none;
+      border: 1px solid #e7065e;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 16px;
+      width: 150px;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
 
   img {
-    width: 600px;
+    width: 70%;
     height: auto;
   }
 }
