@@ -24,19 +24,6 @@ export const createPhoto = (photo) => {
     data: photo
   });
 };
-// export const createPhoto = (photo) => {
-//   return $.ajax({
-//     method: 'POST',
-//     url: 'api/photos',
-//     processData: false,
-//     contentType: false,
-//     dataType: 'json',
-//     data: photo,
-//     success: function(photo) {
-//       PhotoActions.receiveSinglePhoto(photo);
-//     }
-//   });
-// };
 
 export const updatePhoto = (photo) => {
   return $.ajax({

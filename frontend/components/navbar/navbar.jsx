@@ -16,13 +16,6 @@ class NavBar extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentWillReceiveProps(newProps) {
-    this.setState({ modalOpen: false });
-    // if (this.props.history.location.pathname !== this.props.location.pathname) {
-    //   this.setState({ modalOpen: false });
-    // }
-  }
-
   handleLogOut(e) {
     e.preventDefault();
     this.props.logout().then(
@@ -40,6 +33,7 @@ class NavBar extends React.Component {
   }
 
   closeModal() {
+    debugger
     this.setState({modalOpen: false});
   }
 
