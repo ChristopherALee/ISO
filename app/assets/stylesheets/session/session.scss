@@ -116,7 +116,7 @@
           border: 1px solid red;
         }
       }
-      
+
       .session-form-password-errors {
         margin-top: 8px;
         color: red;
@@ -134,6 +134,7 @@
       color: white;
       font-size: 18px;
       min-width: 300px;
+      outline: none;
 
       &:hover {
         cursor:pointer;

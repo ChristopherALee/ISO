@@ -12,13 +12,20 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.deleteErrors = this.deleteErrors.bind(this);
+  }
+
+  componentDidMount() {
+    return null;
+  }
+
+  componentWillUnmount() {
+    this.setState({['validInput']: 'valid'});
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
-    } else if (nextProps.match.location) {
-
     }
   }
 
@@ -37,6 +44,10 @@ class SessionForm extends React.Component {
         that.setState({['validInput']: 'invalid'});
       }
     );
+  }
+
+  deleteErrors() {
+    this.props.deleteAllErrors();
   }
 
   // renderErrors() {
@@ -150,7 +161,13 @@ class SessionForm extends React.Component {
 
         <div className='alt-signup-login'>
           {altText}
-          <Link to={link} className='alt-signup-login-link'>{altProcessFormText}</Link>
+          <Link
+            to={link}
+            className='alt-signup-login-link'
+            onClick={this.deleteErrors}
+            >
+            {altProcessFormText}
+          </Link>
         </div>
       </div>
     );
