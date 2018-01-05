@@ -19,11 +19,6 @@ class SessionForm extends React.Component {
     this.demoLoginButton = this.demoLoginButton.bind(this);
   }
 
-  componentDidMount() {
-    debugger
-    return null;
-  }
-
   componentWillUnmount() {
     this.setState({['validInput']: 'valid'});
   }
@@ -46,7 +41,6 @@ class SessionForm extends React.Component {
     let that = this;
     this.props.processForm(user).fail(
       error => {
-        debugger
         if (error.responseJSON.username) {
           this.setState({['usernameValidInput']: 'invalid'});
         } else {
@@ -85,7 +79,7 @@ class SessionForm extends React.Component {
 
   renderUsernameErrors() {
     let usernameErrors;
-    debugger
+    
     if (this.props.errors instanceof Array) {
       return null;
     } else if (this.props.errors.username) {
@@ -142,7 +136,7 @@ class SessionForm extends React.Component {
       passwordValidInput: "valid"
     };
 
-    const guest = { username: 'batman', password: 'robin123' };
+    const guest = { username: 'guest', password: 'password123' };
     const username = {
       strings: [guest.username],
       typeSpeed: 100
