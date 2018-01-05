@@ -42,6 +42,7 @@ class Api::PhotosController < ApplicationController
 
   private
   def photo_params
+    debugger
     params.require(:photo).permit(:title, :image, :author_id)
   end
 end

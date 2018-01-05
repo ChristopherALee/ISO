@@ -85,12 +85,23 @@ class UploadForm extends React.Component {
   }
 
   titleErrors() {
-    debugger
     if (this.state.errors.title) {
       return (
         this.state.errors.title.map( (error, idx) => {
           return (
-            <li key={idx}>{error}</li>
+            <li key={idx}>* {error}</li>
+          );
+        })
+      );
+    }
+  }
+
+  imageErrors() {
+    if (this.state.errors.image) {
+      return (
+        this.state.errors.image.map( (error, idx) => {
+          return (
+            <li key={idx}>* {error}</li>
           );
         })
       );
@@ -103,7 +114,7 @@ class UploadForm extends React.Component {
       <form className='upload-form' onSubmit={this.handleSubmit}>
         <div className='upload-form-image'>
           {this.image()}
-
+          <ul className={'upload-form-image-errors'}>{this.imageErrors()}</ul>
           <input
             type='submit'
             className='fake-select-photo'
@@ -132,7 +143,7 @@ class UploadForm extends React.Component {
             <p>Description</p>
             <textarea
               onChange={this.handleChange('description')}
-              value='Tell us more about your photo.'>
+            >
             </textarea>
           </label>
         </div>
