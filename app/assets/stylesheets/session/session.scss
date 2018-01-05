@@ -12,9 +12,6 @@
   width:auto;
 }
 
-.invalid {
-  border: 1px solid red;
-}
 
 .session-form-contents {
   border: 1px solid #eeeff2;
@@ -69,6 +66,14 @@
         border: 1px solid #0099e5;
       }
 
+      .invalid {
+        border: 1px solid red;
+
+        &:focus {
+          border: 1px solid red;
+        }
+      }
+
       .session-form-username-errors {
         margin-top: 8px;
         color: red;
@@ -104,6 +109,14 @@
         transition: border-color 0.2s;
       }
 
+      .invalid {
+        border: 1px solid red;
+
+        &:focus {
+          border: 1px solid red;
+        }
+      }
+      
       .session-form-password-errors {
         margin-top: 8px;
         color: red;

@@ -31,10 +31,10 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).catch(
-      resp => {
-        debugger
-        this.setState({validInput: 'invalid'});
+    let that = this;
+    this.props.processForm(user).fail(
+      error => {
+        that.setState({['validInput']: 'invalid'});
       }
     );
   }
@@ -83,7 +83,7 @@ class SessionForm extends React.Component {
     if (this.props.errors instanceof Array) {
       return null;
     } else {
-      passwordErrors = this.props.errors.password.slice(1).map( (error, idx) => {
+      passwordErrors = this.props.errors.password.map( (error, idx) => {
         return (
           <li key={`${idx}`}>
             {error}
@@ -140,6 +140,7 @@ class SessionForm extends React.Component {
               type='password'
               value={this.state.password}
               onChange={this.handleChange('password')}
+              className={this.state.validInput}
             />
             <div className='session-form-password-errors'>{this.renderPasswordErrors()}</div>
           </div>
