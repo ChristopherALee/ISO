@@ -22,17 +22,7 @@ export const createPhoto = (photo) => {
     contentType: false,
     dataType: 'json',
     data: photo
-  }).then(
-    (photo) => {
-      PhotoActions.receiveSinglePhoto(photo);
-      return photo;
-    }
-  ).fail(
-    (errors) => {
-      PhotoActions.receivePhotoErrors(errors);
-      return errors;
-    }
-  );
+  });
 };
 // export const createPhoto = (photo) => {
 //   return $.ajax({

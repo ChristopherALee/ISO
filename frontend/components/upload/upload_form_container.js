@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import UploadForm from './upload_form';
 
 const mapStateToProps = (state) => {
-  // debugger
+  debugger
   return {
-
+    errors: state.errors.photo.errors
   };
 };
 

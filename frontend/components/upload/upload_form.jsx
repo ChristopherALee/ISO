@@ -12,7 +12,7 @@ class UploadForm extends React.Component {
       imageUrl: "",
       imageFile: null,
       isValid: 'true',
-      errors: []
+      errors: {}
     };
 
     this.readFile = this.readFile.bind(this);
@@ -46,8 +46,8 @@ class UploadForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
+    formData.append('photo[title]', this.state.title);
     if (this.state.imageFile) {
-      formData.append('photo[title]', this.state.title);
       formData.append('photo[image]', this.state.imageFile);
     }
 
@@ -59,7 +59,7 @@ class UploadForm extends React.Component {
       }
     ).fail(
       (errors) => {
-        // debugger
+        debugger
         return (
           this.setState({
             ['errors']: errors.responseJSON,
@@ -85,6 +85,7 @@ class UploadForm extends React.Component {
   }
 
   titleErrors() {
+    debugger
     if (this.state.errors.title) {
       return (
         this.state.errors.title.map( (error, idx) => {

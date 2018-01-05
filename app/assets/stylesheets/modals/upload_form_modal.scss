@@ -103,11 +103,11 @@
 
     .fake-select-photo {
       margin-top: 20px;
-      background-color: #e7065e;
+      background-color: #34bf49;
       color: white;
       padding: 10px 20px;
       outline: none;
-      border: 1px solid #e7065e;
+      border: 1px solid #2fab41;
       border-radius: 20px;
       font-weight: bold;
       font-size: 16px;
@@ -129,8 +129,8 @@
       width: 100%;
 
       input[type=submit] {
-        background-color: #e7065e;
-        border: 1px solid #e7065e;
+        background-color: #34bf49;
+        border: 1px solid #2fab41;
         outline: none;
         color: white;
         width: 95%;
@@ -139,22 +139,22 @@
         font-size: 15px;
 
         &:hover {
-          background-color: #fa2076;
+          background-color: #38cf4f;
           cursor: pointer;
         }
 
       }
     }
-    
+
     .false {
-      border: 1px solid red;
+      border: 1px solid red !important;
     }
 
     label[for=upload-form-contents-title] {
       p {
         margin: 0 13px;
         margin-top: 30px;
-        color: #e7065e;
+        color: #0699e6;
         font-weight: bold;
       }
 
@@ -171,7 +171,7 @@
     label[for=upload-form-contents-description] {
       p {
         margin: 0 13px;
-        color: #e7065e;
+        color: #0699e6;
         font-weight: bold;
       }
 
