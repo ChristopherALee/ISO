@@ -1,4 +1,8 @@
 // Modal
+.upload-modal {
+  -webkit-animation: pop-in 0.3s;
+
+}
 .upload-modal-overlay {
   display: flex;
   align-items: center;
@@ -10,10 +14,9 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
-  -webkit-animation: pop-in 0.3s;
 
-  transition: opacity 200ms ease-in-out;
-  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 1ms ease-in-out;
+  background: rgba(0, 0, 0, 0.5);
   // &--after-open {
   //     opacity: 1;
   // }
