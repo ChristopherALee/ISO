@@ -10,7 +10,6 @@ class Feed extends React.Component {
   }
 
   render() {
-
     const allPhotos = this.props.photos.map( (photo, idx) => {
       return (
           <li key={idx} className='photo-upload'>

@@ -96,7 +96,7 @@ class NavBar extends React.Component {
             </div>
 
             {/* <div className='upload-form-container' onChange={this.readFile}> */}
-              <UploadFormContainer />
+              <UploadFormContainer closeModal={this.closeModal} />
             {/* </div> */}
           </Modal>
         </div>

@@ -51,11 +51,11 @@ class UploadForm extends React.Component {
       formData.append('photo[image]', this.state.imageFile);
     }
 
-    this.props.createPhoto(formData, this.resetForm).then(
+    this.props.createPhoto(formData).then(
       (resp) => {
-        return (
-          this.props.history.push('/discover')
-        );
+        this.props.history.push('/discover');
+        this.props.closeModal();
+        return resp;
       }
     ).fail(
       (errors) => {

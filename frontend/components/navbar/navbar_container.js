@@ -7,7 +7,8 @@ const mapStateToProps = (state, ownProps) => {
   const isAlt = ownProps.location.pathname !== '/' ? true : false;
   return {
     currentUser: Boolean(state.session.currentUser),
-    isAlt: { isAlt }
+    isAlt: { isAlt },
+    photoErrors: state.errors.photo
   };
 };
 
