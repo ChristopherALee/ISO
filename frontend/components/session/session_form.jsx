@@ -61,25 +61,9 @@ class SessionForm extends React.Component {
     this.props.deleteAllErrors();
   }
 
-  // renderErrors() {
-  //   const errors = this.props.errors.map( (error, idx) => {
-  //     return (
-  //       <li key={`error-${idx}`}>
-  //         {error}
-  //       </li>
-  //     );
-  //   });
-  //
-  //   return (
-  //     <ul>
-  //       {errors}
-  //     </ul>
-  //   );
-  // }
-
   renderUsernameErrors() {
     let usernameErrors;
-    
+
     if (this.props.errors instanceof Array) {
       return null;
     } else if (this.props.errors.username) {
@@ -161,13 +145,9 @@ class SessionForm extends React.Component {
 
 
   demoLoginButton() {
-    // if (this.props.formType === 'login') {
-      return (
-        <a href='#' className='demo-login' onClick={this.demoLogin}>Demo Log In</a>
-      );
-    // } else {
-    //   this.demoLoginButtonOnSignUp();
-    // }
+    return (
+      <a href='#' className='demo-login' onClick={this.demoLogin}>Demo Log In</a>
+    );
   }
 
   demoLoginButtonOnSignUp() {

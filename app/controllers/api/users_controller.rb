@@ -1,4 +1,8 @@
 class Api::UsersController < ApplicationController
+  def index
+    @users = User.all
+  end
+
   def create
     @user = User.new(user_params)
 
@@ -8,6 +12,11 @@ class Api::UsersController < ApplicationController
     else
       render json: @user.errors.messages, status: 422
     end
+  end
+
+  def show
+    debugger
+    @user = User.find_by(username: params[:id])
   end
 
   def user_params

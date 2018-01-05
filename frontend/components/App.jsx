@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import { ProtectedRoute } from '../util/protected_route_util';
 import NavBarContainer from './navbar/navbar_container';
@@ -7,6 +7,7 @@ import LandingPageContainer from './landing_page/landing_page_container';
 import SessionFormContainer from './session/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
 import FeedContainer from './feed/feed_container';
+import ProfileContainer from './profile/profile_container';
 
 const App = () => {
   return (
@@ -18,7 +19,11 @@ const App = () => {
 
       <Route path='/' component={NavBarContainer}/>
       <Route exact path='/' component={LandingPageContainer} />
-      <ProtectedRoute exact path='/feed' component={FeedContainer} />
+
+      <Switch>
+        <ProtectedRoute exact path='/feed' component={FeedContainer} />
+        {/* <Route exact path='/:username' component={ProfileContainer} /> */}
+      </Switch>
 
       <div id='session-form'>
         <AuthRoute path='/signup' component={SessionFormContainer} />
