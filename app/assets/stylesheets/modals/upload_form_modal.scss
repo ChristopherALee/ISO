@@ -10,6 +10,16 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
+  -webkit-animation: pop-in 0.3s;
+
+  transition: opacity 200ms ease-in-out;
+  background: rgba(0, 0, 0, 0.3);
+  // &--after-open {
+  //     opacity: 1;
+  // }
+  &--before-close {
+      opacity: 0;
+  }
 
   .close-modal {
     display: flex;
