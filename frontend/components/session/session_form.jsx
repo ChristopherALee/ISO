@@ -8,7 +8,8 @@ class SessionForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      validInput: "valid"
+      usernameValidInput: "valid",
+      passwordValidInput: "valid"
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,7 +42,18 @@ class SessionForm extends React.Component {
     let that = this;
     this.props.processForm(user).fail(
       error => {
-        that.setState({['validInput']: 'invalid'});
+        if (error.responseJSON.username) {
+          this.setState({['usernameValidInput']: 'invalid'});
+        } else {
+          this.setState({['usernameValidInput']: 'valid'});
+        }
+
+        if (error.responseJSON.password) {
+          this.setState({['passwordValidInput']: 'invalid'});
+        } else {
+          this.setState({['passwordValidInput']: 'valid'});
+        }
+        // that.setState({['validInput']: 'invalid'});
       }
     );
   }
@@ -68,10 +80,10 @@ class SessionForm extends React.Component {
 
   renderUsernameErrors() {
     let usernameErrors;
-
+    debugger
     if (this.props.errors instanceof Array) {
       return null;
-    } else {
+    } else if (this.props.errors.username) {
       usernameErrors = this.props.errors.username.map( (error, idx) => {
         return (
           <li key={`${idx}`}>
@@ -93,7 +105,7 @@ class SessionForm extends React.Component {
 
     if (this.props.errors instanceof Array) {
       return null;
-    } else {
+    } else if (this.props.errors.password) {
       passwordErrors = this.props.errors.password.map( (error, idx) => {
         return (
           <li key={`${idx}`}>
@@ -140,7 +152,7 @@ class SessionForm extends React.Component {
               type='text'
               value={this.state.username}
               onChange={this.handleChange('username')}
-              className={this.state.validInput}
+              className={this.state.usernameValidInput}
             />
             <div className='session-form-username-errors'>{this.renderUsernameErrors()}</div>
           </div>
@@ -151,7 +163,7 @@ class SessionForm extends React.Component {
               type='password'
               value={this.state.password}
               onChange={this.handleChange('password')}
-              className={this.state.validInput}
+              className={this.state.passwordValidInput}
             />
             <div className='session-form-password-errors'>{this.renderPasswordErrors()}</div>
           </div>
