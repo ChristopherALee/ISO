@@ -42,6 +42,7 @@ class SessionForm extends React.Component {
     let that = this;
     this.props.processForm(user).fail(
       error => {
+        debugger
         if (error.responseJSON.username) {
           this.setState({['usernameValidInput']: 'invalid'});
         } else {
