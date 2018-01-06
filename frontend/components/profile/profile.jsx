@@ -35,6 +35,8 @@ class Profile extends React.Component {
     } else {
       userPhotos = null;
     }
+
+    return userPhotos;
   }
 
   render() {

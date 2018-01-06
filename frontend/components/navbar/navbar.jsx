@@ -16,10 +16,8 @@ class NavBar extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentDidMount() {
-    // if (!this.props.currentUser) {
-      this.props.fetchAllPhotos();
-    // }
+  componentWillMount() {
+    this.props.fetchAllPhotos();
   }
 
   handleLogOut(e) {
