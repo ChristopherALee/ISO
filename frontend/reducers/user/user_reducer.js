@@ -10,7 +10,9 @@ const userReducer = (state = {}, action) => {
       newState = Object.assign({}, state, action.users);
       return newState;
     case RECEIVE_SINGLE_USER:
+      debugger
       newState = Object.assign({}, state, {[action.user.username]: action.user});
+      debugger
       return newState;
     default:
       return state;
