@@ -6,13 +6,21 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchSingleUser(this.props.user.username);
+    this.props.fetchSingleUser(this.props.match.params.username);
   }
 
   componentWillReceiveProps(newProps) {
     if (this.props.location.pathname !== newProps.location.pathname) {
-      this.props.fetchSingleUser(newProps.user.username);
+      this.props.fetchSingleUser(newProps.match.params.username);
     }
+  }
+
+  userPhotos() {
+    this.props.user.photoIds.map( (photoId) => {
+      return (
+        <li>{this.state.photos[photoId]}</li>
+      );
+    });
   }
 
   render() {

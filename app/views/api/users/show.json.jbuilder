@@ -1,2 +1,2 @@
   json.extract! @user, :id, :username
-  json.photos @user.photos.ids
+  json.photoIds @user.photos.ids
