@@ -25,7 +25,10 @@ class SessionForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      this.props.history.push('/feed');
+    } else {
+      this.setState({['usernameValidInput']: 'valid'});
+      this.setState({['passwordValidInput']: 'valid'});
     }
   }
 
@@ -39,7 +42,12 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     let that = this;
-    this.props.processForm(user).fail(
+    this.props.processForm(user).then(
+      success => {
+        debugger
+        this.props.fetchAllUsers();
+      }
+    ).fail(
       error => {
         if (error.responseJSON.username) {
           this.setState({['usernameValidInput']: 'invalid'});
@@ -138,7 +146,11 @@ class SessionForm extends React.Component {
         new Typed('.session-form-password-input', password);
       }, 800),
       typeSubmit: setTimeout(() => {
-        login.props.login(guest) ;
+        login.props.login(guest).then(
+          success => {
+            login.props.fetchAllUsers();
+          }
+        );
       }, 2200)
     });
   }
@@ -172,6 +184,8 @@ class SessionForm extends React.Component {
     }
 
     return (
+      <div id='session-form'>
+
       <div className='session-form-contents'>
         <p>{processFormText} ISO</p>
 
@@ -218,6 +232,7 @@ class SessionForm extends React.Component {
         </div>
         {this.demoLoginButton()}
       </div>
+    </div>
     );
   }
 }

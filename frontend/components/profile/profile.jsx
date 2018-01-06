@@ -3,6 +3,11 @@ import React from 'react';
 class Profile extends React.Component {
   constructor(props) {
     super(props);
+    debugger
+  }
+
+  componentDidMount() {
+    this.props.fetchSingleUser(this.props.user);
   }
 
   render() {

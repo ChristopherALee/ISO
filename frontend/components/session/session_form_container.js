@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SessionForm from './session_form';
 import { signUp, login, deleteAllErrors } from '../../actions/session/session_actions';
+import { fetchAllUsers } from '../../actions/user/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const formType = ownProps.location.pathname === '/signup' ? 'signup' : 'login';
@@ -20,7 +21,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     processForm: (user) => dispatch(action(user)),
     deleteAllErrors: () => dispatch(deleteAllErrors()),
-    login: (user) => dispatch(login(user))
+    login: (user) => dispatch(login(user)),
+    fetchAllUsers: () => dispatch(fetchAllUsers())
   };
 };
 

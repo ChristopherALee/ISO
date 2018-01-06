@@ -8,6 +8,7 @@ import SessionFormContainer from './session/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
 import FeedContainer from './feed/feed_container';
 import ProfileContainer from './profile/profile_container';
+import DiscoverContainer from './discover/discover_container';
 
 const App = () => {
   return (
@@ -22,13 +23,12 @@ const App = () => {
 
       <Switch>
         <ProtectedRoute exact path='/feed' component={FeedContainer} />
-        {/* <Route exact path='/:username' component={ProfileContainer} /> */}
-      </Switch>
-
-      <div id='session-form'>
+        <Route exact path='/discover' component={DiscoverContainer} />
         <AuthRoute path='/signup' component={SessionFormContainer} />
         <AuthRoute path='/login' component={SessionFormContainer} />
-      </div>
+        <Route exact path='/:username' component={ProfileContainer} />
+      </Switch>
+
     </div>
   );
 };
