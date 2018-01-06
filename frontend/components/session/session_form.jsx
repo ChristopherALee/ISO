@@ -44,8 +44,7 @@ class SessionForm extends React.Component {
     let that = this;
     this.props.processForm(user).then(
       success => {
-        debugger
-        this.props.fetchAllUsers();
+
       }
     ).fail(
       error => {
@@ -146,11 +145,7 @@ class SessionForm extends React.Component {
         new Typed('.session-form-password-input', password);
       }, 800),
       typeSubmit: setTimeout(() => {
-        login.props.login(guest).then(
-          success => {
-            login.props.fetchAllUsers();
-          }
-        );
+        login.props.login(guest);
       }, 2200)
     });
   }

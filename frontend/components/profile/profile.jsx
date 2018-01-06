@@ -7,7 +7,8 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchSingleUser(this.props.user);
+    debugger
+    this.props.fetchSingleUser(this.props.user.username);
   }
 
   render() {
