@@ -9,6 +9,7 @@ import GreetingContainer from './greeting/greeting_container';
 import FeedContainer from './feed/feed_container';
 import ProfileContainer from './profile/profile_container';
 import DiscoverContainer from './discover/discover_container';
+import MainContainer from './main/main_container';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <Route path='/' component={NavBarContainer}/>
       <Route exact path='/' component={LandingPageContainer} />
 
+      {/* <Route path='/' component={MainContainer} /> */}
       <Switch>
         <ProtectedRoute exact path='/feed' component={FeedContainer} />
         <Route exact path='/discover' component={DiscoverContainer} />

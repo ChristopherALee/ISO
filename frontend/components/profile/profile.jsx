@@ -3,11 +3,6 @@ import React from 'react';
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-    debugger
-    this.state = {
-      user: this.props.user,
-      photos: this.props.photos
-    };
   }
 
   componentDidMount() {
@@ -37,11 +32,15 @@ class Profile extends React.Component {
     } else {
       userPhotos = null;
     }
-
+    debugger
     return userPhotos;
   }
 
   render() {
+    if (this.props.user) {
+      const user = this.props.user;
+    }
+
     debugger
     return (
       <div className='profile-container'>

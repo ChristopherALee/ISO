@@ -6,9 +6,18 @@ class Feed extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.fetchAllPhotos();
+    if (this.props.location.pathname === '/feed') {
+      this.props.fetchAllPhotos();
+    }
     // this.props.fetchAllUsers();
   }
+
+  // componentWillReceiveProps(newProps) {
+  //   debugger
+  //   if (this.props.location.pathname !== newProps.location.pathname) {
+  //     this.props.fetchAllPhotos();
+  //   }
+  // }
 
   render() {
     const allPhotos = this.props.photos.map( (photo, idx) => {

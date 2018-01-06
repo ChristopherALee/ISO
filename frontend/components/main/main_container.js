@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import Feed from './feed';
+import Main from './main';
 import { fetchAllPhotos } from '../../actions/photos/photo_actions';
 import { fetchAllUsers } from '../../actions/user/user_actions';
 
 const mapStateToProps = (state) => {
   return {
-    photos: Object.values(state.entities.photos)
+
   };
 };
 
@@ -20,4 +20,4 @@ const mapDispatchToProps = (dispatch) => {
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Feed));
+)(Main));

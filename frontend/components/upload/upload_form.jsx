@@ -19,6 +19,7 @@ class UploadForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.image = this.image.bind(this);
+    this.redirectToProfile = this.redirectToProfile.bind(this);
   }
 
   handleChange(field) {
@@ -43,6 +44,11 @@ class UploadForm extends React.Component {
     }
   }
 
+  redirectToProfile() {
+    debugger
+    this.props.history.push(`/${this.props.currentUser}`);
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
@@ -51,11 +57,12 @@ class UploadForm extends React.Component {
       formData.append('photo[image]', this.state.imageFile);
     }
     debugger
-    
+    let that = this;
     this.props.createPhoto(formData).then(
       (resp) => {
         debugger
-        this.props.history.push(`/${this.props.currentUser}`);
+        this.redirectToProfile();
+        // this.props.history.push(`/${this.props.currentUser}`);
         this.props.closeModal();
         return resp;
       }

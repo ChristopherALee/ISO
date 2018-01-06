@@ -17,7 +17,9 @@ class NavBar extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchAllPhotos();
+    if (this.props.location.pathname === '/') {
+      this.props.fetchAllPhotos();
+    }
   }
 
   handleLogOut(e) {
