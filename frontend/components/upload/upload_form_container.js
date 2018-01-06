@@ -4,7 +4,7 @@ import { createPhoto } from '../../actions/photos/photo_actions';
 
 const mapStateToProps = (state) => {
   return {
-
+    currentUser: state.session.currentUser.username
   };
 };
 

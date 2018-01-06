@@ -50,10 +50,12 @@ class UploadForm extends React.Component {
     if (this.state.imageFile) {
       formData.append('photo[image]', this.state.imageFile);
     }
-
+    debugger
+    
     this.props.createPhoto(formData).then(
       (resp) => {
-        this.props.history.push('/discover');
+        debugger
+        this.props.history.push(`/${this.props.currentUser}`);
         this.props.closeModal();
         return resp;
       }

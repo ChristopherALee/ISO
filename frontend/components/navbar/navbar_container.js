@@ -6,6 +6,7 @@ import { fetchAllPhotos } from '../../actions/photos/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const isAlt = ownProps.location.pathname !== '/' ? true : false;
+  
   return {
     currentUser: Boolean(state.session.currentUser),
     isAlt: { isAlt },
@@ -20,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(NavBar);
+)(NavBar));
