@@ -5,7 +5,7 @@ import { fetchAllUsers } from '../../actions/user/user_actions';
 
 const mapStateToProps = (state) => {
   return {
-    photos: Object.values(state.photos)
+    photos: Object.values(state.entities.photos)
   };
 };
 
