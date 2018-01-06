@@ -6,7 +6,7 @@ import {
 const photosReducer = (state = {}, action) => {
   let newState;
   Object.freeze(state);
-  debugger
+  
   switch (action.type) {
     case RECEIVE_ALL_PHOTOS:
       newState = Object.assign({}, state, action.photos);

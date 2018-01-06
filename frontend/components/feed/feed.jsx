@@ -6,8 +6,8 @@ class Feed extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllPhotos();
-    this.props.fetchAllUsers();
+    // this.props.fetchAllPhotos();
+    // this.props.fetchAllUsers();
   }
 
   render() {
