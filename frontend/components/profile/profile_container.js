@@ -5,11 +5,16 @@ import { fetchSingleUser } from '../../actions/user/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const user = state.users[ownProps.match.params.username];
-  // const photos = user.photoIds.map(id => state.photos[id]);
+
+  let photos = [];
+  if (user && user.photoIds) {
+    photos = user.photoIds.map( (photoId) => state.photos[photoId]);
+    debugger
+  }
 
   return {
     user: user,
-    // photos: photos
+    photos: photos
   };
 };
 

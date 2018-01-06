@@ -3,6 +3,11 @@ import React from 'react';
 class Profile extends React.Component {
   constructor(props) {
     super(props);
+    debugger
+    this.state = {
+      user: this.props.user,
+      photos: this.props.photos
+    };
   }
 
   componentDidMount() {
@@ -16,11 +21,20 @@ class Profile extends React.Component {
   }
 
   userPhotos() {
-    this.props.user.photoIds.map( (photoId) => {
-      return (
-        <li>{this.state.photos[photoId]}</li>
-      );
-    });
+    let userPhotos;
+    debugger
+    if (this.props.photos.length) {
+      userPhotos = this.props.photos.map( (photo) => {
+        debugger
+        return (
+          <li key={photo.id}>
+            <img src={`${photo.medium_image_url}`}></img>
+          </li>
+        );
+      });
+    } else {
+      userPhotos = null;
+    }
   }
 
   render() {
@@ -34,7 +48,9 @@ class Profile extends React.Component {
         </div>
 
         <div className='profile-photos'>
-
+          <ul>
+            {this.userPhotos()}
+          </ul>
         </div>
       </div>
     );
