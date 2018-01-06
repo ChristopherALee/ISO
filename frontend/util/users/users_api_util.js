@@ -8,6 +8,6 @@ export const fetchUsers = () => {
 export const fetchSingleUser = (user) => {
   return $.ajax({
     method: 'GET',
-    url: `api/user/${user}`
+    url: `api/users/${user}`
   });
 };

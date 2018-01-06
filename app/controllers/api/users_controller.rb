@@ -15,7 +15,6 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    debugger
     @user = User.find_by(username: params[:id])
   end
 

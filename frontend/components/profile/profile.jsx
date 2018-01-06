@@ -3,12 +3,16 @@ import React from 'react';
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-    debugger
   }
 
   componentDidMount() {
-    debugger
     this.props.fetchSingleUser(this.props.user.username);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.props.location.pathname !== newProps.location.pathname) {
+      this.props.fetchSingleUser(newProps.user.username);
+    }
   }
 
   render() {
