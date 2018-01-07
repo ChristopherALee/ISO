@@ -112,9 +112,10 @@
       outline: none;
       border: 1px solid #2fab41;
       border-radius: 20px;
-      font-weight: bold;
       font-size: 16px;
       width: 150px;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 1px;
 
       &:hover {
         background-color: black;
@@ -145,6 +146,8 @@
         padding: 10px 0;
         border-radius: 3px;
         font-size: 15px;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.5px;
 
         &:hover {
           background-color: #38cf4f;
@@ -170,6 +173,9 @@
         margin-top: 30px;
         color: #0699e6;
         font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 1px;
+        font-size: 14px;
       }
 
       input {
@@ -194,6 +200,9 @@
         margin: 0 13px;
         color: #0699e6;
         font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 1px;
+        font-size: 14px;
       }
 
       textarea {
