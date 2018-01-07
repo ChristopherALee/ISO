@@ -272,7 +272,12 @@
 
     .navbar-alt-left {
       margin-left: 50px;
+      width: 70px;
 
+      img {
+        width: 100%;
+      }
+      
       a {
         text-decoration: none;
       }
