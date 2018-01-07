@@ -53,7 +53,9 @@ class NavBar extends React.Component {
       <nav id='navbar-main-logged-in'>
         <div className='navbar-left'>
           <div id='logo'>
-            <Link to='/feed'>ISO</Link>
+            <Link to='/feed'>
+              <img src='/assets/logo/ISO_Black.png'></img>
+            </Link>
           </div>
 
           <div className='navbar-links'>
@@ -121,7 +123,9 @@ class NavBar extends React.Component {
         {/* <img src='../../../app/assets/images/navbar/gallery.png'></img> */}
         <div className='navbar-left'>
           <div id='logo'>
-            <p>ISO</p>
+            <Link to='/'>
+              <img src='/assets/logo/ISO_White.png'></img>
+            </Link>
           </div>
 
           <div className='navbar-links-main'>
