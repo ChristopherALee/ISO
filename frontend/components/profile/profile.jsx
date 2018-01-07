@@ -49,17 +49,19 @@ class Profile extends React.Component {
         <div className='cover-photo'>Cover Photo</div>
 
         <div className='profile-information'>
+          <div className='profile-picture'></div>
           <p className='profile-username'>
             {user}
           </p>
-          <ul className='profile-detail'></ul>
+          <ul className='profile-detail'>
+            <p>Followers: </p>
+            <p>Following: </p>
+          </ul>
         </div>
 
         <div className='profile-photos-container'>
           <div className='profile-photos'>
-            {/* <ul> */}
               {this.userPhotos()}
-            {/* </ul> */}
           </div>
         </div>
       </div>
