@@ -130,11 +130,11 @@ class SessionForm extends React.Component {
     const guest = { username: 'guest', password: 'password123' };
     const username = {
       strings: [guest.username],
-      typeSpeed: 100
+      typeSpeed: 30
     };
     const password = {
       strings: [guest.password],
-      typeSpeed: 100
+      typeSpeed: 30
     };
 
     this.setState({
@@ -143,10 +143,10 @@ class SessionForm extends React.Component {
       }, 50),
       typePassword: setTimeout(() => {
         new Typed('.session-form-password-input', password);
-      }, 800),
+      }, 400),
       typeSubmit: setTimeout(() => {
         login.props.login(guest);
-      }, 2200)
+      }, 1000)
     });
   }
 
