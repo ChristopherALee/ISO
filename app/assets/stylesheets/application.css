@@ -27,8 +27,20 @@
 100% { opacity: 1; -webkit-transform: scale(1); }
 }
 
+@-webkit-keyframes zoomOpen {
+  0% {transform: scale(0.3, 0.3)}
+  100% {transform: scale(1, 1)}
+}
+
+@-webkit-keyframes slideUp {
+  0% {transform: translateY(100%)}
+  100% {transform: translateY(0)}
+}
+
  html {
-   font-family: 'Comfortaa', cursive;
+   /* font-family: 'Comfortaa', cursive; */
+   /* font-family: 'Raleway', sans-serif; */
+   font-family: 'Open Sans', sans-serif;
  }
 
  body {

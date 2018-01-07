@@ -12,7 +12,7 @@ const LandingPage = (props) => {
       <div id='landing-page'>
         <div className='landing-page-image'>
           <div className='landing-page-image-text'>
-            <p>Get Inspired and Share Your Best Photos</p>
+            <p>Get inspired and share your best photos</p>
             <p>Find your home among the world's best photographers.</p>
             <Link to='/signup' className='landing-page-signup-button'>Join ISO</Link>
           </div>
