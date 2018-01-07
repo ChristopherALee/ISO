@@ -8,6 +8,10 @@ class Profile extends React.Component {
   componentDidMount() {
     debugger
     this.props.fetchSingleUser(this.props.match.params.username);
+
+    if (this.props.photos.length === 0) {
+      this.props.fetchAllPhotos();
+    }
   }
 
   componentWillReceiveProps(newProps) {
@@ -20,8 +24,9 @@ class Profile extends React.Component {
 
   userPhotos() {
     let userPhotos;
-
-    if (this.props.photos.length) {
+    debugger
+    if (this.props.photos.length && this.props.photos.every( (photo) => (photo !== undefined))) {
+      debugger
       userPhotos = this.props.photos.map( (photo) => {
         return (
           <li key={photo.id}>
@@ -37,8 +42,11 @@ class Profile extends React.Component {
   }
 
   render() {
+    let user;
     if (this.props.user) {
-      const user = this.props.user;
+      user = this.props.user.username;
+    } else {
+      user = null;
     }
 
     debugger
@@ -49,6 +57,7 @@ class Profile extends React.Component {
 
         <div className='profile-information'>
           <p className='profile-username'>
+            {user}
           </p>
           <ul className='profile-detail'></ul>
         </div>

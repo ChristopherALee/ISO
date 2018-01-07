@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Profile from './profile';
 import { fetchSingleUser } from '../../actions/user/user_actions';
+import { fetchAllPhotos } from '../../actions/photos/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[ownProps.match.params.username];
@@ -20,7 +21,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchSingleUser: (user) => dispatch(fetchSingleUser(user))
+    fetchSingleUser: (user) => dispatch(fetchSingleUser(user)),
+    fetchAllPhotos: () => dispatch(fetchAllPhotos())
   };
 };
 
