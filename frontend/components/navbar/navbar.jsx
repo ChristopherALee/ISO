@@ -131,6 +131,7 @@ class NavBar extends React.Component {
 
           <div className='navbar-links-main'>
             <Link to='/discover'>Discover</Link>
+            <Link to='/about'>About</Link>
           </div>
         </div>
 
@@ -146,9 +147,16 @@ class NavBar extends React.Component {
     return (
       <nav id='navbar-alt'>
         <div className='navbar-alt-left'>
-          <Link to='/'>
-            <div className='logo-alt'>logo-alt</div>
-          </Link>
+          <div id='logo'>
+            <Link to='/'>
+              <div className='logo-alt'>logo-alt</div>
+            </Link>
+          </div>
+
+          <div className='navbar-links-alt'>
+            <Link to='/discover'>Discover</Link>
+            <Link to='/about'>About</Link>
+          </div>
         </div>
 
         <div className='navbar-alt-right'>

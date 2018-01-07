@@ -10,6 +10,7 @@ import FeedContainer from './feed/feed_container';
 import ProfileContainer from './profile/profile_container';
 import DiscoverContainer from './discover/discover_container';
 import MainContainer from './main/main_container';
+import About from './about/about';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route exact path='/discover' component={DiscoverContainer} />
         <AuthRoute path='/signup' component={SessionFormContainer} />
         <AuthRoute path='/login' component={SessionFormContainer} />
+        <Route exact path='/about' component={About} />
         <Route exact path='/:username' component={ProfileContainer} />
       </Switch>
 
