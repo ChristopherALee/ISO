@@ -134,12 +134,8 @@ class NavBar extends React.Component {
         </div>
 
         <div className='navbar-right'>
-
             <Link to='/login' className='navbar-login'>Log In</Link>
-
-          <button className='navbar-signup'>
-            <Link to='/signup'>Sign Up</Link>
-          </button>
+            <Link to='/signup' className='navbar-signup'>Sign Up</Link>
         </div>
       </nav>
     );
