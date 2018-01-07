@@ -28,7 +28,7 @@ class Profile extends React.Component {
             <img key={photo.id} src={`${photo.medium_image_url}`}></img>
           // </li>
         );
-      });
+      }).reverse();
     } else {
       userPhotos = null;
     }

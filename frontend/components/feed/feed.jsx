@@ -22,14 +22,9 @@ class Feed extends React.Component {
   render() {
     const allPhotos = this.props.photos.map( (photo, idx) => {
       return (
-          // <li key={idx} className='photo-upload'>
             <img key={idx} src={photo.medium_image_url}></img>
-          // </li>
       );
-    });
-
-    const firstPhotos = allPhotos.slice(0, 3);
-    const lastPhotos = allPhotos.slice(3);
+    }).reverse();
 
     return (
       <div id='feed'>

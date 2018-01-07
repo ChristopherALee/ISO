@@ -3,95 +3,37 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 60px;
 
-  .all-images {
-    width: 100%;
+  img {
+    width: 45%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-
-    li {
-      width: 500px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: transparent;
-    }
   }
-
-  // .all-images {
-  //   max-width: 1600px;
-  //
-  //   div {
-  //     display: flex;
-  //     // width: 1500px;
-  //     height: 348px;
-  //     margin-right: 10px;
-  //     margin-bottom: 10px;
-  //
-  //     .photo-upload {
-  //       // object-fit: cover;
-  //       width: 100%;
-  //       // height: 100%;
-  //       background-size:cover;
-  //       background-position: center;
-  //     }
-  //   }
-  //
-  //   div:last-child {
-  //     margin: 0;
-  //   }
-  // }
 }
 
 // test
-#feed {
-  margin: 1em auto;
-  width: 96%;
-  display: grid;
-  grid-auto-rows: 200px;
-  grid-gap: 2px;
-
-  > * {
-    width: 100%;
-  }
-
-  img {
-    height: 100%;
-    width: 100%;
-    display: inline-block;
-    overflow: hidden;
-    object-fit: cover;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 400px) {
-  #feed {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 300px;
-  }
-}
-
-@media (min-width: 768px) {
-  #feed {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 1200px) {
-  #feed {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1800px) {
-  #feed {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+// #feed {
+//   margin: 1em auto;
+//   width: 96%;
+//   display: grid;
+//   grid-auto-rows: 200px;
+//   grid-gap: 2px;
+//
+//   > * {
+//     width: 100%;
+//   }
+//
+//   img {
+//     height: 100%;
+//     width: 100%;
+//     display: inline-block;
+//     overflow: hidden;
+//     object-fit: cover;
+//     margin-bottom: 0;
+//   }
+// }
