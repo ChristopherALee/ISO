@@ -204,10 +204,10 @@
           background-size: cover;
           color: transparent;
           text-decoration: none;
-          transition: 0.5s;
+          transition: 0.3s;
 
           &:hover {
-            background-image: image_url('logo/ISO_Magenta.png');
+            background-image: image_url('logo/ISO_Cyan.png');
           }
         }
       }

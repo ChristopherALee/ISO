@@ -26,19 +26,19 @@ class Feed extends React.Component {
       );
     }).reverse();
 
-    return (
-      <div id='feed'>
-        {/* <ul className='all-images'> */}
-          {/* <div className='all-images-1'>
-            {firstPhotos}
-          </div> */}
-          {/* <div className='all-images-2'>
-            {lastPhotos}
-          </div> */}
+    if (this.props.location.pathname === '/' || this.props.location.pathname === '/discover') {
+      return (
+        <div id='discover'>
           {allPhotos}
-        {/* </ul> */}
-      </div>
-    );
+        </div>
+      );
+    } else {
+      return (
+        <div id='feed'>
+          {allPhotos}
+        </div>
+      );
+    }
   }
 }
 
