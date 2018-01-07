@@ -6,11 +6,10 @@ import { fetchAllPhotos } from '../../actions/photos/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[ownProps.match.params.username];
-  debugger
+
   let photos = [];
   if (user && user.photoIds) {
     photos = user.photoIds.map( (photoId) => state.entities.photos[photoId]);
-    debugger
   }
 
   return {

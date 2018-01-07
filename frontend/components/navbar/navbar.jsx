@@ -10,6 +10,7 @@ class NavBar extends React.Component {
     this.state = { modalOpen: false };
 
     this.handleLogOut = this.handleLogOut.bind(this);
+    this.handleProfileLink = this.handleProfileLink.bind(this);
     this.handleModal = this.handleModal.bind(this);
 
     this.openModal = this.openModal.bind(this);
@@ -17,7 +18,6 @@ class NavBar extends React.Component {
   }
 
   componentWillMount() {
-    debugger
     if (this.props.location.pathname === '/') {
       this.props.fetchAllPhotos();
     }
@@ -28,6 +28,11 @@ class NavBar extends React.Component {
     this.props.logout().then(
       () => this.props.history.push('/')
     );
+  }
+
+  handleProfileLink(e) {
+    e.preventDefault();
+    this.props.history.push(`/${this.props.currentUsername}`);
   }
 
   handleModal(boolean = false) {
@@ -67,7 +72,7 @@ class NavBar extends React.Component {
               <div className='dropdown-break'></div>
               <div className='user-profile-dropdown'>
                 <ul>
-                  <li>Profile</li>
+                  <li onClick={this.handleProfileLink}>Profile</li>
                   <li onClick={this.handleLogOut}>Log Out</li>
                 </ul>
               </div>

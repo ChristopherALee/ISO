@@ -1,9 +1,27 @@
 .profile-container {
   margin-top: 50px;
 
+  .cover-photo {
+    width: 100vw;
+    height: 350px;
+    background-color: navy;
+    color: white;
+  }
+
   .profile-information {
     width: 100vw;
     height: 175px;
     background-color: white;
+  }
+
+  .profile-photos-container {
+    margin: 20px 0;
+    padding: 0 50px;
+
+    .profile-photos {
+      ul {
+        display: flex;
+      }
+    }
   }
 }
