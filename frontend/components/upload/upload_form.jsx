@@ -46,7 +46,12 @@ class UploadForm extends React.Component {
 
   redirectToProfile() {
     debugger
-    this.props.history.push(`/${this.props.currentUser}`);
+    if (this.props.currentUser === this.props.location.pathname.slice(1)) {
+      // will find a better alternative
+      window.location.reload();
+    } else {
+      this.props.history.push(`/${this.props.currentUser}`);
+    }
   }
 
   handleSubmit(e) {
@@ -62,7 +67,6 @@ class UploadForm extends React.Component {
       (resp) => {
         debugger
         this.redirectToProfile();
-        // this.props.history.push(`/${this.props.currentUser}`);
         this.props.closeModal();
         return resp;
       }
