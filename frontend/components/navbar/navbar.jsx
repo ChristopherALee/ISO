@@ -54,7 +54,7 @@ class NavBar extends React.Component {
         <div className='navbar-left'>
           <div id='logo'>
             <Link to='/feed'>
-              <img src='/assets/logo/ISO_Black.png'></img>
+              <div className='logo-logged-in'>logo-logged</div>
             </Link>
           </div>
 
@@ -124,7 +124,7 @@ class NavBar extends React.Component {
         <div className='navbar-left'>
           <div id='logo'>
             <Link to='/'>
-              <img src='/assets/logo/ISO_White.png'></img>
+              <div className='logo-main'>logo</div>
             </Link>
           </div>
 
@@ -150,7 +150,7 @@ class NavBar extends React.Component {
       <nav id='navbar-alt'>
         <div className='navbar-alt-left'>
           <Link to='/'>
-            <img src='/assets/logo/ISO_Black.png'></img>
+            <div className='logo-alt'>logo-alt</div>
           </Link>
         </div>
 

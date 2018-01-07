@@ -26,8 +26,17 @@
         margin-left: 50px;
         width: 70px;
 
-        img {
+        a {
+          text-decoration: none;
+        }
+
+        .logo-logged-in {
           width: 100%;
+          height: 40px;
+          background-image: image_url('logo/ISO_Black.png');
+          background-size: cover;
+          color: transparent;
+          text-decoration: none;
         }
       }
 
@@ -43,7 +52,6 @@
 
     .navbar-right {
       display: flex;
-      // justify-content: space-between;
       align-items: center;
       margin-right: 20px;
       height: 100%;
@@ -181,12 +189,20 @@
       align-items: center;
 
       #logo {
-        color: white;
         margin-left: 50px;
-        width: 70px;
+        width: 88px;
 
-        img {
+        a {
+          text-decoration: none;
+        }
+
+        .logo-main {
           width: 100%;
+          height: 50px;
+          background-image: image_url('logo/ISO_White.png');
+          background-size: cover;
+          color: transparent;
+          text-decoration: none;
         }
       }
 
@@ -272,13 +288,18 @@
 
     .navbar-alt-left {
       margin-left: 50px;
-      width: 70px;
+      width: 88px;
 
-      img {
-        width: 100%;
-      }
-      
       a {
+        text-decoration: none;
+      }
+
+      .logo-alt {
+        width: 100%;
+        height: 50px;
+        background-image: image_url('logo/ISO_Black.png');
+        background-size: cover;
+        color: transparent;
         text-decoration: none;
       }
     }
