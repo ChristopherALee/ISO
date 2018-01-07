@@ -5,7 +5,7 @@
   .cover-photo {
     width: 100vw;
     height: 350px;
-    background-color: #e8065e;
+    background-color: #0399e5;
     color: white;
     min-width: 570px;
 
@@ -13,15 +13,17 @@
       position: absolute;
       right: 25px;
       top: 410px;
-      background-color: #e8065e;
+      background-color: #34bf49;
       color: white;
-      border: 1px solid #e8065e;
+      border: 0px solid black;
       border-radius: 3px;
-      font-size: 1em;
+      font-size: 12px;
       font-family: 'Open Sans', sans-serif;
+      padding: 5px 10px;
+      letter-spacing: 0.5px;
 
       &:hover {
-        background-color: #fa2076;
+        background-color: #41cb56;
         cursor: pointer;
       }
     }

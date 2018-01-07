@@ -162,12 +162,12 @@
         color: white;
         font-weight: bold;
         border: 0px solid #04aaff;
-        border-radius: 20px;
-        background-color: #0399e5;
+        border-radius: 3px;
+        background-color: #34bf49;
         outline: none;
 
         &:hover {
-          background-color: #04aaff;
+          background-color: #41cb56;
           cursor: pointer;
         }
 
@@ -176,7 +176,10 @@
         }
 
         p {
-          margin-left: 5px;
+          margin-left: 8px;
+          font-family: 'Open Sans', sans-serif;
+          letter-spacing: 0.5px;
+          font-size: 12px;
         }
       }
     }
