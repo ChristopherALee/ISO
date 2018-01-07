@@ -24,9 +24,9 @@ class Profile extends React.Component {
     if (this.props.photos.length && this.props.photos.every( (photo) => (photo !== undefined))) {
       userPhotos = this.props.photos.map( (photo) => {
         return (
-          <li key={photo.id}>
-            <img src={`${photo.medium_image_url}`}></img>
-          </li>
+          // <li key={photo.id}>
+            <img key={photo.id} src={`${photo.medium_image_url}`}></img>
+          // </li>
         );
       });
     } else {
@@ -57,9 +57,9 @@ class Profile extends React.Component {
 
         <div className='profile-photos-container'>
           <div className='profile-photos'>
-            <ul>
+            {/* <ul> */}
               {this.userPhotos()}
-            </ul>
+            {/* </ul> */}
           </div>
         </div>
       </div>

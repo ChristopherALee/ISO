@@ -22,9 +22,9 @@ class Feed extends React.Component {
   render() {
     const allPhotos = this.props.photos.map( (photo, idx) => {
       return (
-          <li key={idx} className='photo-upload'>
-            <img src={photo.medium_image_url}></img>
-          </li>
+          // <li key={idx} className='photo-upload'>
+            <img key={idx} src={photo.medium_image_url}></img>
+          // </li>
       );
     });
 
@@ -33,7 +33,7 @@ class Feed extends React.Component {
 
     return (
       <div id='feed'>
-        <ul className='all-images'>
+        {/* <ul className='all-images'> */}
           {/* <div className='all-images-1'>
             {firstPhotos}
           </div> */}
@@ -41,7 +41,7 @@ class Feed extends React.Component {
             {lastPhotos}
           </div> */}
           {allPhotos}
-        </ul>
+        {/* </ul> */}
       </div>
     );
   }
