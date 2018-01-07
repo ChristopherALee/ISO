@@ -76,7 +76,6 @@
 .upload-form {
   display: grid;
   grid-template-columns: 80% 20%;
-  // align-items: center;
   height: 100%;
 
   .upload-form-image {
@@ -96,9 +95,13 @@
       border-radius: 20px;
       font-weight: bold;
       font-size: 16px;
-      width: 111px;
+      // width: 111px;
       margin-top: -42px;
       opacity: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .fake-select-photo {
@@ -115,8 +118,8 @@
 
       &:hover {
         background-color: black;
+        cursor: pointer;
       }
-
     }
 
     .upload-form-image-errors {

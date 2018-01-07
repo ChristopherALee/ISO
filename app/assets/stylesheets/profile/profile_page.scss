@@ -4,8 +4,24 @@
   .cover-photo {
     width: 100vw;
     height: 350px;
-    background-color: navy;
+    background-color: #e8065e;
     color: white;
+
+    .edit-profile-button {
+      position: absolute;
+      right: 25px;
+      top: 410px;
+      background-color: #e8065e;
+      color: white;
+      border: 1px solid #e8065e;
+      border-radius: 3px;
+      font-size: 1em;
+
+      &:hover {
+        background-color: #fa2076;
+        cursor: pointer;
+      }
+    }
   }
 
   .profile-information {
@@ -16,7 +32,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-top: 1px solid #eeeff2;
     border-bottom: 1px solid #eeeff2;
+
 
     .profile-picture {
       background-color: white;
@@ -26,14 +44,18 @@
       border-radius: 50%;
       margin-top: -80px;
       margin-bottom: 100px;
+
     }
 
     .profile-username {
       position:absolute;
+      font-size: 24px;
+      font-weight: bold;
     }
 
     .profile-detail {
       display: flex;
+      font-size: 14px;
 
       p {
         margin-right: 100px;

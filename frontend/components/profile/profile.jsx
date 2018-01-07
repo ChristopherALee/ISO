@@ -46,10 +46,16 @@ class Profile extends React.Component {
 
     return (
       <div className='profile-container'>
-        <div className='cover-photo'>Cover Photo</div>
+        <div className='cover-photo'>
+          Cover Photo
+          <button className='edit-profile-button'>
+            Edit Profile
+          </button>
+        </div>
 
         <div className='profile-information'>
-          <div className='profile-picture'></div>
+          <div className='profile-picture'>
+          </div>
           <p className='profile-username'>
             {user}
           </p>
