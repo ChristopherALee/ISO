@@ -46,6 +46,14 @@
         a {
           text-decoration: none;
           color: black;
+          transition: 0.1s;
+          font-family: 'Open Sans', sans-serif;
+          margin-right: 10px;
+          font-size: 13px;
+
+          &:hover {
+            color: #0099e5;
+          }
         }
       }
     }
@@ -122,9 +130,10 @@
             li {
               margin: 10px 0;
               width: max-content;
+              transition: 0.1s;
 
               &:hover {
-                color: #e7065e;
+                color: #0399e5;
               }
             }
           }
