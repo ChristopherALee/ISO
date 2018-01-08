@@ -50,6 +50,16 @@
 
       .feed-item-description {
         padding: 20px;
+        color: #525558;
+
+        p {
+          max-width: 800px;
+        }
+
+        p:first-child {
+          margin-bottom: 30px;
+          font-size: 16px;
+        }
       }
     }
 
