@@ -1,4 +1,5 @@
 import * as FollowsApiUtil from '../../util/follows/follows_api_util';
+import { receiveAllUsers } from '../user/user_actions';
 
 export const RECEIVE_ALL_FOLLOWS = 'RECEIVE_ALL_FOLLOWS';
 export const RECEIVE_SINGLE_FOLLOW = 'RECEIVE_SINGLE_FOLLOW';
@@ -36,12 +37,12 @@ export const fetchAllFollows = () => dispatch => {
   );
 };
 
-export const fetchSingleFollow = (follow) => dispatch => {
+export const createFollow = (follow) => dispatch => {
   return (
-    FollowsApiUtil.fetchSingleFollow(follow.id).then(
-      (follow) => {
-        dispatch(receiveSingleFollow(follow));
-        return follow;
+    FollowsApiUtil.createFollow(follow).then(
+      (users) => {
+        dispatch(receiveAllUsers(users));
+        return users;
       }
     )
   );

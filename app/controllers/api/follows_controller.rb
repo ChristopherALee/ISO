@@ -11,8 +11,8 @@ class Api::FollowsController < ApplicationController
     @follow = current_user.out_follows.new(follow_params)
 
     if @follow.save
-      @user = current_user
-      render 'api/users/show'
+      @users = [current_user, User.find(follow_params[:followee_id])]
+      render 'api/users/follow'
     else
       render json: @follow.errors.full_messages, status: 422
     end
