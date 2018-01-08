@@ -39,13 +39,13 @@ class Profile extends React.Component {
   toggleEditFollowButton() {
     if (this.props.user && this.props.location.pathname.slice(1) !== this.props.user.username) {
       return (
-        <button className='profile-follow-button'>
+        <button className='profile-edit-follow-button'>
           Follow
         </button>
       );
     } else {
       return (
-        <button className='edit-profile-button'>
+        <button className='profile-edit-follow-button'>
           Edit Profile
         </button>
       );
