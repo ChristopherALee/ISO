@@ -21,13 +21,17 @@ class User < ApplicationRecord
     class_name: 'Photo',
     foreign_key: :author_id
 
-  has_many :followers,
+  has_many :follows,
     class_name: 'Follow',
-    foreign_key: :follower_id
+    foreign_key: :followee_id
+
+  has_many :followers, through: :follows, source: :follower
 
   has_many :followees,
     class_name: 'Follow',
-    foreign_key: :followee_id
+    foreign_key: :follower_id
+
+  has_many :followings, through: :followees, source: :followee
 
   attr_reader :password
 
