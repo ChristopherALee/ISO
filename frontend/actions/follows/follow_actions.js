@@ -49,7 +49,6 @@ export const createFollow = (follow) => dispatch => {
 };
 
 export const deleteFollow = (follow) => dispatch => {
-  debugger
   return (
     FollowsApiUtil.removeFollow(follow.followee_id).then(
       (user) => {
