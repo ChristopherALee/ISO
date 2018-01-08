@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FeedItemContainer = (props) => {
+  debugger
   return (
     <div className="feed-item">
       <div className="feed-item-header">

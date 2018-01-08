@@ -57,6 +57,7 @@ class UploadForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append('photo[title]', this.state.title);
+    formData.append('photo[description]', this.state.description);
     if (this.state.imageFile) {
       formData.append('photo[image]', this.state.imageFile);
     }
