@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeedItemContainer = (props) => {
   return (
     <div className="feed-item">
       <div className="feed-item-header">
-        <p>{props.photo.author}</p>
+        <Link to={`/${props.photo.author}`}>{props.photo.author}</Link>
       </div>
 
       <div className="feed-item-image">

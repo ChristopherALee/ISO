@@ -22,6 +22,17 @@
         padding: 20px;
         font-weight: bold;
         font-size: 18px;
+
+        a {
+          text-decoration: none;
+          color: #525558;
+          transition: 0.2s;
+
+          &:hover {
+            cursor: pointer;
+            color: #0099e5;
+          }
+        }
       }
 
       .feed-item-image {
