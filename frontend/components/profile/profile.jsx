@@ -112,8 +112,8 @@ class Profile extends React.Component {
             {user}
           </p>
           <ul className='profile-detail'>
-            <p>Followers: {this.getFollowers()}</p>
-            <p>Following: {this.getFollowees()}</p>
+            <p>{this.getFollowers()} Followers</p>
+            <p>{this.getFollowees()} Following</p>
           </ul>
         </div>
 
