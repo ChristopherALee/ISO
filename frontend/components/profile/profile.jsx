@@ -40,7 +40,8 @@ class Profile extends React.Component {
   }
 
   toggleEditFollowButton() {
-    if (this.props.user && this.props.location.pathname.slice(1) !== this.props.user.username) {
+    debugger
+    if (this.props.currentUser && this.props.location.pathname.slice(1) !== this.props.currentUser.username) {
       return (
         <button className='profile-edit-follow-button'>
           Follow

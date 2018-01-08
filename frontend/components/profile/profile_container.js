@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 
   return {
+    currentUser: state.session.currentUser,
     user: user,
     photos: photos
   };

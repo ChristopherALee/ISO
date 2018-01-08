@@ -2,6 +2,7 @@ import {
   RECEIVE_ALL_FOLLOWS,
   RECEIVE_SINGLE_FOLLOW,
   REMOVE_FOLLOW } from '../../actions/follows/follow_actions';
+// import { RECEIVE_SINGLE_USER } from '../../actions/user/user_actions';
 
 const followsReducer = (state = {}, action) => {
   let newState;
