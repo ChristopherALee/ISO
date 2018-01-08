@@ -12,38 +12,12 @@ Photo.destroy_all
 user1 = User.create({username: 'guest', password: 'password123'})
 user2 = User.create({username: 'chris', password: 'lily010115'})
 user3 = User.create({username: 'lily', password: 'chris010115'})
-user3 = User.create({username: 'batman', password: 'robin123'})
-user3 = User.create({username: 'superman', password: 'superdog1213'})
-user3 = User.create({username: 'wonderwoman', password: 'invisibleplane'})
+user4 = User.create({username: 'batman', password: 'robin123'})
+user5 = User.create({username: 'superman', password: 'superdog1213'})
+user6 = User.create({username: 'wonderwoman', password: 'invisibleplane'})
 
-# LOCAL TEST IMAGES
-# photo1 = Photo.create({
-#   title: 'test_photo_1',
-#   description: 'test_description',
-#   author_id: user1.id
-#   })
-# photo2 = Photo.create({
-#   title: 'test_photo_2',
-#   description: 'test_description',
-#   author_id: user1.id
-#   })
-# photo3 = Photo.create({
-#   title: 'test_photo_3',
-#   description: 'test_description',
-#   author_id: user1.id
-#   })
-# photo4 = Photo.create({
-#   title: 'test_photo_4',
-#   description: 'test_description',
-#   author_id: user1.id
-#   })
-# photo5 = Photo.create({
-#   title: 'test_photo_5',
-#   description: 'test_description',
-#   author_id: user1.id
-#   })
-# photo6 = Photo.create({
-#   title: 'test_photo_6',
-#   description: 'test_description',
-#   author_id: user1.id
-#   })
+follow1 = Follow.create({follower_id: user1.id, followee_id: user2.id })
+follow2 = Follow.create({follower_id: user1.id, followee_id: user3.id })
+follow3 = Follow.create({follower_id: user1.id, followee_id: user4.id })
+follow4 = Follow.create({follower_id: user1.id, followee_id: user5.id })
+follow5 = Follow.create({follower_id: user1.id, followee_id: user6.id })
