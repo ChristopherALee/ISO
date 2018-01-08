@@ -6,32 +6,34 @@ class Api::FollowsController < ApplicationController
   end
 
   def create
-    @follow = Follow.new(follow_params)
+    # @follow = Follow.new(follow_params)
+    # @follow.follower_id = current_user.id
+    @follow = current_user.out_follows.new(follow_params)
 
-    if current_user.id == @follow.follower_id
-      if @follow.save
-        render 'api/users/show'
-      else
-        render json: @follow.errors.full_messages, status: 403
-      end
+    if @follow.save
+      @user = current_user
+      render 'api/users/show'
     else
-      render json: @follow.errors.full_messages, status: 403
+      render json: @follow.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    @follow = Follow.find_by(id: params[:id])
+    @follow = current_user.out_follows.find_by!(followee_id: params[:followee_id])
+    @follow.destroy
 
-    if @follow && @follow.follower_id == current_user.id
-      @follow.destroy
-    else
-      render json: @follow.errors.full_messages, status: 403
-    end
+    @user = current_user
+    render 'api/users/show'
+    # if @follow && @follow.follower_id == current_user.id
+    #   @follow.destroy
+    # else
+    #   render json: @follow.errors.full_messages, status: 403
+    # end
   end
 
 
   private
   def follow_params
-    params.require(:follow).permit(:follower_id, :followee_id)
+    params.require(:follow).permit(:followee_id)
   end
 end

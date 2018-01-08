@@ -66,8 +66,8 @@ class UploadForm extends React.Component {
     this.props.createPhoto(formData).then(
       (resp) => {
         debugger
-        this.redirectToProfile();
         this.props.closeModal();
+        this.redirectToProfile();
         return resp;
       }
     ).fail(
@@ -141,17 +141,17 @@ class UploadForm extends React.Component {
         </div>
 
         <div className='upload-form-contents'>
-          <label for='submit'>
+          <label htmlFor='submit'>
             <input type='submit' value='Submit' />
           </label>
 
-          <label for='upload-form-contents-title'>
+          <label htmlFor='upload-form-contents-title'>
             <p>Title</p>
             <input type='text' className={this.state.isValid} value={this.state.title} onChange={this.handleChange('title')}/>
             <ul className={'upload-form-contents-title-errors'}>{this.titleErrors()}</ul>
           </label>
 
-          <label for='upload-form-contents-description'>
+          <label htmlFor='upload-form-contents-description'>
             <p>Description</p>
             <textarea
               onChange={this.handleChange('description')}
