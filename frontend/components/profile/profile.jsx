@@ -36,6 +36,22 @@ class Profile extends React.Component {
     return userPhotos;
   }
 
+  toggleEditFollowButton() {
+    if (this.props.user && this.props.location.pathname.slice(1) !== this.props.user.username) {
+      return (
+        <button className='profile-follow-button'>
+          Follow
+        </button>
+      );
+    } else {
+      return (
+        <button className='edit-profile-button'>
+          Edit Profile
+        </button>
+      );
+    }
+  }
+
   render() {
     let user;
     if (this.props.user) {
@@ -44,13 +60,12 @@ class Profile extends React.Component {
       user = null;
     }
 
+
     return (
       <div className='profile-container'>
         <div className='cover-photo'>
           Cover Photo
-          <button className='edit-profile-button'>
-            Edit Profile
-          </button>
+          {this.toggleEditFollowButton()}
         </div>
 
         <div className='profile-information'>
