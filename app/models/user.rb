@@ -25,7 +25,7 @@ class User < ApplicationRecord
     class_name: 'Follow',
     foreign_key: :follower_id
 
-  has_one :followee,
+  has_many :followees,
     class_name: 'Follow',
     foreign_key: :followee_id
 
