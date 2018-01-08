@@ -1,5 +1,5 @@
 import * as FollowsApiUtil from '../../util/follows/follows_api_util';
-import { receiveAllUsers } from '../user/user_actions';
+import { receiveAllUsers, receiveSingleUser } from '../user/user_actions';
 
 export const RECEIVE_ALL_FOLLOWS = 'RECEIVE_ALL_FOLLOWS';
 export const RECEIVE_SINGLE_FOLLOW = 'RECEIVE_SINGLE_FOLLOW';
@@ -48,11 +48,12 @@ export const createFollow = (follow) => dispatch => {
   );
 };
 
-export const removeSingleFollow = (follow) => dispatch => {
+export const deleteFollow = (follow) => dispatch => {
+  debugger
   return (
-    FollowsApiUtil.removeFollow(follow.id).then(
-      (follow) => {
-        dispatch(removeFollow(follow));
+    FollowsApiUtil.removeFollow(follow.followee_id).then(
+      (user) => {
+        dispatch(receiveSingleUser(user));
         return follow;
       }
     )

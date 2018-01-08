@@ -17,6 +17,16 @@ user4 = User.create({username: 'batman', password: 'robin123'})
 user5 = User.create({username: 'superman', password: 'superdog1213'})
 user6 = User.create({username: 'wonderwoman', password: 'invisibleplane'})
 
+photo1 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/adi-constantin-65004.jpg', author_id: user1.id})
+photo2 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/andre-benz-248759.jpg', author_id: user1.id})
+photo3 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/andrea-cau-51160.jpg', author_id: user1.id})
+photo4 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/daniel-zacatenco-363505.jpg', author_id: user1.id})
+photo5 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/david-marcu-114194.jpg', author_id: user1.id})
+photo6 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/dominik-lange-35224.jpg', author_id: user1.id})
+photo7 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/ferdinand-stohr-176623.jpg', author_id: user1.id})
+photo8 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/henning-witzel-38848.jpg', author_id: user1.id})
+photo9 = Photo.create({ title: 'test', image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jonatan-pie-234237.jpg', author_id: user1.id})
+
 # user1's follows
 follow1 = Follow.create({follower_id: user1.id, followee_id: user2.id })
 follow2 = Follow.create({follower_id: user1.id, followee_id: user3.id })

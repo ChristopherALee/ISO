@@ -45,7 +45,6 @@ class UploadForm extends React.Component {
   }
 
   redirectToProfile() {
-    debugger
     if (this.props.currentUser === this.props.location.pathname.slice(1)) {
       // will find a better alternative
       window.location.reload();
@@ -61,11 +60,10 @@ class UploadForm extends React.Component {
     if (this.state.imageFile) {
       formData.append('photo[image]', this.state.imageFile);
     }
-    debugger
+
     let that = this;
     this.props.createPhoto(formData).then(
       (resp) => {
-        debugger
         this.props.closeModal();
         this.redirectToProfile();
         return resp;

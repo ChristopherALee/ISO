@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import NavBar from './navbar';
 import { logout } from '../../actions/session/session_actions';
 import { fetchAllPhotos } from '../../actions/photos/photo_actions';
-import { fetchAllFollows } from '../../actions/follows/follow_actions';
+// import { fetchAllFollows } from '../../actions/follows/follow_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const isAlt = ownProps.location.pathname !== '/' ? true : false;
@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
     fetchAllPhotos: () => dispatch(fetchAllPhotos()),
-    fetchAllFollows: () => dispatch(fetchAllFollows()),
+    // fetchAllFollows: () => dispatch(fetchAllFollows()),
   };
 };
 

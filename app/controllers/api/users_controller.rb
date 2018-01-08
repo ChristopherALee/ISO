@@ -18,6 +18,15 @@ class Api::UsersController < ApplicationController
     @user = User.find_by(username: params[:id])
   end
 
+  def unfollow
+    @follow = current_user.out_follows.find_by!(followee_id: params[:id])
+
+    if @follow.destroy
+      @user = User.find(params[:id])
+      render 'api/users/show'
+    end
+  end
+
   def user_params
     params.require(:user).permit(:username, :password)
   end

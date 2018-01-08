@@ -14,7 +14,6 @@ const userReducer = (state = {}, action) => {
       return newState;
     case RECEIVE_SINGLE_USER:
       newState = Object.assign({}, state, {[action.user.username]: action.user});
-      debugger
       return newState;
     case RECEIVE_SINGLE_FOLLOW:
       // let username = state.

@@ -3,11 +3,14 @@ import React from 'react';
 class Profile extends React.Component {
   constructor(props) {
     super(props);
+
+
+    this.handleFollow = this.handleFollow.bind(this);
+    this.handleUnFollow = this.handleUnFollow.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchSingleUser(this.props.match.params.username);
-    // debugger
 
     // will fix later must not fetch all photos on viewing profile page everytime
     // if (this.props.photos.length === 0) {
@@ -16,7 +19,6 @@ class Profile extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    debugger
     if (this.props.location.pathname !== newProps.location.pathname) {
       this.props.fetchSingleUser(newProps.match.params.username);
     }
@@ -39,11 +41,30 @@ class Profile extends React.Component {
     return userPhotos;
   }
 
+  handleFollow(e) {
+    e.preventDefault();
+    // debugger
+    this.props.createFollow({ followee_id: this.props.user.id });
+  }
+
+  handleUnFollow(e) {
+    e.preventDefault();
+    // debugger
+    this.props.deleteFollow({ followee_id: this.props.user.id });
+  }
+
   toggleEditFollowButton() {
-    debugger
-    if (this.props.currentUser && this.props.location.pathname.slice(1) !== this.props.currentUser.username) {
+    // debugger
+
+    if (this.props.currentUserFollowed) {
       return (
-        <button className='profile-edit-follow-button'>
+        <button className='followed-button' onClick={this.handleUnFollow}>
+          Followed
+        </button>
+      );
+    } else if (this.props.currentUser && this.props.location.pathname.slice(1) !== this.props.currentUser.username) {
+      return (
+        <button className='profile-edit-follow-button' onClick={this.handleFollow}>
           Follow
         </button>
       );
