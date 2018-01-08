@@ -15,9 +15,6 @@ const userReducer = (state = {}, action) => {
     case RECEIVE_SINGLE_USER:
       newState = Object.assign({}, state, {[action.user.username]: action.user});
       return newState;
-    case RECEIVE_SINGLE_FOLLOW:
-      // let username = state.
-      // newState = Object.assign({}, state,)
     default:
       return state;
   }

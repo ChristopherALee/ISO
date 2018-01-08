@@ -43,19 +43,15 @@ class Profile extends React.Component {
 
   handleFollow(e) {
     e.preventDefault();
-    // debugger
     this.props.createFollow({ followee_id: this.props.user.id });
   }
 
   handleUnFollow(e) {
     e.preventDefault();
-    // debugger
     this.props.deleteFollow({ followee_id: this.props.user.id });
   }
 
   toggleEditFollowButton() {
-    // debugger
-
     if (this.props.currentUserFollowed) {
       return (
         <button className='followed-button' onClick={this.handleUnFollow}>
@@ -73,6 +69,22 @@ class Profile extends React.Component {
         <button className='profile-edit-follow-button'>
           Edit Profile
         </button>
+      );
+    }
+  }
+
+  getFollowers() {
+    if (this.props.user) {
+      return (
+        this.props.user.followerIds.length
+      );
+    }
+  }
+
+  getFollowees() {
+    if (this.props.user) {
+      return (
+        this.props.user.followingIds.length
       );
     }
   }
@@ -100,8 +112,8 @@ class Profile extends React.Component {
             {user}
           </p>
           <ul className='profile-detail'>
-            <p>Followers: </p>
-            <p>Following: </p>
+            <p>Followers: {this.getFollowers()}</p>
+            <p>Following: {this.getFollowees()}</p>
           </ul>
         </div>
 

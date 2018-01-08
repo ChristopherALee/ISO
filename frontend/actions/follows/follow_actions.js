@@ -37,6 +37,7 @@ export const fetchAllFollows = () => dispatch => {
   );
 };
 
+// Uses receiveAllUsers action to update state of new follows per user
 export const createFollow = (follow) => dispatch => {
   return (
     FollowsApiUtil.createFollow(follow).then(
@@ -48,6 +49,7 @@ export const createFollow = (follow) => dispatch => {
   );
 };
 
+// Uses receiveSingleUser to update state of removed follows per user
 export const deleteFollow = (follow) => dispatch => {
   return (
     FollowsApiUtil.removeFollow(follow.followee_id).then(

@@ -8,9 +8,6 @@ import { createFollow, deleteFollow } from '../../actions/follows/follow_actions
 const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[ownProps.match.params.username];
 
-  let followers = user ? user.followerIds : [];
-  let following = user ? user.followeeIds : [];
-
   let photos = [];
   if (user && user.photoIds) {
     photos = user.photoIds.map( (photoId) => state.entities.photos[photoId]);
@@ -23,8 +20,6 @@ const mapStateToProps = (state, ownProps) => {
     currentUserFollowed: currentUserFollowed,
     user: user,
     photos: photos,
-    followers: followers,
-    following: following
   };
 };
 
