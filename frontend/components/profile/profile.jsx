@@ -7,13 +7,16 @@ class Profile extends React.Component {
 
   componentDidMount() {
     this.props.fetchSingleUser(this.props.match.params.username);
+    // debugger
 
-    if (this.props.photos.length === 0) {
+    // will fix later must not fetch all photos on viewing profile page everytime
+    // if (this.props.photos.length === 0) {
       this.props.fetchAllPhotos();
-    }
+    // }
   }
 
   componentWillReceiveProps(newProps) {
+    debugger
     if (this.props.location.pathname !== newProps.location.pathname) {
       this.props.fetchSingleUser(newProps.match.params.username);
     }
