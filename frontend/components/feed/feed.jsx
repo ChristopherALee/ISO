@@ -1,4 +1,5 @@
 import React from 'react';
+import FeedItemContainer from './feed_item_container';
 
 class Feed extends React.Component {
   constructor(props) {
@@ -9,20 +10,15 @@ class Feed extends React.Component {
     if (this.props.location.pathname === '/feed') {
       this.props.fetchAllPhotos();
     }
-    // this.props.fetchAllUsers();
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   debugger
-  //   if (this.props.location.pathname !== newProps.location.pathname) {
-  //     this.props.fetchAllPhotos();
-  //   }
-  // }
-
   render() {
+    debugger
     const allPhotos = this.props.photos.map( (photo, idx) => {
       return (
-            <img key={idx} src={photo.medium_image_url}></img>
+        <div key={idx} className="feed-item-container">
+          <FeedItemContainer photo={photo} />
+        </div>
       );
     }).reverse();
 
@@ -34,7 +30,7 @@ class Feed extends React.Component {
       );
     } else {
       return (
-        <div id='feed'>
+        <div id="feed">
           {allPhotos}
         </div>
       );
