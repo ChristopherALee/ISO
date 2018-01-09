@@ -85,64 +85,69 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-      }
 
-      .fa-user {
-        // position: relative;
-        // display: inline-block;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 50px;
+        .navbar-profile-photo {
+          position: relative;
+          // display: inline-block;
 
-        &:before {
-          padding: 17.5px 0;
-        }
+          img {
+            width: 38px;
+            display: flex;
+            border-radius: 20px;
+            margin-top: -6px;
+            margin-left: 20px;
 
-        .user-profile-dropdown {
-          display: none;
-          // position: absolute;
-          // border: 1px solid black;
-          padding-top: 50px;
-          font-family: 'Open Sans', sans-serif;
-          font-size: 12px;
-          padding: 10px 20px;
-          right: -38px;
-          z-index: 1;
-          background-color: white;
-          border-bottom: 1px solid #eeeff2;
-          border-right: 1px solid #eeeff2;
-          border-left: 1px solid #eeeff2;
-
-          &:before:hover {
-            display: block;
           }
 
-          .dropdown-break {
+          &:before {
+            padding: 17.5px 0;
+          }
+
+          .user-profile-dropdown {
+            display: none;
+            // position: absolute;
+            // border: 1px solid black;
+            padding-top: 50px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            padding: 10px 20px;
+            right: -38px;
+            z-index: 1;
             background-color: white;
-            width: 1px;
-            height: 10px;
-          }
+            border-bottom: 1px solid #eeeff2;
+            border-right: 1px solid #eeeff2;
+            border-left: 1px solid #eeeff2;
 
-          ul {
-            display: block;
-            li {
-              margin: 10px 0;
-              width: max-content;
-              transition: 0.1s;
+            &:before:hover {
+              display: block;
+            }
 
-              &:hover {
-                color: #0399e5;
+            .dropdown-break {
+              background-color: white;
+              width: 1px;
+              height: 10px;
+            }
+
+            ul {
+              display: block;
+              li {
+                margin: 10px 0;
+                width: max-content;
+                transition: 0.1s;
+
+                &:hover {
+                  color: #0399e5;
+                }
               }
             }
           }
-        }
 
-        &:hover .user-profile-dropdown {
-          display: block;
+          &:hover .user-profile-dropdown {
+            display: block;
+          }
         }
       }
+
 
       .navbar-right-logout {
         margin-left: 60px;
