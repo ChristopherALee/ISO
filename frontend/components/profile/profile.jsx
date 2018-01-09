@@ -162,11 +162,22 @@ class Profile extends React.Component {
   coverPhoto() {
     if (this.props.user) {
       return (
-        <img src={this.props.user.cover_photo_url2}></img>
+        <div
+          className="cover-photo-image"
+          style={{ backgroundImage: `url(${this.props.user.cover_photo_url2})`}}
+        >
+
+        </div>
       );
-    } else {
-      return null;
-    }
+
+    //   return (
+    //     <img src={this.props.user.cover_photo_url2}></img>
+    //   );
+    // } else {
+    //   return null;
+  } else {
+    return null;
+  }
   }
 
   profilePhoto() {
