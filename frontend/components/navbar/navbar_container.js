@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import NavBar from './navbar';
 import { logout } from '../../actions/session/session_actions';
 import { fetchAllPhotos } from '../../actions/photos/photo_actions';
-import { fetchAllUsers } from '../../actions/user/user_actions';
+import { fetchSingleUser } from '../../actions/user/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const isAlt = ownProps.location.pathname !== '/' ? true : false;
@@ -12,11 +12,17 @@ const mapStateToProps = (state, ownProps) => {
     currentUsername = state.session.currentUser.username;
   }
 
+  let currentUserProfilePhoto;
+  if (state.session.currentUser) {
+    currentUserProfilePhoto = state.session.currentUser.profile_photo_url;
+  }
+
   return {
     currentUser: Boolean(state.session.currentUser),
     currentUsername: currentUsername,
     isAlt: { isAlt },
-    photoErrors: state.errors.photo
+    photoErrors: state.errors.photo,
+    currentUserProfilePhoto: currentUserProfilePhoto
   };
 };
 
@@ -24,6 +30,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
     fetchAllPhotos: () => dispatch(fetchAllPhotos()),
+    fetchSingleUser: (username) => dispatch(fetchSingleUser(username))
   };
 };
 

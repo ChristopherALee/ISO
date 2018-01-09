@@ -20,6 +20,7 @@ class NavBar extends React.Component {
   componentWillMount() {
     if (this.props.location.pathname === '/') {
       this.props.fetchAllPhotos();
+      this.props.fetchSingleUser(this.props.currentUsername);
     }
   }
 
@@ -49,6 +50,7 @@ class NavBar extends React.Component {
   }
 
   mainNavLoggedIn() {
+    debugger
     return (
       <nav id='navbar-main-logged-in'>
         <div className='navbar-left'>
@@ -71,7 +73,9 @@ class NavBar extends React.Component {
           />
 
           <div className='user-profile-options'>
-            <i className="fa fa-lg fa-user navbar-right-logout" aria-hidden="true">
+            <div className='navbar-profile-photo'>
+              <img src={this.props.currentUserProfilePhoto}></img>
+              {/* <i className="fa fa-lg fa-user navbar-right-logout" aria-hidden="true"> */}
               <div className='dropdown-break'></div>
               <div className='user-profile-dropdown'>
                 <ul>
@@ -79,7 +83,8 @@ class NavBar extends React.Component {
                   <li onClick={this.handleLogOut}>Log Out</li>
                 </ul>
               </div>
-            </i>
+              {/* </i> */}
+            </div>
 
           </div>
 
