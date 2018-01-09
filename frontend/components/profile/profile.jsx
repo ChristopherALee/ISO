@@ -119,7 +119,7 @@ class Profile extends React.Component {
   coverPhoto() {
     if (this.props.user) {
       return (
-        <img src={this.props.user.cover_photo_url}></img>
+        <img src={this.props.user.cover_photo_url2}></img>
       );
     } else {
       return null;

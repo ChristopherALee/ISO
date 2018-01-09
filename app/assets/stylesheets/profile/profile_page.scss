@@ -4,10 +4,40 @@
 
   .cover-photo {
     width: 100vw;
-    height: 359px;
+    height: 500px;
     background-color: #0399e5;
     color: white;
     min-width: 570px;
+    overflow-y:hidden;
+
+    @media (min-width: 100px) {
+      height: 300px;
+    }
+
+    @media (min-width: 900px) {
+      height: 400px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 500px;
+    }
+
+    img {
+      width: 100%;
+
+      @media (min-width: 780px) {
+        margin-top: -250px;
+      }
+      @media (min-width: 800px) {
+        margin-top: -295px;
+      }
+      @media (min-width: 1200px) {
+        margin-top: -298px;
+      }
+      @media (min-width: 1500px) {
+        margin-top: -300px;
+      }
+    }
 
     .profile-edit-follow-button {
       position: absolute;
