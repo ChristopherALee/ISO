@@ -11,16 +11,11 @@ class Feed extends React.Component {
       this.props.fetchSingleUser(this.props.sessionUser.username);
       this.props.fetchAllPhotos();
     }
-    console.log("feed mounted");
-  }
-
-  componentWillUnmount() {
-    console.log("feed unmounted");
   }
 
   render() {
     let that = this;
-
+    
     let allPhotos;
     if (that.props.photos.length && that.props.currentUser) {
       allPhotos = that.props.photos.filter((photo) => {
