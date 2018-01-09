@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import CoverPhotoUploadFormContainer from '../upload/cover_photo/cover_photo_upload_form_container';
+import ProfilePhotoUploadFormContainer from '../upload/profile_photo/profile_photo_upload_form_container';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -168,6 +169,16 @@ class Profile extends React.Component {
     }
   }
 
+  profilePhoto() {
+    if (this.props.user) {
+      return (
+        <img src={this.props.user.profile_photo_url}></img>
+      );
+    } else {
+      return null;
+    }
+  }
+
   render() {
     let user;
     if (this.props.user) {
@@ -225,10 +236,33 @@ class Profile extends React.Component {
             >
 
             <div className='close-modal'>
-              <p className='close-modal-x' onClick={this.closeAllModals}>X</p>
+              <p className='close-modal-x' onClick={this.closeModalCoverPhoto}>X</p>
             </div>
 
-            <CoverPhotoUploadFormContainer closeModal={this.closeModalCoverPhoto} />
+            <CoverPhotoUploadFormContainer closeModal={this.closeAllModals} />
+          </Modal>
+
+          <Modal
+            className={{
+              base: 'profile-photo-upload-modal',
+              afterOpen: 'profile-photo-upload-modal-after-open',
+              beforeClose: 'profile-photo-upload-modal-before-close'
+            }}
+            overlayClassName={{
+              base: 'profile-photo-upload-modal-overlay',
+              afterOpen: 'profile-photo-upload-modal-overlay_after-open',
+              beforeClose: 'profile-photo-upload-modal-overlay_before-close'
+            }}
+            ariaHideApp={false}
+            isOpen={this.state.modalOpenProfilePhoto}
+            shouldCloseOnOverlayClick={true}
+            >
+
+            <div className='close-modal'>
+              <p className='close-modal-x' onClick={this.closeModalProfilePhoto}>X</p>
+            </div>
+
+            <ProfilePhotoUploadFormContainer closeModal={this.closeAllModals} />
           </Modal>
         </Modal>
 
@@ -239,6 +273,7 @@ class Profile extends React.Component {
 
         <div className='profile-information'>
           <div className='profile-picture'>
+            {this.profilePhoto()}
           </div>
           <p className='profile-username'>
             {user}
