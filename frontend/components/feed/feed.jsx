@@ -8,24 +8,26 @@ class Feed extends React.Component {
 
   componentDidMount() {
     if (this.props.location.pathname === '/feed') {
-      debugger
       this.props.fetchSingleUser(this.props.sessionUser.username);
       this.props.fetchAllPhotos();
     }
+    console.log("feed mounted");
+  }
+
+  componentWillUnmount() {
+    console.log("feed unmounted");
   }
 
   render() {
     let that = this;
 
-    debugger
     let allPhotos;
-    if (this.props.photos.length && this.props.currentUser) {
+    if (that.props.photos.length && that.props.currentUser) {
       allPhotos = that.props.photos.filter((photo) => {
         return (
           that.props.currentUser.followingIds.includes(photo.author)
         );
       }).map( (photo, idx) => {
-        debugger
         return (
           <div key={idx} className="feed-item-container">
             <FeedItemContainer photo={photo} />
@@ -34,7 +36,6 @@ class Feed extends React.Component {
       }).reverse();
     }
 
-    debugger
 
     if (this.props.location.pathname === '/' || this.props.location.pathname === '/discover') {
       return (

@@ -5,17 +5,14 @@ import { fetchAllPhotos } from '../../actions/photos/photo_actions';
 import { fetchAllUsers, fetchSingleUser } from '../../actions/user/user_actions';
 
 const mapStateToProps = (state) => {
-  debugger
-
   let sessionUser = state.session.currentUser ? state.session.currentUser : null;
 
   let currentUser;
-  if (Object.values(state.entities.users).length === 1) {
+  // INVESTIGATE backend information may not be enough
+  if (Object.values(state.entities.users).length >= 1) {
     let firstKey = Object.keys(state.entities.users)[0];
     currentUser = state.entities.users[firstKey];
   }
-
-  debugger
 
   return {
     sessionUser: sessionUser,
