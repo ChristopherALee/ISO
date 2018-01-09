@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CoverPhotoUploadForm from './cover_photo_upload_form';
-import { createPhoto } from '../../../actions/photos/photo_actions';
+import { updateUser } from '../../../actions/user/user_actions';
 
 const mapStateToProps = state => {
   return {
@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    createPhoto: (photo) => dispatch(createPhoto(photo))
+    updateUser: (photo, userId) => dispatch(updateUser(photo, userId))
   };
 };
 

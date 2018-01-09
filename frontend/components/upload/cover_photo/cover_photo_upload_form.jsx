@@ -5,12 +5,9 @@ class CoverPhotoUploadForm extends React.Component {
     super(props);
 
     this.state = {
-      title: 'cover photo',
-      description: 'description',
+      username: `${this.props.currentUser.username}`,
       imageUrl: "",
       imageFile: null,
-      profile_photo: false,
-      cover_photo: false,
     };
 
     this.readFile = this.readFile.bind(this);
@@ -44,16 +41,13 @@ class CoverPhotoUploadForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('photo[title]', this.state.title);
-    formData.append('photo[description]', this.state.description);
-    formData.append('photo[profile_photo]', false);
-    formData.append('photo[cover_photo]', true);
-    if (this.state.imageFile) {
-      formData.append('photo[image]', this.state.imageFile);
-    }
 
+    if (this.state.imageFile) {
+      formData.append('user[cover_photo]', this.state.imageFile);
+    }
+    debugger
     let that = this;
-    this.props.createPhoto(formData).then(
+    this.props.updateUser(formData, this.props.currentUser.id).then(
       (resp) => {
         this.props.closeModal();
         return resp;
@@ -95,7 +89,7 @@ class CoverPhotoUploadForm extends React.Component {
 
         <div className='upload-form-contents'>
           <label htmlFor='submit'>
-            <input type='submit' value='Submit' />
+            <input type='submit' value='Set Cover Photo' />
           </label>
         </div>
       </form>
