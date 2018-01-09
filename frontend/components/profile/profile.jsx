@@ -116,6 +116,16 @@ class Profile extends React.Component {
     this.setState({['modalOpen']: false});
   }
 
+  coverPhoto() {
+    if (this.props.user) {
+      return (
+        <img src={this.props.user.cover_photo}></img>
+      );
+    } else {
+      return null;
+    }
+  }
+
   render() {
     let user;
     if (this.props.user) {
@@ -127,7 +137,7 @@ class Profile extends React.Component {
     return (
       <div className='profile-container'>
         <div className='cover-photo'>
-          Cover Photo
+          {this.coverPhoto()}
 
           <Modal
             className={{

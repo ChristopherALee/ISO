@@ -18,6 +18,14 @@ class Api::UsersController < ApplicationController
     @user = User.find_by(username: params[:id])
   end
 
+  def update
+    @user = User.find_by(username: params[:id])
+
+    if current_user.id == @user.id && @user.update
+      render 'api/users/show'
+    end
+  end
+
   def unfollow
     @follow = current_user.out_follows.find_by!(followee_id: params[:id])
 

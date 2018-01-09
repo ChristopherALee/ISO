@@ -15,6 +15,11 @@ class User < ApplicationRecord
   validates :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true, message: 'Password must be a minimum of 6 characters.' }
 
+  has_attached_file :cover_photo, styles: { medium: '800x800>' }
+  validates_attachment_content_type :cover_photo, content_type: /\Aimage\/.*\Z/
+  has_attached_file :profile_photo, styles: { thumb: '100x100>' }
+  validates_attachment_content_type :profile_photo, content_type: /\Aimage\/.*\Z/
+
   validates :username, presence: { message: 'Please enter a username.'}, uniqueness: { message: 'This username has already been taken.'}
 
   has_many :photos,
@@ -32,14 +37,6 @@ class User < ApplicationRecord
     foreign_key: :follower_id
 
   has_many :followees, through: :out_follows, source: :followee
-
-  has_one :profile_photo,
-    class_name: 'Photo',
-    foreign_key: :author_id
-
-  has_one :cover_photo,
-    class_name: 'Photo',
-    foreign_key: :author_id
 
   attr_reader :password
 

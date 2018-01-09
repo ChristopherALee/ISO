@@ -5,8 +5,8 @@ class CoverPhotoUploadForm extends React.Component {
     super(props);
 
     this.state = {
-      title: '',
-      description: '',
+      title: 'cover photo',
+      description: 'description',
       imageUrl: "",
       imageFile: null,
       profile_photo: false,
@@ -56,17 +56,7 @@ class CoverPhotoUploadForm extends React.Component {
     this.props.createPhoto(formData).then(
       (resp) => {
         this.props.closeModal();
-        this.redirectToProfile();
         return resp;
-      }
-    ).fail(
-      (errors) => {
-        return (
-          this.setState({
-            ['errors']: errors.responseJSON,
-            ['isValid']: 'false'
-          })
-        );
       }
     );
   }
@@ -87,7 +77,28 @@ class CoverPhotoUploadForm extends React.Component {
 
   render() {
     return (
-      null
+      <form className='upload-form' onSubmit={this.handleSubmit}>
+        <div className='upload-form-image'>
+          {this.image()}
+          <input
+            type='submit'
+            className='fake-select-photo'
+            value='Select Photo'
+          />
+          <input
+            type='file'
+            accept='.jpg, .jpeg, .png'
+            onChange={this.readFile}
+            multiple
+          />
+        </div>
+
+        <div className='upload-form-contents'>
+          <label htmlFor='submit'>
+            <input type='submit' value='Submit' />
+          </label>
+        </div>
+      </form>
     );
   }
 }

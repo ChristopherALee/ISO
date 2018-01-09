@@ -10,9 +10,6 @@ class Api::PhotosController < ApplicationController
     @photo.author_id = current_user.id
 
     if @photo.save
-      @photo.profile_photo ? current_user.profile_photo = @photo : nil
-      @photo.cover_photo ? current_user.cover_photo = @photo : nil
-      
       render 'api/photos/show'
     else
       render json: @photo.errors.messages, status: 422
@@ -45,7 +42,6 @@ class Api::PhotosController < ApplicationController
 
   private
   def photo_params
-    debugger
     params.require(:photo).permit(:title, :description, :image, :author_id)
   end
 end
