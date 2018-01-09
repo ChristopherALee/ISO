@@ -75,7 +75,6 @@ class NavBar extends React.Component {
           <div className='user-profile-options'>
             <div className='navbar-profile-photo'>
               <img src={this.props.currentUserProfilePhoto}></img>
-              {/* <i className="fa fa-lg fa-user navbar-right-logout" aria-hidden="true"> */}
               <div className='user-profile-dropdown'>
                 <ul>
                   <li>{this.props.currentUsername}</li>
@@ -83,7 +82,6 @@ class NavBar extends React.Component {
                   <li onClick={this.handleLogOut}>Log Out</li>
                 </ul>
               </div>
-              {/* </i> */}
             </div>
 
           </div>
