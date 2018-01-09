@@ -12,13 +12,14 @@ export const fetchSingleUser = (user) => {
   });
 };
 
-export const updateUser = (user, userId) => {
+export const updateUser = (user, username) => {
   debugger
   return $.ajax({
     method: 'PATCH',
-    url: `api/users/${userId}`,
+    url: `api/users/${username}`,
     processData: false,
     contentType: false,
+    dataType: 'json',
     data: user
   });
 };

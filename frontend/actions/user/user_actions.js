@@ -39,10 +39,11 @@ export const fetchSingleUser = (user) => dispatch => {
   );
 };
 
-export const updateUser = (user) => dispatch => {
+export const updateUser = (user, username) => dispatch => {
   return (
-    UserApiUtil.updateUser(user).then(
+    UserApiUtil.updateUser(user, username).then(
       (user) => {
+        debugger
         dispatch(receiveSingleUser(user));
         return user;
       }

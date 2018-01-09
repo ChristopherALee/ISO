@@ -44,10 +44,10 @@ class CoverPhotoUploadForm extends React.Component {
 
     if (this.state.imageFile) {
       formData.append('user[cover_photo]', this.state.imageFile);
+      debugger
     }
-    debugger
     let that = this;
-    this.props.updateUser(formData, this.props.currentUser.id).then(
+    this.props.updateUser(formData, this.props.currentUser.username).then(
       (resp) => {
         this.props.closeModal();
         return resp;
