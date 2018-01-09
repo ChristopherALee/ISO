@@ -7,7 +7,9 @@ class Profile extends React.Component {
     super(props);
 
     this.state = {
-      modalOpen: false
+      modalOpen: false,
+      modalOpenCoverPhoto: false,
+      modalOpenProfilePhoto: false
     };
 
     this.handleFollow = this.handleFollow.bind(this);
@@ -15,6 +17,14 @@ class Profile extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+
+    this.openModalCoverPhoto = this.openModalCoverPhoto.bind(this);
+    this.closeModalCoverPhoto = this.closeModalCoverPhoto.bind(this);
+
+    this.openModalProfilePhoto = this.openModalProfilePhoto.bind(this);
+    this.closeModalProfilePhoto = this.closeModalProfilePhoto.bind(this);
+
+    this.closeAllModals = this.closeAllModals.bind(this);
   }
 
   componentDidMount() {
@@ -103,6 +113,12 @@ class Profile extends React.Component {
     };
   }
 
+  closeAllModals() {
+    this.setState({['modalOpen']: false});
+    this.setState({['modalOpenCoverPhoto']: false});
+    this.setState({['modalOpenProfilePhoto']: false});
+  }
+
   handleModal(boolean = false) {
     // debugger
     this.setState({['modalOpen']: boolean});
@@ -114,6 +130,32 @@ class Profile extends React.Component {
 
   closeModal() {
     this.setState({['modalOpen']: false});
+  }
+
+  handleModalCoverPhoto(boolean = false) {
+    // debugger
+    this.setState({['modalOpenCoverPhoto']: boolean});
+  }
+
+  openModalCoverPhoto() {
+    this.setState({['modalOpenCoverPhoto']: true});
+  }
+
+  closeModalCoverPhoto() {
+    this.setState({['modalOpenCoverPhoto']: false});
+  }
+
+  handleModalProfilePhoto(boolean = false) {
+    // debugger
+    this.setState({['modalOpenProfilePhoto']: boolean});
+  }
+
+  openModalProfilePhoto() {
+    this.setState({['modalOpenProfilePhoto']: true});
+  }
+
+  closeModalProfilePhoto() {
+    this.setState({['modalOpenProfilePhoto']: false});
   }
 
   coverPhoto() {
@@ -136,8 +178,33 @@ class Profile extends React.Component {
 
     return (
       <div className='profile-container'>
-        <div className='cover-photo'>
-          {this.coverPhoto()}
+        <Modal
+          className={{
+            base: 'options-upload-modal',
+            afterOpen: 'options-upload-modal-after-open',
+            beforeClose: 'options-upload-modal-before-close'
+          }}
+          overlayClassName={{
+            base: 'options-upload-modal-overlay',
+            afterOpen: 'options-upload-modal-overlay_after-open',
+            beforeClose: 'options-upload-modal-overlay_before-close'
+          }}
+          ariaHideApp={false}
+          isOpen={this.state.modalOpen}
+          shouldCloseOnOverlayClick={true}
+          >
+
+          <div className='close-modal'>
+            <p className='close-modal-x' onClick={this.closeModal}>X</p>
+          </div>
+
+          <div className="choose-cover" onClick={this.openModalCoverPhoto}>
+            Choose a Cover Photo
+          </div>
+
+          <div className="choose-profile" onClick={this.openModalProfilePhoto}>
+            Choose a Profile Photo
+          </div>
 
           <Modal
             className={{
@@ -151,17 +218,20 @@ class Profile extends React.Component {
               beforeClose: 'cover-photo-upload-modal-overlay_before-close'
             }}
             ariaHideApp={false}
-            isOpen={this.state.modalOpen}
+            isOpen={this.state.modalOpenCoverPhoto}
             shouldCloseOnOverlayClick={true}
             >
 
             <div className='close-modal'>
-              <p className='close-modal-x' onClick={this.closeModal}>X</p>
+              <p className='close-modal-x' onClick={this.closeAllModals}>X</p>
             </div>
 
-            <CoverPhotoUploadFormContainer closeModal={this.closeModal} />
+            <CoverPhotoUploadFormContainer closeModal={this.closeModalCoverPhoto} />
           </Modal>
+        </Modal>
 
+        <div className='cover-photo'>
+          {this.coverPhoto()}
           {this.toggleEditFollowButton()}
         </div>
 
