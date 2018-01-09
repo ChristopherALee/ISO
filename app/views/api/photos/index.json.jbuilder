@@ -5,5 +5,6 @@
     json.thumbnail asset_path(photo.image(:thumbnail))
     json.medium_image_url asset_path(photo.image(:medium))
     json.author photo.author.username
+    json.authorProfilePhoto asset_path(photo.author.profile_photo)
   end
 end

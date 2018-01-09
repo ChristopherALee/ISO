@@ -5,6 +5,9 @@ const FeedItemContainer = (props) => {
   return (
     <div className="feed-item">
       <div className="feed-item-header">
+        <div className="feed-item-header-profile-photo">
+          <img src={`${props.photo.authorProfilePhoto}`}></img>
+        </div>
         <Link to={`/${props.photo.author}`}>{props.photo.author}</Link>
       </div>
 

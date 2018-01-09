@@ -20,14 +20,22 @@
       width: 801px;
 
       .feed-item-header {
-        padding: 20px;
+        padding: 10px 20px;
         font-weight: bold;
         font-size: 14px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 50px;
+          border-radius: 20px;
+        }
 
         a {
           text-decoration: none;
           color: #525558;
           transition: 0.2s;
+          margin-left: 15px;
 
           &:hover {
             cursor: pointer;
