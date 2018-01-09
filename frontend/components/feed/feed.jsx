@@ -8,19 +8,33 @@ class Feed extends React.Component {
 
   componentDidMount() {
     if (this.props.location.pathname === '/feed') {
+      debugger
+      this.props.fetchSingleUser(this.props.sessionUser.username);
       this.props.fetchAllPhotos();
     }
   }
 
   render() {
+    let that = this;
+
     debugger
-    const allPhotos = this.props.photos.map( (photo, idx) => {
-      return (
-        <div key={idx} className="feed-item-container">
-          <FeedItemContainer photo={photo} />
-        </div>
-      );
-    }).reverse();
+    let allPhotos;
+    if (this.props.photos.length && this.props.currentUser) {
+      allPhotos = that.props.photos.filter((photo) => {
+        return (
+          that.props.currentUser.followingIds.includes(photo.author)
+        );
+      }).map( (photo, idx) => {
+        debugger
+        return (
+          <div key={idx} className="feed-item-container">
+            <FeedItemContainer photo={photo} />
+          </div>
+        );
+      }).reverse();
+    }
+
+    debugger
 
     if (this.props.location.pathname === '/' || this.props.location.pathname === '/discover') {
       return (

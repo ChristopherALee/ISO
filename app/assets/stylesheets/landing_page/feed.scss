@@ -22,7 +22,7 @@
       .feed-item-header {
         padding: 20px;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 14px;
 
         a {
           text-decoration: none;
@@ -59,7 +59,11 @@
 
         p:first-child {
           margin-bottom: 30px;
-          font-size: 16px;
+          font-size: 18px;
+        }
+
+        p:nth-child(2) {
+          font-size: 14px;
         }
       }
     }
