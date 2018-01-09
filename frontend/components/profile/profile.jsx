@@ -1,16 +1,23 @@
 import React from 'react';
+import Modal from 'react-modal';
+import CoverPhotoUploadFormContainer from '../upload/cover_photo/cover_photo_upload_form_container';
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      modalOpen: false
+    };
 
     this.handleFollow = this.handleFollow.bind(this);
     this.handleUnFollow = this.handleUnFollow.bind(this);
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount() {
-    debugger
     this.props.fetchSingleUser(this.props.match.params.username);
 
     // will fix later must not fetch all photos on viewing profile page everytime
@@ -90,6 +97,25 @@ class Profile extends React.Component {
     }
   }
 
+  handleChange(field) {
+    return (e) => {
+      this.setState({[field]: e.target.value });
+    };
+  }
+
+  handleModal(boolean = false) {
+    // debugger
+    this.setState({['modalOpen']: boolean});
+  }
+
+  openModal() {
+    this.setState({['modalOpen']: true});
+  }
+
+  closeModal() {
+    this.setState({['modalOpen']: false});
+  }
+
   render() {
     let user;
     if (this.props.user) {
@@ -98,11 +124,38 @@ class Profile extends React.Component {
       user = null;
     }
 
-
     return (
       <div className='profile-container'>
         <div className='cover-photo'>
           Cover Photo
+
+          <button className="upload-cover-photo-button" onClick={this.openModal}>
+            Edit Cover Photo
+          </button>
+
+          <Modal
+            className={{
+              base: 'upload-modal',
+              afterOpen: 'upload-modal-after-open',
+              beforeClose: 'upload-modal-before-close'
+            }}
+            overlayClassName={{
+              base: 'upload-modal-overlay',
+              afterOpen: 'upload-modal-overlay_after-open',
+              beforeClose: 'upload-modal-overlay_before-close'
+            }}
+            ariaHideApp={false}
+            isOpen={this.state.modalOpen}
+            shouldCloseOnOverlayClick={true}
+            >
+
+            <div className='close-modal'>
+              <p className='close-modal-x' onClick={this.closeModal}>X</p>
+            </div>
+
+            <CoverPhotoUploadFormContainer closeModal={this.closeModal} />
+          </Modal>
+
           {this.toggleEditFollowButton()}
         </div>
 
