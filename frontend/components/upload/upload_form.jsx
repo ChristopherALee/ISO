@@ -47,7 +47,8 @@ class UploadForm extends React.Component {
   redirectToProfile() {
     if (this.props.currentUser === this.props.location.pathname.slice(1)) {
       // will find a better alternative
-      window.location.reload();
+      // window.location.reload();
+      this.props.closeModal();
     } else {
       this.props.history.push(`/${this.props.currentUser}`);
     }
@@ -65,7 +66,7 @@ class UploadForm extends React.Component {
     let that = this;
     this.props.createPhoto(formData).then(
       (resp) => {
-        this.props.closeModal();
+        // this.props.closeModal();
         this.redirectToProfile();
         return resp;
       }

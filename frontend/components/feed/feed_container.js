@@ -17,6 +17,7 @@ const mapStateToProps = (state) => {
   return {
     sessionUser: sessionUser,
     currentUser: currentUser,
+    allUsers: state.entities.users,
     photos: Object.values(state.entities.photos)
   };
 };
