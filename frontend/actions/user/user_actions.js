@@ -38,3 +38,14 @@ export const fetchSingleUser = (user) => dispatch => {
     )
   );
 };
+
+export const updateUser = (user) => dispatch => {
+  return (
+    UserApiUtil.updateUser(user).then(
+      (user) => {
+        dispatch(receiveSingleUser(user));
+        return user;
+      }
+    )
+  );
+};

@@ -1,9 +1,6 @@
 import {
   RECEIVE_ALL_USERS,
   RECEIVE_SINGLE_USER } from '../../actions/user/user_actions';
-import {
-  RECEIVE_SINGLE_FOLLOW,
-  REMOVE_FOLLOW } from '../../actions/follows/follow_actions';
 
 const userReducer = (state = {}, action) => {
   let newState;
