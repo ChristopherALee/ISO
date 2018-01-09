@@ -44,8 +44,8 @@ class CoverPhotoUploadForm extends React.Component {
 
     if (this.state.imageFile) {
       formData.append('user[cover_photo]', this.state.imageFile);
-      debugger
     }
+
     let that = this;
     this.props.updateUser(formData, this.props.currentUser.username).then(
       (resp) => {
@@ -71,8 +71,8 @@ class CoverPhotoUploadForm extends React.Component {
 
   render() {
     return (
-      <form className='upload-form' onSubmit={this.handleSubmit}>
-        <div className='upload-form-image'>
+      <form className='cover-photo-upload-form' onSubmit={this.handleSubmit}>
+        <div className='cover-photo-upload-form-image'>
           {this.image()}
           <input
             type='submit'
@@ -87,7 +87,7 @@ class CoverPhotoUploadForm extends React.Component {
           />
         </div>
 
-        <div className='upload-form-contents'>
+        <div className='cover-photo-upload-form-contents'>
           <label htmlFor='submit'>
             <input type='submit' value='Set Cover Photo' />
           </label>

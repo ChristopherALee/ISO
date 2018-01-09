@@ -141,14 +141,14 @@ class Profile extends React.Component {
 
           <Modal
             className={{
-              base: 'upload-modal',
-              afterOpen: 'upload-modal-after-open',
-              beforeClose: 'upload-modal-before-close'
+              base: 'cover-photo-upload-modal',
+              afterOpen: 'cover-photo-upload-modal-after-open',
+              beforeClose: 'cover-photo-upload-modal-before-close'
             }}
             overlayClassName={{
-              base: 'upload-modal-overlay',
-              afterOpen: 'upload-modal-overlay_after-open',
-              beforeClose: 'upload-modal-overlay_before-close'
+              base: 'cover-photo-upload-modal-overlay',
+              afterOpen: 'cover-photo-upload-modal-overlay_after-open',
+              beforeClose: 'cover-photo-upload-modal-overlay_before-close'
             }}
             ariaHideApp={false}
             isOpen={this.state.modalOpen}
