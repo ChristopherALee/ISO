@@ -13,6 +13,8 @@
 #  comment_ids        :string           default([]), is an Array
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  profile_photo      :boolean          default(FALSE)
+#  cover_photo        :boolean          default(FALSE)
 #
 
 require 'test_helper'

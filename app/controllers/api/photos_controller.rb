@@ -8,8 +8,11 @@ class Api::PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     @photo.author_id = current_user.id
-    debugger
+
     if @photo.save
+      @photo.profile_photo ? current_user.profile_photo = @photo : nil
+      @photo.cover_photo ? current_user.cover_photo = @photo : nil
+      
       render 'api/photos/show'
     else
       render json: @photo.errors.messages, status: 422

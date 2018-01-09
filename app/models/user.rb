@@ -33,6 +33,14 @@ class User < ApplicationRecord
 
   has_many :followees, through: :out_follows, source: :followee
 
+  has_one :profile_photo,
+    class_name: 'Photo',
+    foreign_key: :author_id
+
+  has_one :cover_photo,
+    class_name: 'Photo',
+    foreign_key: :author_id
+
   attr_reader :password
 
   after_initialize :ensure_session_token

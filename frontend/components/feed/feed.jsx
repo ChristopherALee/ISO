@@ -15,12 +15,12 @@ class Feed extends React.Component {
 
   render() {
     let that = this;
-    
+
     let allPhotos;
     if (that.props.photos.length && that.props.currentUser) {
       allPhotos = that.props.photos.filter((photo) => {
         return (
-          that.props.currentUser.followingIds.includes(photo.author)
+          that.props.currentUser.followingIds.includes(photo.author) || that.props.currentUser.username === photo.author
         );
       }).map( (photo, idx) => {
         return (
