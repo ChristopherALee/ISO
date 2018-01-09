@@ -3,6 +3,45 @@
   -webkit-animation: pop-in 0.3s;
   width: 1500px;
   height: 1000px;
+
+  .options {
+    display:grid;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+
+    .choose-cover {
+      display: flex;
+      text-align: center;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      background-color: #34bf49;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 30px;
+      color: white;
+
+      &:hover {
+        background-color: #41cb56;
+      }
+    }
+
+    .choose-profile {
+      display: flex;
+      text-align: center;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      background-color: #0399e5;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 30px;
+      color: white;
+
+      &:hover {
+        background-color: #04aaff;
+      }
+    }
+  }
 }
 .options-upload-modal-overlay {
   display: flex;
@@ -42,8 +81,8 @@
     height: 45vh;
     margin: 20px;
     outline: none;
-    border: 1px solid #eeeff2;
-    border-radius: 3px;
+    border: 1px solid #000000c2;
+    // border-radius: 3px;
     box-shadow: 0 2px 25px rgba(0,0,0,0.2);
     background-color: white;
 

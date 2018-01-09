@@ -198,12 +198,14 @@ class Profile extends React.Component {
             <p className='close-modal-x' onClick={this.closeModal}>X</p>
           </div>
 
-          <div className="choose-cover" onClick={this.openModalCoverPhoto}>
-            Choose a Cover Photo
-          </div>
+          <div className="options">
+            <div className="choose-cover" onClick={this.openModalCoverPhoto}>
+              Choose a Cover Photo
+            </div>
 
-          <div className="choose-profile" onClick={this.openModalProfilePhoto}>
-            Choose a Profile Photo
+            <div className="choose-profile" onClick={this.openModalProfilePhoto}>
+              Choose a Profile Photo
+            </div>
           </div>
 
           <Modal
