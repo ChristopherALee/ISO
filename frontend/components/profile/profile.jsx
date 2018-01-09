@@ -74,7 +74,7 @@ class Profile extends React.Component {
       );
     } else {
       return (
-        <button className='profile-edit-follow-button'>
+        <button className='profile-edit-follow-button' onClick={this.openModal}>
           Edit Profile
         </button>
       );
@@ -128,10 +128,6 @@ class Profile extends React.Component {
       <div className='profile-container'>
         <div className='cover-photo'>
           Cover Photo
-
-          <button className="upload-cover-photo-button" onClick={this.openModal}>
-            Edit Cover Photo
-          </button>
 
           <Modal
             className={{
