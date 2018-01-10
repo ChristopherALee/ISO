@@ -12,7 +12,9 @@ const FeedItemContainer = (props) => {
       </div>
 
       <div className="feed-item-image">
-        <img src={props.photo.medium_image_url}></img>
+        <Link to={`/photos/${props.photo.id}`}>
+          <img src={props.photo.medium_image_url}></img>
+        </Link>
       </div>
 
       <div className="feed-item-description">
