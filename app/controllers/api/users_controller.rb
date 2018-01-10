@@ -20,7 +20,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find_by(username: params[:id])
-    debugger
+    
     if current_user.id == @user.id && @user.update(user_params)
       render 'api/users/show'
     end

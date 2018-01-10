@@ -81,31 +81,21 @@
       }
 
       .user-profile-options {
-        // height: 100%;
-        // display: flex;
-        // align-items: center;
-        // flex-direction: column;
         height: 100%;
         margin-left: 30px;
 
         .navbar-profile-photo-container {
-          // position: relative;
-          // display: inline-block;
           height: 100%;
 
           .navbar-profile-photo-image {
-            // width: 38px;
-            // display: flex;
-            // border-radius: 20px;
-            // margin-top: -6px;
-            // margin-left: 20px;
-            // padding-bottom: 5px;
-            height: 100%;
-            display: flex;
-            align-items: center;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-top: 5px;
 
             img {
-              height: 65%;
+              width: 100%;
             }
 
             &:hover .user-profile-dropdown {
