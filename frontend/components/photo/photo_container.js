@@ -6,10 +6,10 @@ import { fetchSingleUser } from '../../actions/user/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let currentPhoto;
-  if (Object.values(ownProps.match.params).length) {
+  // if (Object.values(ownProps.match.params).length) {
     currentPhoto = state.entities.photos[ownProps.match.params.photoId];
-  }
-
+  // }
+  debugger
   return {
     currentPhoto: currentPhoto,
     photoId: ownProps.match.params.photoId

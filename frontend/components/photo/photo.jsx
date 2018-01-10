@@ -3,10 +3,6 @@ import React from 'react';
 class Photo extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      photo: this.props.currentPhoto
-    };
   }
 
   componentDidMount() {
@@ -19,11 +15,23 @@ class Photo extends React.Component {
     }
   }
 
+  showPhoto() {
+    if (this.props.currentPhoto) {
+      return (
+        <img src={this.props.currentPhoto.medium_image_url}></img>
+      );
+    } else {
+      return null;
+    }
+  }
+
   render() {
     return (
       <div className="photo-show-container">
         <div className="photo-show">
-
+          <div className="photo">
+            {this.showPhoto()}
+          </div>
         </div>
 
         <div className="photo-contents">
