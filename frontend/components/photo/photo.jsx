@@ -11,8 +11,8 @@ class Photo extends React.Component {
 
   componentDidMount() {
     debugger
-    this.props.fetchSingleUser(this.state.photo.authorName);
-    this.props.fetchSinglePhoto(this.props.photoId);
+    // this.props.fetchSingleUser(this.state.photo.authorName);
+    this.props.fetchShowPhoto(this.props.photoId);
   }
 
   componentWillReceiveProps(newProps) {
