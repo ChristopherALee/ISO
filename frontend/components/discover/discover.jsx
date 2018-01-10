@@ -3,10 +3,36 @@ import React from 'react';
 class Discover extends React.Component {
   constructor(props) {
     super(props);
+
+  }
+
+  componentDidMount() {
+    this.props.fetchAllPhotos();
+  }
+
+  allPhotos() {
+    let photos;
+    if (this.props.allPhotos) {
+      photos = this.props.allPhotos.map( (photo) => {
+        return (
+          <img src={photo.medium_image_url}></img>
+        );
+      });
+    }
+
+    return photos;
   }
 
   render() {
-    
+    return (
+      <div className="discover-container">
+        <div className="discover-banner"></div>
+
+        <div className="discover-photos">
+          {this.allPhotos()}
+        </div>
+      </div>
+    );
   }
 }
 
