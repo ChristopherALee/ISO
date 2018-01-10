@@ -10,14 +10,16 @@ class Photo extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchShowPhoto(this.props.photoId).then(
-      (photo) => this.props.fetchSingleUser(photo.authorName)
+    this.props.fetchShowPhoto(parseInt(this.props.photoId)).then(
+      (photo) => {
+        this.props.fetchSingleUser(photo.authorName);
+      }
     );
   }
 
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.photoId !== newProps.match.params.photoId) {
-      this.props.fetchShowPhoto(newProps.match.params.photoId).then(
+      this.props.fetchShowPhoto(parseInt(newProps.match.params.photoId)).then(
         (photo) => this.props.fetchSingleUser(photo.authorName)
       );
     }
@@ -34,20 +36,20 @@ class Photo extends React.Component {
   }
 
   toggleEditFollowButton() {
-    if (this.props.currentUser && this.props.currentUser.followingIds && !this.props.currentUser.followingIds.includes(this.props.currentPhoto.authorName)) {
-      return (
-        <button className="follow-button" onClick={this.handleFollow}>
-          Follow
-        </button>
-      );
-    } else if (this.props.currentUser.username === this.props.currentPhoto.authorName) {
+    if (this.props.currentUser && this.props.currentUser.username === this.props.currentPhoto.authorName) {
       return (
         null
       );
-    } else {
+    } else if (this.props.currentUser && this.props.currentUser.followingIds && this.props.currentUser.followingIds.includes(this.props.currentPhoto.authorName)) {
       return (
         <button className="unfollow-button" onClick={this.handleUnFollow}>
           Followed
+        </button>
+      );
+    } else {
+      return (
+        <button className="follow-button" onClick={this.handleFollow}>
+          Follow
         </button>
       );
     }
@@ -68,7 +70,7 @@ class Photo extends React.Component {
                   <Link to={`/${this.props.currentPhoto.authorName}`}>
                   <div
                     className="photo-contents-user-profile-photo-container"
-                    style={{ backgroundImage: `url(${this.props.currentPhoto.authorProfilePhotoUrl})`}}
+                    style={{ backgroundImage: `url(${this.props.currentPhoto.authorProfilePhoto})`}}
                     >
                     </div>
                   </Link>
@@ -94,7 +96,9 @@ class Photo extends React.Component {
         </div>
       );
     } else {
-      return null;
+      return (
+        <div></div>
+      );
     }
   }
 }

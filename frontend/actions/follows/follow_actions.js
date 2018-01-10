@@ -53,9 +53,14 @@ export const createFollow = (follow) => dispatch => {
 export const deleteFollow = (follow) => dispatch => {
   return (
     FollowsApiUtil.removeFollow(follow.followee_id).then(
-      (user) => {
-        dispatch(receiveSingleUser(user));
-        return follow;
+      // (user) => {
+      //   debugger
+      //   dispatch(receiveSingleUser(user));
+      //   return follow;
+      // }
+      (users) => {
+        dispatch(receiveAllUsers(users));
+        return users;
       }
     )
   );

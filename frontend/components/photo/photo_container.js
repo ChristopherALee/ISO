@@ -7,9 +7,8 @@ import { createFollow, deleteFollow } from '../../actions/follows/follow_actions
 
 const mapStateToProps = (state, ownProps) => {
   let currentPhoto = state.entities.photos[ownProps.match.params.photoId];
-  let currentUser = state.session.currentUser;
-  // let currentUser = currentPhoto ? state.entities.users[currentPhoto.authorName] : null;
-  debugger
+  let sessionUser = state.session.currentUser.username;
+  let currentUser = state.entities.users[sessionUser];
 
   return {
     currentPhoto: currentPhoto,

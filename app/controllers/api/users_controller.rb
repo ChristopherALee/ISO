@@ -20,7 +20,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find_by(username: params[:id])
-    
+
     if current_user.id == @user.id && @user.update(user_params)
       render 'api/users/show'
     end
@@ -30,8 +30,9 @@ class Api::UsersController < ApplicationController
     @follow = current_user.out_follows.find_by!(followee_id: params[:id])
 
     if @follow.destroy
-      @user = User.find(params[:id])
-      render 'api/users/show'
+      @users = [current_user, User.find(params[:id])]
+      # render 'api/users/show'
+      render 'api/users/unfollow'
     end
   end
 
