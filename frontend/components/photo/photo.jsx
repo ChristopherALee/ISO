@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 class Photo extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleFollow = this.handleFollow.bind(this);
+    this.handleUnFollow = this.handleUnFollow.bind(this);
   }
 
   componentDidMount() {
@@ -14,7 +17,39 @@ class Photo extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.photoId !== newProps.match.params.photoId) {
-      this.props.fetchShowPhoto(newProps.match.params.photoId);
+      this.props.fetchShowPhoto(newProps.match.params.photoId).then(
+        (photo) => this.props.fetchSingleUser(photo.authorName)
+      );
+    }
+  }
+
+  handleFollow(e) {
+    e.preventDefault();
+    this.props.createFollow({ followee_id: this.props.currentPhoto.author_id });
+  }
+
+  handleUnFollow(e) {
+    e.preventDefault();
+    this.props.deleteFollow({ followee_id: this.props.currentPhoto.author_id });
+  }
+
+  toggleEditFollowButton() {
+    if (this.props.currentUser && this.props.currentUser.followingIds && !this.props.currentUser.followingIds.includes(this.props.currentPhoto.authorName)) {
+      return (
+        <button className="follow-button" onClick={this.handleFollow}>
+          Follow
+        </button>
+      );
+    } else if (this.props.currentUser.username === this.props.currentPhoto.authorName) {
+      return (
+        null
+      );
+    } else {
+      return (
+        <button className="unfollow-button" onClick={this.handleUnFollow}>
+          Followed
+        </button>
+      );
     }
   }
 
@@ -43,6 +78,7 @@ class Photo extends React.Component {
                   <Link to={`/${this.props.currentPhoto.authorName}`}>
                     <p>{this.props.currentPhoto.authorName}</p>
                   </Link>
+                  {this.toggleEditFollowButton()}
                 </div>
               </div>
             </div>
