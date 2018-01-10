@@ -111,10 +111,9 @@
             display: none;
             // position: absolute;
             // border: 1px solid black;
-            padding-top: 50px;
             font-family: 'Open Sans', sans-serif;
             font-size: 12px;
-            padding: 10px 20px;
+            // padding: 10px 20px;
             right: 136px;
             z-index: 1;
             background-color: white;
@@ -129,14 +128,30 @@
 
             ul {
               display: block;
+              overflow-x: hidden;
+              width: 100px;
+
               li {
                 margin: 10px 0;
-                width: max-content;
+                width: 100%;
+                padding: 5px 10px;
                 transition: 0.1s;
 
-                &:hover {
+                &:hover:nth-child(2) {
                   color: #0399e5;
+                  cursor: pointer
                 }
+
+                &:hover:nth-child(3) {
+                  color: #0399e5;
+                  cursor: pointer;
+                }
+              }
+
+              li:nth-child(1) {
+                padding: 10px;
+                font-size: 18px;
+                border-bottom: 1px solid #f0f0f0;
               }
             }
           }
