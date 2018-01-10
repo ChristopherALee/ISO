@@ -13,9 +13,9 @@ class Discover extends React.Component {
   allPhotos() {
     let photos;
     if (this.props.allPhotos) {
-      photos = this.props.allPhotos.map( (photo) => {
+      photos = this.props.allPhotos.map( (photo, idx) => {
         return (
-          <img src={photo.medium_image_url}></img>
+          <img key={idx} src={photo.medium_image_url}></img>
         );
       });
     }
@@ -26,7 +26,13 @@ class Discover extends React.Component {
   render() {
     return (
       <div className="discover-container">
-        <div className="discover-banner"></div>
+        <div className="discover-banner">
+          <p>Discover Inspiration</p>
+        </div>
+
+        <div className="discover-photo-header">
+          <p>See recently added photos from photographers around the world</p>
+        </div>
 
         <div className="discover-photos">
           {this.allPhotos()}

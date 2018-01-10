@@ -1,5 +1,34 @@
 .discover-container {
   margin-top: 50px;
+
+  .discover-banner {
+    background-image: image_url("discover/discover_banner1.jpg");
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 48px;
+      color: white;
+      text-shadow: 1px 1px 10px black;
+    }
+  }
+
+  .discover-photo-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    p {
+      font-size: 20px;
+      color: #525558;
+    }
+  }
 }
 
 .discover-photos {
