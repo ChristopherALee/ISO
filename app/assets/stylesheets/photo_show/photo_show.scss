@@ -18,10 +18,26 @@
   .photo-contents {
     display: grid;
     grid-template-rows: 10% 20% 70%;
-    
+
     .photo {
       display: flex;
       align-items: center;
+      padding: 15px 20px;
+
+      .photo-contents-user-profile-photo-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .photo-contents-user-username {
+        font-size: 18px;
+        color: #535659;
+        margin-left: 10px;
+      }
     }
   }
 }

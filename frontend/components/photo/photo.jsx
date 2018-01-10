@@ -27,7 +27,11 @@ class Photo extends React.Component {
             <div className="photo-contents-user">
               <div className="photo">
                 <div className="photo-contents-user-profile-photo">
-                  <img src={this.props.currentPhoto.authorProfilePhotoUrl}></img>
+                  <div
+                    className="photo-contents-user-profile-photo-container"
+                    style={{ backgroundImage: `url(${this.props.currentPhoto.authorProfilePhotoUrl})`}}
+                    >
+                  </div>
                 </div>
 
                 <div className="photo-contents-user-username">
