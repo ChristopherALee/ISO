@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Discover extends React.Component {
   constructor(props) {
@@ -15,7 +16,9 @@ class Discover extends React.Component {
     if (this.props.allPhotos) {
       photos = this.props.allPhotos.map( (photo, idx) => {
         return (
-          <img key={idx} src={photo.medium_image_url}></img>
+          <Link to={`/photos/${photo.id}`} key={idx}>
+            <img src={photo.medium_image_url}></img>
+          </Link>
         );
       });
     }
