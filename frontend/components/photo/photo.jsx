@@ -60,7 +60,12 @@ class Photo extends React.Component {
       return (
         <div className="photo-show-container">
           <div className="photo-show">
-            <img src={this.props.currentPhoto.medium_image_url}></img>
+            {/* <img src={this.props.currentPhoto.medium_image_url}></img> */}
+            <div
+              style={{ backgroundImage: `url(${this.props.currentPhoto.medium_image_url})`}}
+              >
+
+            </div>
           </div>
 
           <div className="photo-contents">
@@ -86,7 +91,13 @@ class Photo extends React.Component {
             </div>
 
             <div className="photo-contents-description">
+              <div className="photo-contents-description-title">
+                <p>{this.props.currentPhoto.title}</p>
+              </div>
 
+              <div className="photo-contents-description-description">
+                <p>{this.props.currentPhoto.description}</p>
+              </div>
             </div>
 
             <div className="photo-contents-comments">

@@ -13,17 +13,25 @@
     align-items: center;
     border-right: 1px solid #ededed;
 
+    div {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 
   .photo-contents {
     display: grid;
-    grid-template-rows: 10% 20% 70%;
+    grid-template-rows: 10% 30% 60%;
 
     .photo-contents-user {
       .photo {
+        height: 100%;
         display: flex;
         align-items: center;
-        padding: 15px 20px;
+        padding: 0 20px;
         border-bottom: 1px solid #ededed;
 
         .photo-contents-user-profile-photo-container {
@@ -83,9 +91,22 @@
           }
         }
       }
+    }
 
-      
+    .photo-contents-description {
+      overflow-y: scroll;
+      padding: 20px;
+      border-bottom: 1px solid #ededed;
 
+      .photo-contents-description-title {
+        font-size: 18px;
+        color: #535659;
+        margin-bottom: 20px;
+      }
+
+      .photo-contents-description-description {
+        font-size: 12px;
+      }
     }
   }
 }
