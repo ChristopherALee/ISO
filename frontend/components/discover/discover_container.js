@@ -1,9 +1,19 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import Discover from './discover';
 
-const DiscoverContainer = () => {
-  return (
-    <div></div>
-  );
+const mapStateToProps = state => {
+  return {
+
+  };
 };
 
-export default DiscoverContainer;
+const mapDispatchToProps = dispatch => {
+  return {
+
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Discover);
