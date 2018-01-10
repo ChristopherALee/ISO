@@ -6,6 +6,7 @@
   grid-template-columns: 80% 20%;
   background-color: white;
   border: 1px solid #ededed;
+  -webkit-animation: zoomOpen 0.3s;
 
   .photo-show {
     display: flex;

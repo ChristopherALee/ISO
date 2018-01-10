@@ -1,5 +1,6 @@
 .discover-container {
   margin-top: 50px;
+  -webkit-animation: pop-in 0.3s;
 
   .discover-banner {
     background-image: image_url("discover/discover_banner1.jpg");
