@@ -60,7 +60,10 @@ export const fetchSinglePhoto = (photoId) => dispatch => {
 export const fetchShowPhoto = (photoId) => dispatch => {
   return (
     PhotosApiUtil.fetchSinglePhoto(photoId).then(
-      photo => dispatch(receiveShowPhoto(photo))
+      photo => {
+        dispatch(receiveShowPhoto(photo));
+        return photo;
+      }
     )
   );
 };
