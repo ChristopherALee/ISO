@@ -84,6 +84,10 @@
         height: 100%;
         margin-left: 30px;
 
+        &:hover .user-profile-dropdown {
+          display:block;
+        }
+
         .navbar-profile-photo-container {
           height: 100%;
 
@@ -106,58 +110,52 @@
           &:before {
             padding: 17.5px 0;
           }
+        }
 
-          .user-profile-dropdown {
-            display: none;
-            // position: absolute;
-            // border: 1px solid black;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 12px;
-            // padding: 10px 20px;
-            right: 136px;
-            z-index: 1;
-            background-color: white;
-            border-bottom: 1px solid #eeeff2;
-            border-right: 1px solid #eeeff2;
-            border-left: 1px solid #eeeff2;
-            position: absolute;
+        .user-profile-dropdown {
+          display: none;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 12px;
+          right: 130px;
+          margin-top: -5px;
+          z-index: 1;
+          background-color: white;
+          border-bottom: 1px solid #eeeff2;
+          border-right: 1px solid #eeeff2;
+          border-left: 1px solid #eeeff2;
+          position: absolute;
 
-            &:before:hover {
-              display: block;
-            }
-
-            ul {
-              display: block;
-              overflow-x: hidden;
-              width: 100px;
-
-              li {
-                margin: 10px 0;
-                width: 100%;
-                padding: 5px 10px;
-                transition: 0.1s;
-
-                &:hover:nth-child(2) {
-                  color: #0399e5;
-                  cursor: pointer
-                }
-
-                &:hover:nth-child(3) {
-                  color: #0399e5;
-                  cursor: pointer;
-                }
-              }
-
-              li:nth-child(1) {
-                padding: 10px;
-                font-size: 18px;
-                border-bottom: 1px solid #f0f0f0;
-              }
-            }
+          &:before:hover {
+            display: block;
           }
 
-          &:hover .user-profile-dropdown {
+          ul {
             display: block;
+            overflow-x: hidden;
+            width: 100px;
+
+            li {
+              margin: 10px 0;
+              width: 100%;
+              padding: 5px 10px;
+              transition: 0.1s;
+
+              &:hover:nth-child(2) {
+                color: #0399e5;
+                cursor: pointer
+              }
+
+              &:hover:nth-child(3) {
+                color: #0399e5;
+                cursor: pointer;
+              }
+            }
+
+            li:nth-child(1) {
+              padding: 10px;
+              font-size: 18px;
+              border-bottom: 1px solid #f0f0f0;
+            }
           }
         }
       }

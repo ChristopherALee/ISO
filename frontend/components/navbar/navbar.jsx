@@ -50,7 +50,6 @@ class NavBar extends React.Component {
   }
 
   mainNavLoggedIn() {
-    debugger
     return (
       <nav id='navbar-main-logged-in'>
         <div className='navbar-left'>
@@ -78,13 +77,13 @@ class NavBar extends React.Component {
                 <img src={this.props.currentUserProfilePhoto}></img>
               </div>
 
-              <div className='user-profile-dropdown'>
-                <ul>
-                  <li>Hi, {this.props.currentUsername}</li>
-                  <li onClick={this.handleProfileLink}>Profile</li>
-                  <li onClick={this.handleLogOut}>Log Out</li>
-                </ul>
-              </div>
+            </div>
+            <div className='user-profile-dropdown'>
+              <ul>
+                <li>Hi, {this.props.currentUsername}</li>
+                <li onClick={this.handleProfileLink}>Profile</li>
+                <li onClick={this.handleLogOut}>Log Out</li>
+              </ul>
             </div>
 
           </div>
