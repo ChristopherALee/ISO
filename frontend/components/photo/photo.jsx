@@ -15,30 +15,40 @@ class Photo extends React.Component {
     }
   }
 
-  showPhoto() {
+  render() {
     if (this.props.currentPhoto) {
       return (
-        <img src={this.props.currentPhoto.medium_image_url}></img>
+        <div className="photo-show-container">
+          <div className="photo-show">
+            <img src={this.props.currentPhoto.medium_image_url}></img>
+          </div>
+
+          <div className="photo-contents">
+            <div className="photo-contents-user">
+              <div className="photo">
+                <div className="photo-contents-user-profile-photo">
+                  <img src={this.props.currentPhoto.authorProfilePhotoUrl}></img>
+                </div>
+
+                <div className="photo-contents-user-username">
+                  <p>{this.props.currentPhoto.authorName}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="photo-contents-description">
+
+            </div>
+
+            <div className="photo-contents-comments">
+
+            </div>
+          </div>
+        </div>
       );
     } else {
       return null;
     }
-  }
-
-  render() {
-    return (
-      <div className="photo-show-container">
-        <div className="photo-show">
-          <div className="photo">
-            {this.showPhoto()}
-          </div>
-        </div>
-
-        <div className="photo-contents">
-
-        </div>
-      </div>
-    );
   }
 }
 

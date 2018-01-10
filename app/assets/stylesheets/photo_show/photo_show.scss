@@ -1,0 +1,27 @@
+.photo-show-container {
+  margin-top: 83px;
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  background-color: white;
+  border: 1px solid #ededed;
+
+  .photo-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ededed;
+
+  }
+
+  .photo-contents {
+    display: grid;
+    grid-template-rows: 10% 20% 70%;
+    
+    .photo {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
