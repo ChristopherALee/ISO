@@ -98,8 +98,12 @@
             overflow: hidden;
             margin-top: 5px;
 
-            img {
+            div {
               width: 100%;
+              height: 100%;
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
             }
 
             &:hover .user-profile-dropdown {

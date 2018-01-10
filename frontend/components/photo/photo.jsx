@@ -60,7 +60,6 @@ class Photo extends React.Component {
       return (
         <div className="photo-show-container">
           <div className="photo-show">
-            {/* <img src={this.props.currentPhoto.medium_image_url}></img> */}
             <div
               style={{ backgroundImage: `url(${this.props.currentPhoto.medium_image_url})`}}
               >

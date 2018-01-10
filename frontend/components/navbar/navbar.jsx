@@ -76,7 +76,9 @@ class NavBar extends React.Component {
           <div className='user-profile-options'>
             <div className='navbar-profile-photo-container'>
               <div className="navbar-profile-photo-image">
-                <img src={this.props.currentUserProfilePhoto}></img>
+                <div
+                  style={{ backgroundImage: `url(${this.props.currentUserProfilePhoto})`}}>
+                </div>
               </div>
 
             </div>
