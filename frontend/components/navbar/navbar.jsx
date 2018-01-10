@@ -73,8 +73,11 @@ class NavBar extends React.Component {
           />
 
           <div className='user-profile-options'>
-            <div className='navbar-profile-photo'>
-              <img src={this.props.currentUserProfilePhoto}></img>
+            <div className='navbar-profile-photo-container'>
+              <div className="navbar-profile-photo-image">
+                <img src={this.props.currentUserProfilePhoto}></img>
+              </div>
+
               <div className='user-profile-dropdown'>
                 <ul>
                   <li>{this.props.currentUsername}</li>

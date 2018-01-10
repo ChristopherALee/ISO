@@ -23,9 +23,9 @@ class User < ApplicationRecord
   validates :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true, message: 'Password must be a minimum of 6 characters.' }
 
-  has_attached_file :cover_photo, styles: { medium: '800x800>' }
+  has_attached_file :cover_photo, styles: { medium: '800x800>' }, default_url: "https://s3.amazonaws.com/iso-frame-dev/missing_photo_images/missing_cover_photo.png"
   validates_attachment_content_type :cover_photo, content_type: /\Aimage\/.*\Z/
-  has_attached_file :profile_photo, styles: { thumb: '100x100>' }
+  has_attached_file :profile_photo, styles: { thumb: '100x100>' }, default_url: "https://s3.amazonaws.com/iso-frame-dev/missing_photo_images/missing_profile_photo.png"
   validates_attachment_content_type :profile_photo, content_type: /\Aimage\/.*\Z/
 
   validates :username, presence: { message: 'Please enter a username.'}, uniqueness: { message: 'This username has already been taken.'}
