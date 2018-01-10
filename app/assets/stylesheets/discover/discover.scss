@@ -1,5 +1,6 @@
 .discover-container {
   margin-top: 50px;
+  background-color: #f7f8fa;
   -webkit-animation: pop-in 0.3s;
 
   .discover-banner {
@@ -23,8 +24,14 @@
   .discover-photo-header {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
     margin-bottom: 30px;
+    background-color: white;
+    border-bottom: 1px solid #ededed;
 
     p {
       font-size: 20px;
@@ -56,22 +63,27 @@
 
   .discover-photo-overlay-container {
     &:hover .discover-photo-overlay {
-      height: 100%;
+      opacity: 0.8;
     }
 
     .discover-photo-overlay {
-      // position:;
+      position: relative;
+      top: -147px;
       bottom: 0;
-      left: 0;
+      left: 231px;
       right: 0;
-      background-color: blue;
+      // background-color: blue;
+      background: linear-gradient(black, transparent 120px, black);
       overflow: hidden;
       width: 100%;
-      height: 0;
+      height: 100%;
+      opacity: 0;
       transition: 0.5s;
+      transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
 
       .overlay-info {
-
+        color: white;
       }
     }
   }

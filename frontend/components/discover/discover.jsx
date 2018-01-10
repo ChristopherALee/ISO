@@ -19,7 +19,6 @@ class Discover extends React.Component {
           <div className="discover-photo-overlay-container" key={idx}>
             <Link to={`/photos/${photo.id}`} key={idx}>
               <img src={photo.medium_image_url}></img>
-            </Link>
 
             <div className="discover-photo-overlay">
               <div className="overlay-info">
@@ -31,6 +30,7 @@ class Discover extends React.Component {
                 <p>{photo.author}</p>
               </div>
             </div>
+          </Link>
           </div>
         );
       });
@@ -47,7 +47,7 @@ class Discover extends React.Component {
         </div>
 
         <div className="discover-photo-header">
-          <p>See recently added photos from photographers around the world</p>
+          <p>See recent photos from photographers around the world</p>
         </div>
 
         <div className="discover-photos">
