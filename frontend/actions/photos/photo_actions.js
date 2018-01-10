@@ -41,9 +41,9 @@ export const fetchAllPhotos = () => dispatch => {
   );
 };
 
-export const fetchSinglePhoto = (photo) => dispatch => {
+export const fetchSinglePhoto = (photoId) => dispatch => {
   return (
-    PhotosApiUtil.fetchSinglePhoto(photo).then(
+    PhotosApiUtil.fetchSinglePhoto(photoId).then(
       photo => dispatch(receiveSinglePhoto(photo))
     )
   );

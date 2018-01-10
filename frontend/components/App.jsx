@@ -9,7 +9,8 @@ import GreetingContainer from './greeting/greeting_container';
 import FeedContainer from './feed/feed_container';
 import ProfileContainer from './profile/profile_container';
 import DiscoverContainer from './discover/discover_container';
-import MainContainer from './main/main_container';
+import PhotoContainer from './photo/photo_container';
+// import MainContainer from './main/main_container';
 import About from './about/about';
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <AuthRoute path='/login' component={SessionFormContainer} />
         <Route exact path='/about' component={About} />
         <Route exact path='/:username' component={ProfileContainer} />
+        <Route exact path='/photos/:photoId' component={PhotoContainer} />
       </Switch>
 
     </div>
