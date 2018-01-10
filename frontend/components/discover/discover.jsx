@@ -16,9 +16,22 @@ class Discover extends React.Component {
     if (this.props.allPhotos) {
       photos = this.props.allPhotos.map( (photo, idx) => {
         return (
-          <Link to={`/photos/${photo.id}`} key={idx}>
-            <img src={photo.medium_image_url}></img>
-          </Link>
+          <div className="discover-photo-overlay-container" key={idx}>
+            <Link to={`/photos/${photo.id}`} key={idx}>
+              <img src={photo.medium_image_url}></img>
+            </Link>
+
+            <div className="discover-photo-overlay">
+              <div className="overlay-info">
+                <div
+                  className="overlay-info-profile-photo"
+                  style={{ backgroundImage: `url(${photo.authorProfilePhoto})`}}
+                  >
+                </div>
+                <p>{photo.author}</p>
+              </div>
+            </div>
+          </div>
         );
       });
     }
