@@ -5,6 +5,7 @@ export const RECEIVE_SINGLE_PHOTO = 'RECEIVE_SINGLE_PHOTO';
 export const RECEIVE_SHOW_PHOTO = 'RECEIVE_SHOW_PHOTO';
 export const REMOVE_PHOTO = 'REMOVE_PHOTO';
 export const RECEIVE_PHOTO_ERRORS = 'RECEIVE_PHOTO_ERRORS';
+export const START_LOADING_UPLOAD = 'START_LOADING_UPLOAD';
 
 export const receiveAllPhotos = (photos) => {
   return {
@@ -41,6 +42,12 @@ export const receivePhotoErrors = (errors) => {
   };
 };
 
+export const startLoadingUpload = () => {
+  return {
+    type: START_LOADING_UPLOAD
+  };
+};
+
 export const fetchAllPhotos = () => dispatch => {
   return (
     PhotosApiUtil.fetchAllPhotos().then(
@@ -69,6 +76,9 @@ export const fetchShowPhoto = (photoId) => dispatch => {
 };
 
 export const createPhoto = (photo) => dispatch => {
+  // loading dispatch
+  dispatch(startLoadingUpload());
+
   return (
     PhotosApiUtil.createPhoto(photo).then(
       photo => {
