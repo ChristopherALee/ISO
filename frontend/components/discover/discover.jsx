@@ -35,7 +35,7 @@ class Discover extends React.Component {
             </Link>
           </div>
         );
-      });
+      }).reverse();
     }
 
     return photos;
