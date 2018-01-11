@@ -1,5 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
+
 import CoverPhotoUploadFormContainer from '../upload/cover_photo/cover_photo_upload_form_container';
 import ProfilePhotoUploadFormContainer from '../upload/profile_photo/profile_photo_upload_form_container';
 
@@ -48,7 +50,9 @@ class Profile extends React.Component {
     if (this.props.photos.length && this.props.photos.every( (photo) => (photo !== undefined))) {
       userPhotos = this.props.photos.map( (photo) => {
         return (
-            <img key={photo.id} src={`${photo.medium_image_url}`}></img>
+            <Link to={`/photos/${photo.id}`} key={photo.id}>
+              <img src={`${photo.medium_image_url}`}></img>
+            </Link>
         );
       }).reverse();
     } else {
