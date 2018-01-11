@@ -20,17 +20,19 @@ class Discover extends React.Component {
             <Link to={`/photos/${photo.id}`} key={idx}>
               <img src={photo.medium_image_url}></img>
 
-            <div className="discover-photo-overlay">
-              <div className="overlay-info">
-                <div
-                  className="overlay-info-profile-photo"
-                  style={{ backgroundImage: `url(${photo.authorProfilePhoto})`}}
-                  >
+              <div className="discover-photo-overlay">
+                <div className="overlay-info">
+                  <div className="overlay-info-profile-photo-container">
+                    <div
+                      className="overlay-info-profile-photo"
+                      style={{ backgroundImage: `url(${photo.authorProfilePhoto})`}}
+                      >
+                      </div>
+                  </div>
+                  <Link to={`/${photo.author}`}>{photo.author}</Link>
                 </div>
-                <p>{photo.author}</p>
               </div>
-            </div>
-          </Link>
+            </Link>
           </div>
         );
       });
