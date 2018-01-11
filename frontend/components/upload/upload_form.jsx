@@ -50,6 +50,7 @@ class UploadForm extends React.Component {
       // window.location.reload();
       this.props.closeModal();
     } else {
+      this.props.closeModal();
       this.props.history.push(`/${this.props.currentUser}`);
     }
   }
