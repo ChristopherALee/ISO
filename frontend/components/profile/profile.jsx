@@ -199,6 +199,7 @@ class Profile extends React.Component {
 
     return (
       <div className='profile-container'>
+
         <Modal
           className={{
             base: 'options-upload-modal',

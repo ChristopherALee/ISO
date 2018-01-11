@@ -20,6 +20,7 @@ const mapStateToProps = (state, ownProps) => {
     currentUserFollowed: currentUserFollowed,
     user: user,
     photos: photos,
+    uploadLoading: state.loading.uploadLoading
   };
 };
 

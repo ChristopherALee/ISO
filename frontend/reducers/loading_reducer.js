@@ -2,11 +2,12 @@ import {
   START_LOADING_UPLOAD,
   RECEIVE_SINGLE_PHOTO,
   RECEIVE_PHOTO_ERRORS } from '../actions/photos/photo_actions';
+import { RECEIVE_SINGLE_USER } from '../actions/user/user_actions';
 
 const loadingReducer = (state = { uploadLoading: false }, action) => {
   let newState;
   Object.freeze(state);
-  debugger
+
   switch (action.type) {
     case START_LOADING_UPLOAD:
       newState = Object.assign({}, state, { uploadLoading: true });
@@ -15,6 +16,9 @@ const loadingReducer = (state = { uploadLoading: false }, action) => {
       newState = Object.assign({}, state, { uploadLoading: false });
       return newState;
     case RECEIVE_PHOTO_ERRORS:
+      newState = Object.assign({}, state, { uploadLoading: false });
+      return newState;
+    case RECEIVE_SINGLE_USER:
       newState = Object.assign({}, state, { uploadLoading: false });
       return newState;
     default:

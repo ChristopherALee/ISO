@@ -69,9 +69,22 @@ class CoverPhotoUploadForm extends React.Component {
     }
   }
 
+  loading() {
+    if (this.props.uploadLoading) {
+      return (
+        <div className="cover-photo-loader">Loading...</div>
+      );
+    } else {
+      return (
+        null
+      );
+    }
+  }
+
   render() {
     return (
       <form className='cover-photo-upload-form' onSubmit={this.handleSubmit}>
+        {this.loading()}
         <div className='cover-photo-upload-form-image'>
           {this.image()}
           <input

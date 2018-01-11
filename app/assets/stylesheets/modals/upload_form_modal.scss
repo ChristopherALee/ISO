@@ -30,6 +30,7 @@
     justify-content: flex-end;
     padding: 10px;
     position: absolute;
+    z-index: 1;
 
     &:hover {
       cursor: pointer;
@@ -77,6 +78,7 @@
   display: grid;
   grid-template-columns: 80% 20%;
   height: 100%;
+  position: relative;
 
   .upload-form-image {
     display: flex;
