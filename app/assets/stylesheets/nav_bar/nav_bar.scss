@@ -16,6 +16,7 @@
     height: 50px;
     position:fixed;
     border-bottom: 1px solid #ededed;
+    z-index: 8;
 
     .navbar-left {
       display: flex;
@@ -216,6 +217,7 @@
     justify-content: space-between;
     position: absolute;
     padding: 20px 0 20px 0;
+    z-index: 8;
     // -webkit-animation: pop-in 1.2s;
 
     .navbar-left {
@@ -327,6 +329,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0 10px 0;
+    z-index: 8;
 
     .navbar-alt-left {
       margin-left: 50px;
