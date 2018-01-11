@@ -17,8 +17,11 @@ const Comments = ({
             >
           </div>
         </div>
-        <p>{comment.authorName}</p>
-        <p>{comment.body}</p>
+
+        <div className="comment-text-contents">
+          <p>{comment.authorName}</p>
+          <p>{comment.body}</p>
+        </div>
       </li>
     );
   });
