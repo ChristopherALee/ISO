@@ -4,7 +4,8 @@ import { updateUser } from '../../../actions/user/user_actions';
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    uploadLoading: state.loading.uploadLoading
   };
 };
 

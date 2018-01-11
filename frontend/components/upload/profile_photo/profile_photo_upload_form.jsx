@@ -69,9 +69,23 @@ class ProfilePhotoUploadForm extends React.Component {
     }
   }
 
+  loading() {
+    if (this.props.uploadLoading) {
+      return (
+        <div className="profile-photo-loader">Loading...</div>
+      );
+    } else {
+      return (
+        null
+      );
+    }
+  }
+
   render() {
     return (
       <form className='profile-photo-upload-form' onSubmit={this.handleSubmit}>
+        {this.loading()}
+
         <div className='profile-photo-upload-form-image'>
           {this.image()}
           <input
