@@ -14,7 +14,7 @@ import {
 const mapStateToProps = (state, ownProps) => {
   debugger
   let currentPhoto = state.entities.photos[ownProps.match.params.photoId];
-  let sessionUser = state.session.currentUser.username;
+  let sessionUser = state.session.currentUser ? state.session.currentUser.username : null;
   let currentUser = state.entities.users[sessionUser];
 
   let photoComments;

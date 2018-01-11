@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[ownProps.match.params.username];
 
   let photos = [];
-  if (user && user.photoIds) {
+  if (user && user.photoIds && user.photoIds.every( (photoId) => photoId !== undefined)) {
     photos = user.photoIds.map( (photoId) => state.entities.photos[photoId]);
   }
 

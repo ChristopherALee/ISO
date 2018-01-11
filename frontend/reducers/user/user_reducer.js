@@ -14,9 +14,10 @@ const userReducer = (state = {}, action) => {
       newState = Object.assign({}, state, {[action.user.username]: action.user});
       return newState;
     case RECEIVE_SINGLE_PHOTO:
-      let authorName = action.photo.authorName;
+      let authorName = action.photo.photo.authorName;
       newState = Object.assign({}, state);
-      newState[authorName].photoIds.push(action.photo.id);
+      debugger
+      newState[authorName].photoIds.push(action.photo.photo.id);
       return newState;
     default:
       return state;
