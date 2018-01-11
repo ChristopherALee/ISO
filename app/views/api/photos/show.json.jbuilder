@@ -1,4 +1,5 @@
 json.extract! @photo, :id, :title, :description, :author_id, :comment_ids
+json.comments @photo.comments.pluck(:body)
 json.authorName @photo.author.username
 json.authorProfilePhoto asset_path(@photo.author.profile_photo(:thumb))
 json.image_url asset_path(@photo.image.url)

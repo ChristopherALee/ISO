@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :create, :show, :update]
     resources :photos, only: [:index, :create, :show, :update, :destroy]
     resources :follows, only: [:index, :create]
+    resources :comments, only: [:index, :create, :show, :update, :destroy]
     resource :session, only: [:create, :destroy]
 
     delete '/users/:id/unfollow', to: 'users#unfollow'
