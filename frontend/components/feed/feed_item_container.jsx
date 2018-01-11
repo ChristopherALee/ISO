@@ -6,7 +6,12 @@ const FeedItemContainer = (props) => {
     <div className="feed-item">
       <div className="feed-item-header">
         <div className="feed-item-header-profile-photo">
-          <img src={`${props.photo.authorProfilePhoto}`}></img>
+          <div
+            className="feed-item-header-profile-photo-image"
+            style={{ backgroundImage: `url(${props.photo.authorProfilePhoto})`}}
+            >
+          </div>
+          {/* <img src={`${props.photo.authorProfilePhoto}`}></img> */}
         </div>
         <Link to={`/${props.photo.author}`}>{props.photo.author}</Link>
       </div>
