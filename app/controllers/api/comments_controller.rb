@@ -20,6 +20,26 @@ class Api::CommentsController < ApplicationController
     end
   end
 
+  def update
+    @comment = Comment.find(params[:id])
+
+    if @comment.author_id == current_user.id && @comment.update(comment_params)
+      render 'api/photos/show'
+    else
+      render json: @comment.errors.full_messages, status: 403
+    end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+
+    if @comment.author_id == current_user.id && @comment.destroy
+      render 'api/photos/show'
+    else
+      render json: @comment.errors.full_messages, status: 403
+    end
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:photo_id, :body)
