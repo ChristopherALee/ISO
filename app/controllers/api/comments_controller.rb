@@ -14,7 +14,7 @@ class Api::CommentsController < ApplicationController
     @comment.author_id = current_user.id
 
     if @comment.save
-      render 'api/photos/show'
+      render 'api/comments/show'
     else
       render json: @comment.errors.full_messages, status: 422
     end
@@ -24,7 +24,7 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
 
     if @comment.author_id == current_user.id && @comment.update(comment_params)
-      render 'api/photos/show'
+      render 'api/comments/show'
     else
       render json: @comment.errors.full_messages, status: 403
     end
