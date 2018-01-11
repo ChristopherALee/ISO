@@ -67,7 +67,6 @@ class UploadForm extends React.Component {
     let that = this;
     this.props.createPhoto(formData).then(
       (resp) => {
-        // this.props.closeModal();
         this.redirectToProfile();
         return resp;
       }
@@ -121,10 +120,25 @@ class UploadForm extends React.Component {
     }
   }
 
+  loading() {
+    if (this.props.uploadLoading) {
+      return (
+        <div className="loader">Loading...</div>
+      );
+    } else {
+      return (
+        null
+      );
+    }
+  }
+
   render() {
 
     return (
       <form className='upload-form' onSubmit={this.handleSubmit}>
+
+        {this.loading()}
+
         <div className='upload-form-image'>
           {this.image()}
           <ul className={'upload-form-image-errors'}>{this.imageErrors()}</ul>

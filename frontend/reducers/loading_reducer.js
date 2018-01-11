@@ -6,7 +6,7 @@ import {
 const loadingReducer = (state = { uploadLoading: false }, action) => {
   let newState;
   Object.freeze(state);
-
+  debugger
   switch (action.type) {
     case START_LOADING_UPLOAD:
       newState = Object.assign({}, state, { uploadLoading: true });
