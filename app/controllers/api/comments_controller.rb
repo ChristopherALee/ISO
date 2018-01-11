@@ -12,7 +12,7 @@ class Api::CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.author_id = current_user.id
-    debugger
+
     if @comment.save
       @photo = @comment.photo
       render 'api/photos/show'
@@ -43,7 +43,6 @@ class Api::CommentsController < ApplicationController
 
   private
   def comment_params
-    debugger
     params.require(:comment).permit(:photo_id, :body)
   end
 end

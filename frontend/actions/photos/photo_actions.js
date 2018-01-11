@@ -43,7 +43,6 @@ export const receivePhotoErrors = (errors) => {
 };
 
 export const startLoadingUpload = () => {
-  debugger
   return {
     type: START_LOADING_UPLOAD
   };
@@ -79,7 +78,6 @@ export const fetchShowPhoto = (photoId) => dispatch => {
 export const createPhoto = (photo) => dispatch => {
   // loading dispatch
   dispatch(startLoadingUpload());
-  debugger
   return (
     PhotosApiUtil.createPhoto(photo).then(
       photo => {

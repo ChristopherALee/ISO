@@ -1,7 +1,7 @@
 import {
   RECEIVE_ALL_USERS,
   RECEIVE_SINGLE_USER } from '../../actions/user/user_actions';
-import { RECEIVE_SINGLE_PHOTO } from '../../actions/photos/photo_actions';
+import { RECEIVE_SINGLE_PHOTO, RECEIVE_SHOW_PHOTO } from '../../actions/photos/photo_actions';
 
 const userReducer = (state = {}, action) => {
   let newState;

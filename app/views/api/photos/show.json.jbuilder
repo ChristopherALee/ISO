@@ -12,7 +12,10 @@ comments = @photo.comments.includes(:author)
 json.comments do
   json.array! comments do |comment|
     json.id comment.id
+    json.photoId comment.photo_id
     json.body comment.body
+    json.authorName comment.author.username
+    json.authorProfilePhoto asset_path(comment.author.profile_photo(:thumb))
   end
 end
 

@@ -3,15 +3,11 @@ import {
   RECEIVE_SINGLE_PHOTO,
   RECEIVE_SHOW_PHOTO,
   REMOVE_PHOTO } from '../../actions/photos/photo_actions';
-import {
-  RECEIVE_SINGLE_COMMENT,
-  REMOVE_COMMENT } from '../../actions/comments/comment_actions';
 
 const photosReducer = (state = {}, action) => {
   let newState;
   Object.freeze(state);
 
-  let photoId;
 
   switch (action.type) {
     case RECEIVE_ALL_PHOTOS:

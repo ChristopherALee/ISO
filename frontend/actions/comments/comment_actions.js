@@ -1,8 +1,16 @@
 import * as CommentsApiUtil from '../../util/comments/comments_api_util';
 
+export const RECEIVE_ALL_COMMENTS = 'RECEIVE_ALL_COMMENTS';
 export const RECEIVE_SINGLE_COMMENT = 'RECEIVE_SINGLE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_COMMENT_ERRORS';
+
+const receiveAllComments = (comments) => {
+  return {
+    type: RECEIVE_ALL_COMMENTS,
+    comments: comments
+  };
+};
 
 const receiveSingleComment = (comment) => {
   return {
@@ -25,12 +33,21 @@ const receiveCommentErrors = (errors) => {
   };
 };
 
+export const fetchAllComments = () => dispatch => {
+  return (
+    CommentsApiUtil.fetchAllComments().then(
+      (comments) => {
+        dispatch(receiveAllComments(comments));
+        return comments;
+      }
+    )
+  );
+};
+
 export const createComment = (comment) => dispatch => {
-  debugger
   return (
     CommentsApiUtil.createComment(comment).then(
       (comment) => {
-        debugger
         dispatch(receiveSingleComment(comment));
         return comment;
       }

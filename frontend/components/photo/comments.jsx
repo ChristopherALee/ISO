@@ -1,11 +1,7 @@
 import React from 'react';
 
-const Comments = ({
-  currentPhoto,
-  currentUser,
-  }) => {
-
-  const comments = currentPhoto.comments.map( (comment, idx) => {
+const Comments = (props) => {
+  const comments = props.photoComments.map( (comment, idx) => {
     return (
       <li key={idx}>
         <div className="comment-author-profile-photo-container">

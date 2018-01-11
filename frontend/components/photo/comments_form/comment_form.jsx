@@ -3,7 +3,7 @@ import React from 'react';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
-    debugger
+
     this.state = {
       body: "",
       photo_id: this.props.currentPhoto.id
@@ -21,8 +21,8 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.props.createComment({comment: this.state});
+    this.setState({['body']: ""});
   }
 
   render() {

@@ -57,6 +57,18 @@ class Photo extends React.Component {
     }
   }
 
+  showComments() {
+    if (this.props.photoComments) {
+      return (
+        <Comments
+          photoComments={this.props.photoComments}
+        />
+      );
+    } else {
+      return null;
+    }
+  }
+
   render() {
     if (this.props.currentPhoto) {
       return (
@@ -102,18 +114,14 @@ class Photo extends React.Component {
             </div>
 
             <div className="photo-contents-comments">
-              {/* CommentFormContainer */}
-              {/* <CommentFormContainer
+              <CommentFormContainer
                 currentPhoto={this.props.currentPhoto}
                 // createComment={this.props.createComment}
                 // updateComment={this.props.updateComment}
                 // deleteComment={this.props.deleteComment}
               />
 
-              <Comments
-                currentPhoto={this.props.currentPhoto}
-                currentUser={this.props.currentUser}
-              /> */}
+              {this.showComments()}
             </div>
           </div>
         </div>

@@ -123,7 +123,6 @@ class Profile extends React.Component {
   }
 
   handleModal(boolean = false) {
-    // debugger
     this.setState({['modalOpen']: boolean});
   }
 
@@ -136,7 +135,6 @@ class Profile extends React.Component {
   }
 
   handleModalCoverPhoto(boolean = false) {
-    // debugger
     this.setState({['modalOpenCoverPhoto']: boolean});
   }
 
@@ -149,7 +147,6 @@ class Profile extends React.Component {
   }
 
   handleModalProfilePhoto(boolean = false) {
-    // debugger
     this.setState({['modalOpenProfilePhoto']: boolean});
   }
 
