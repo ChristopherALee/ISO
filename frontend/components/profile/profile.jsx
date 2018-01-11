@@ -51,7 +51,7 @@ class Profile extends React.Component {
       userPhotos = this.props.photos.map( (photo) => {
         return (
             <Link to={`/photos/${photo.id}`} key={photo.id}>
-              <img src={`${photo.large_image_url}`}></img>
+              <img src={`${photo.medium_image_url}`}></img>
             </Link>
         );
       }).reverse();

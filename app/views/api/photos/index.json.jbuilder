@@ -4,7 +4,6 @@
     json.image_url asset_path(photo.image)
     json.thumbnail asset_path(photo.image(:thumbnail))
     json.medium_image_url asset_path(photo.image(:medium))
-    json.large_image_url asset_path(photo.image(:large))
     json.author photo.author.username
     json.authorProfilePhoto asset_path(photo.author.profile_photo)
   end
