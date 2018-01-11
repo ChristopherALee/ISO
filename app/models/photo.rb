@@ -16,7 +16,7 @@
 #
 
 class Photo < ApplicationRecord
-  has_attached_file :image, styles: { thumb: '100x100>', medium: '800x800>' }
+  has_attached_file :image, styles: { thumb: '100x100>', medium: '800x800>', large: '1000x1000>' }
   validates :title, presence: { message: 'Please enter a title.' }
   validates :image, attachment_presence: { message: 'Please upload a photo' }
   validates :author, presence: true
