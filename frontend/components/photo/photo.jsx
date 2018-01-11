@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Comments from './comments';
 
 class Photo extends React.Component {
   constructor(props) {
@@ -100,7 +101,13 @@ class Photo extends React.Component {
             </div>
 
             <div className="photo-contents-comments">
-
+              <Comments
+                currentPhoto={this.props.currentPhoto}
+                currentUser={this.props.currentUser}
+                createComment={this.props.createComment}
+                updateComment={this.props.updateComment}
+                deleteComment={this.props.deleteComment}
+              />
             </div>
           </div>
         </div>
