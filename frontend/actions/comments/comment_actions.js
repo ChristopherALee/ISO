@@ -26,9 +26,11 @@ const receiveCommentErrors = (errors) => {
 };
 
 export const createComment = (comment) => dispatch => {
+  debugger
   return (
     CommentsApiUtil.createComment(comment).then(
       (comment) => {
+        debugger
         dispatch(receiveSingleComment(comment));
         return comment;
       }

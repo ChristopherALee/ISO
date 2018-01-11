@@ -27,6 +27,7 @@
   .photo-contents {
     display: grid;
     grid-template-rows: 10% 30% 60%;
+    overflow-y: scroll;
 
     .photo-contents-user {
       .photo {
@@ -116,6 +117,7 @@
 
       .comments-content {
         padding: 20px;
+        background-color: #f7f8fa;
 
         ul {
           li {

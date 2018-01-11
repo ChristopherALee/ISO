@@ -3,9 +3,7 @@ import React from 'react';
 const Comments = ({
   currentPhoto,
   currentUser,
-  createComment,
-  updateComment,
-  deleteComment}) => {
+  }) => {
 
   const comments = currentPhoto.comments.map( (comment, idx) => {
     return (

@@ -18,41 +18,14 @@ const photosReducer = (state = {}, action) => {
       newState = Object.assign({}, state, action.photos);
       return newState;
     case RECEIVE_SINGLE_PHOTO:
-      newState = Object.assign({}, state, {[action.photo.id]: action.photo});
+      newState = Object.assign({}, state, {[action.photo.photo.id]: action.photo.photo});
       return newState;
     case RECEIVE_SHOW_PHOTO:
-      newState = Object.assign({}, state, {[action.photo.id]: action.photo});
+      newState = Object.assign({}, state, {[action.photo.photo.id]: action.photo.photo});
       return newState;
     case REMOVE_PHOTO:
       newState = Object.assign({}, state);
       delete newState[action.photoId];
-      return newState;
-    case RECEIVE_SINGLE_COMMENT:
-      photoId = action.comment.photo_id;
-      newState = Object.assign({}, state);
-      newState[photoId].comment_ids.push(action.comment.id);
-      newState[photoId].comments.push(action.comment.body);
-      return newState;
-    case REMOVE_COMMENT:
-      photoId = action.comment.photo_id;
-      newState = Object.assign({}, state);
-
-      let newCommentIds = [];
-      newState[photoId].comment_ids.each ( (commentId) => {
-        if (action.comment.id !== commentId) {
-          newCommentIds.push(commentId);
-        }
-      });
-      newState[photoId].comment_ids = newCommentIds;
-
-      let newComments = [];
-      newState[photoId].comments.each( (comment) => {
-        if (action.comment.body !== comment) {
-          newComments.push(comment);
-        }
-      });
-      newState[photoId].comments = newComments;
-
       return newState;
     default:
       return state;
