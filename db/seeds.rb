@@ -9,6 +9,7 @@
 User.destroy_all
 Photo.destroy_all
 Follow.destroy_all
+Comment.destroy_all
 
 user1 = User.create({username: 'guest', password: 'password123'})
 user2 = User.create({username: 'Chris', password: 'lily010115'})
@@ -96,3 +97,10 @@ follow18 = Follow.create({follower_id: user5.id, followee_id: user6.id })
 follow19 = Follow.create({follower_id: user6.id, followee_id: user3.id })
 follow19 = Follow.create({follower_id: user6.id, followee_id: user4.id })
 follow19 = Follow.create({follower_id: user6.id, followee_id: user5.id })
+
+comment1 = Comment.create({photo_id: photo1.id, author_id: user1.id, body: "Wow nice picture!"})
+comment2 = Comment.create({photo_id: photo1.id, author_id: user2.id, body: "Coooooool!"})
+comment3 = Comment.create({photo_id: photo1.id, author_id: user3.id, body: "How did you take this picture?"})
+comment4 = Comment.create({photo_id: photo1.id, author_id: user4.id, body: "This is wack."})
+comment5 = Comment.create({photo_id: photo1.id, author_id: user5.id, body: "^ lol"})
+comment6 = Comment.create({photo_id: photo1.id, author_id: user6.id, body: ":)"})
