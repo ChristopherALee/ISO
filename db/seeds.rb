@@ -11,7 +11,7 @@ Photo.destroy_all
 Follow.destroy_all
 Comment.destroy_all
 
-user1 = User.create({username: 'guest', password: 'password123'})
+user1 = User.create({username: 'guest', password: 'password123', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/anders-jilden-307322.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jakob-owens-224351.jpg'})
 user2 = User.create({username: 'Chris', password: 'lily010115', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/teddy-kelley-181683.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jeremy-bishop-262119.jpg'})
 user3 = User.create({username: 'Lily', password: 'chris010115', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jad-limcaco-272413.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/andre-benz-248759.jpg'})
 user4 = User.create({username: 'Batman', password: 'robin123', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/vincent-guth-314899.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/mohammad-alizade-341348.jpg'})
@@ -198,8 +198,6 @@ photo38 = Photo.create({
 # user1's follows
 follow1 = Follow.create({follower_id: user1.id, followee_id: user2.id })
 follow2 = Follow.create({follower_id: user1.id, followee_id: user3.id })
-follow3 = Follow.create({follower_id: user1.id, followee_id: user4.id })
-follow4 = Follow.create({follower_id: user1.id, followee_id: user5.id })
 follow5 = Follow.create({follower_id: user1.id, followee_id: user6.id })
 
 # user2's follows
@@ -217,8 +215,6 @@ follow12 = Follow.create({follower_id: user3.id, followee_id: user6.id })
 follow13 = Follow.create({follower_id: user4.id, followee_id: user6.id })
 
 # user5's follows
-follow14 = Follow.create({follower_id: user5.id, followee_id: user1.id })
-follow15 = Follow.create({follower_id: user5.id, followee_id: user2.id })
 follow16 = Follow.create({follower_id: user5.id, followee_id: user3.id })
 follow17 = Follow.create({follower_id: user5.id, followee_id: user4.id })
 follow18 = Follow.create({follower_id: user5.id, followee_id: user6.id })
