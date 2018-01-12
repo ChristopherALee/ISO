@@ -18,11 +18,10 @@ const LandingPage = (props) => {
           </div>
         </div>
 
-        <div className='landing-page-photos'>
+        {/* <div className='landing-page-photos'>
           <p>Take a look at photos that photographers have shared.</p>
           <p>Discover what's trending according to photographers around the world.</p>
-          {/* Put Discover Container later */}
-        </div>
+        </div> */}
       </div>
     );
   }

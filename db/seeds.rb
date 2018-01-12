@@ -64,6 +64,121 @@ photo9 = Photo.create({
   description: 'Donec lacinia tincidunt tristique. Phasellus venenatis consectetur sapien. Donec ut libero ut ligula ornare eleifend. Nunc viverra tortor nulla, vel congue est ornare nec. Mauris et egestas nibh. Proin scelerisque nulla non felis pulvinar rhoncus. Sed pulvinar orci nec semper placerat. Maecenas in congue nunc. Curabitur interdum justo ut rutrum pharetra.',
   image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jonatan-pie-234237.jpg',
   author_id: user5.id})
+photo10 = Photo.create({
+  title: 'Lorem ipsum dolor sit amet',
+  description: 'Consectetur adipiscing elit. Fusce commodo lacus quis quam fermentum eleifend. Aliquam feugiat vulputate nibh at pharetra. Sed sodales metus quis tincidunt varius. Duis a volutpat velit. Proin et rutrum sem. Donec ut nisl id nibh vehicula venenatis. Donec convallis vitae sapien vitae eleifend. Etiam quis lacus sit amet tellus dictum elementum. Integer laoreet lorem id fringilla tristique. Donec porta sagittis elit, a ullamcorper erat bibendum luctus. Maecenas eu nulla vitae metus rutrum tempus.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/aaron-burden-391488.jpg',
+  author_id: user1.id})
+photo11 = Photo.create({
+  title: 'Aenean finibus id odio',
+  description: 'Nunc nunc sem, eleifend quis viverra id, malesuada ut turpis. Ut consequat nunc magna, sit amet tincidunt massa fringilla vitae. Nulla justo augue, porttitor et porta sed, dignissim vel lacus. Vivamus efficitur eleifend nulla, porttitor pharetra dui fermentum vestibulum. Sed pellentesque dapibus nunc eget porta. In lobortis tincidunt venenatis. Sed justo mi, suscipit in nulla non, maximus sagittis justo. Nam a felis viverra, semper nulla nec, imperdiet nulla. Quisque gravida arcu lacus, in blandit nunc tincidunt ac. Fusce lacus lorem, ultricies vitae purus nec, fringilla placerat arcu. Duis feugiat a massa a volutpat.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/adi-constantin-65004.jpg',
+  author_id: user2.id})
+photo12 = Photo.create({
+  title: 'Proin commodo suscipit eros vel suscipit.',
+  description: 'Pellentesque sollicitudin turpis eget lorem maximus luctus. Phasellus volutpat justo quis nunc viverra cursus at nec risus. Donec mollis, sem id gravida rhoncus, mi ex dignissim odio, quis iaculis nulla dolor vel ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis vitae diam sagittis, fringilla justo et, accumsan ipsum. Quisque id est a augue iaculis accumsan iaculis vitae lacus.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/anders-jilden-307322.jpg',
+  author_id: user3.id})
+photo13 = Photo.create({
+  title: 'Praesent id libero posuere',
+  description: 'Imperdiet felis id, faucibus risus. Nam gravida sem nibh. Ut egestas sit amet nunc et congue. Etiam pulvinar aliquam velit, a egestas mi efficitur quis. Curabitur id turpis tortor. Vestibulum id faucibus sapien. Aenean tempor ante eu nulla blandit, sodales porttitor ipsum tincidunt.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/andre-benz-248759.jpg',
+  author_id: user4.id})
+photo14 = Photo.create({
+  title: 'Nulla rutrum quis sapien at accumsan.',
+  description: 'Nullam eleifend arcu vitae libero viverra, mattis bibendum velit dapibus. Etiam in risus posuere, commodo felis eget, ornare felis. Praesent ut ipsum nulla. Praesent vulputate quis dolor sed vehicula. Nulla condimentum pretium nisl ut pulvinar. Aliquam sit amet malesuada ligula.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/andrea-cau-51160.jpg',
+  author_id: user5.id})
+photo15 = Photo.create({
+  title: 'Maecenas interdum dictum tortor vel pretium. ',
+  description: 'Aliquam maximus semper tortor ac congue. In egestas mollis molestie. Proin vel rhoncus turpis, a varius diam. Sed accumsan posuere mauris, vitae imperdiet libero imperdiet quis. Suspendisse potenti. Suspendisse ultrices massa orci, eu interdum nisl iaculis interdum',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/aperture-vintage-346923.jpg',
+  author_id: user6.id})
+photo16 = Photo.create({
+  title: 'Morbi et neque erat.',
+  description: 'Mauris tristique ligula ut fermentum tempor. Cras orci velit, aliquam sed magna id, maximus ornare neque. In vestibulum urna id gravida pellentesque. Mauris in nulla a risus placerat ornare a eget enim. Pellentesque ac lorem vehicula, interdum risus in, pretium ipsum. Aenean ultricies vulputate odio sed faucibus. Phasellus blandit tellus vitae enim gravida elementum. Vivamus a nisl a sapien egestas dapibus sed sed ipsum. Sed ut nisl sit amet lorem malesuada iaculis.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/chris-holgersson-249309.jpg',
+  author_id: user1.id})
+photo17 = Photo.create({
+  title: 'Nunc condimentum arcu vitae erat dapibus pellentesque.',
+  description: 'Curabitur scelerisque orci nec eros viverra, sit amet convallis orci dignissim. Praesent cursus efficitur mauris ut rhoncus. Vivamus quis justo eget libero auctor vestibulum. Donec porta justo id metus placerat laoreet. Pellentesque metus sapien, consequat dignissim aliquam id, bibendum id urna. Aliquam ut pellentesque metus. Etiam eleifend rhoncus pulvinar.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/daniel-zacatenco-363505.jpg',
+  author_id: user1.id})
+photo18 = Photo.create({
+  title: 'Suspendisse dapibus leo massa, eget pretium erat tempus ac',
+  description: 'Fusce a nunc at massa pellentesque ornare. Curabitur tempus eleifend dictum. Donec vulputate dui a nisi sollicitudin placerat. Quisque ac vestibulum sem. Cras hendrerit metus ut porta dapibus. Nullam vel sem consequat, consequat velit id, ultricies arcu. Curabitur lorem massa, aliquet lacinia porta eu, gravida nec neque. Etiam in tortor nibh.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/david-marcu-114194.jpg',
+  author_id: user2.id})
+photo19 = Photo.create({
+  title: 'Aliquam erat volutpat',
+  description: 'Curabitur eu tincidunt risus. Sed vitae magna luctus risus posuere facilisis. Sed vestibulum egestas dapibus. Aenean sit amet porttitor purus. Nullam nec massa imperdiet, lacinia ex quis, tempus odio',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/dominik-lange-35224.jpg',
+  author_id: user3.id})
+photo20 = Photo.create({
+  title: 'Fusce et nunc mauris',
+  description: 'Morbi fermentum gravida mauris et suscipit. Quisque suscipit risus sit amet ipsum sodales, ac porttitor odio laoreet.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/erik-odiin-453075.jpg',
+  author_id: user4.id})
+photo21 = Photo.create({
+  title: 'Curabitur eu est metus',
+  description: 'Nam ut aliquam sapien. Sed tempus, est id ultricies aliquam, nisl erat egestas nisl, feugiat consequat magna ligula eget ipsum. In in turpis eu ligula sagittis dapibus et ac purus. Cras lobortis, elit sit amet gravida iaculis, nulla dui scelerisque mauris, laoreet efficitur nulla turpis eu nisi. Nulla scelerisque id ligula quis pellentesque.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/ferdinand-stohr-176623.jpg',
+  author_id: user5.id})
+photo22 = Photo.create({
+  title: 'Quisque id tincidunt nulla. ',
+  description: 'Nam luctus placerat turpis. Aliquam ultrices nec neque id convallis. Sed sollicitudin neque leo, ut ullamcorper diam placerat nec. Integer euismod, arcu nec malesuada accumsan',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/florian-van-duyn-387688.jpg',
+  author_id: user6.id})
+photo23 = Photo.create({
+  title: 'Phasellus venenatis nibh non vestibulum laoreet',
+  description: 'Aliquam erat volutpat. Curabitur ultricies pulvinar justo. Quisque mollis lacinia blandit. Donec non diam quis ex bibendum ultrices facilisis sed lacus. Sed vitae turpis tincidunt, molestie massa nec, interdum justo. Sed et rutrum metus. Maecenas faucibus fringilla tortor, eu egestas erat eleifend sit amet',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/gabriel-santiago-1596.jpg',
+  author_id: user1.id})
+photo24 = Photo.create({
+  title: 'Praesent porttitor cursus elementum. ',
+  description: 'Aenean porttitor quis nunc sed scelerisque. Donec a sodales elit. Morbi at nisi ullamcorper diam gravida congue non id mi. In ac tellus at nulla placerat faucibus sed quis nibh. Fusce eget ante et massa volutpat viverra sit amet at mi. Nam faucibus metus quis augue maximus rhoncus. Mauris in lectus feugiat, vulputate augue sed, dapibus dolor.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/geran-de-klerk-136351.jpg',
+  author_id: user2.id})
+photo25 = Photo.create({
+  title: 'Maecenas condimentum lorem ut felis faucibus pellentesque.',
+  description: 'Sed fringilla purus quis lorem lobortis sagittis. Vestibulum id accumsan erat, sit amet ultrices ex. Duis at odio rhoncus, mollis lacus non, egestas sapien. Morbi egestas sagittis nibh eget ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/henning-witzel-38848.jpg',
+  author_id: user3.id})
+photo26 = Photo.create({
+  title: 'Vivamus lacus massa, malesuada nec dapibus eget, sollicitudin eu neque',
+  description: 'Suspendisse lobortis, eros vitae euismod luctus, tortor velit maximus orci, id egestas elit felis maximus dui. Morbi iaculis mauris sed lobortis accumsan. ',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/hollie-harmsworth-401692.jpg',
+  author_id: user3.id})
+photo27 = Photo.create({
+  title: 'Aenean pellentesque dui at ex tempus rhoncus',
+  description: 'Etiam vel neque ante. Maecenas eget tincidunt ligula. Praesent convallis in metus quis sollicitudin. Praesent fermentum volutpat felis id dignissim',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jad-limcaco-272413.jpg',
+  author_id: user4.id})
+photo28 = Photo.create({
+  title: 'Phasellus sed massa nibh',
+  description: 'Morbi euismod non ipsum eget finibus. Nulla in libero sed metus tristique posuere. Quisque in nisi in nibh lacinia finibus quis at dui. Vivamus tincidunt nibh lectus. Donec urna ante, blandit sit amet interdum in, vulputate eu magna. Aenean sit amet interdum risus.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jakob-owens-224351.jpg',
+  author_id: user5.id})
+photo29 = Photo.create({
+  title: 'Phasellus vitae nunc vitae metus accumsan eleifend',
+  description: 'In quis faucibus dolor. Vestibulum vitae faucibus nulla, id viverra nulla. Morbi hendrerit massa dui, condimentum rutrum libero lacinia et',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jakob-owens-224352.jpg',
+  author_id: user6.id})
+photo30 = Photo.create({
+  title: 'Nunc mollis sem non orci egestas, in maximus erat rutrum. ',
+  description: 'Sed ut magna non erat ultricies maximus. Aenean at felis sed augue sagittis tempor nec quis lectus. Nullam convallis metus et enim pretium, ut luctus lectus tincidunt. Vivamus metus odio, commodo eget vehicula a, commodo ut felis. Cras ultricies quam at nisi tempor condimentum. Mauris porta ante et est rhoncus auctor.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jakob-owens-339733.jpg',
+  author_id: user1.id})
+photo31 = Photo.create({
+  title: 'Ut neque mi, ullamcorper ut turpis ac, pharetra congue nulla.',
+  description: 'Aliquam ornare dolor a varius lacinia. Fusce sed ullamcorper lorem, vel iaculis dolor. Fusce luctus ipsum vel tellus consequat, sed ultrices ligula tristique. Nullam pulvinar, neque eget luctus interdum, elit risus porta ipsum, vitae feugiat magna nisi cursus ante.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/james-donaldson-365418.jpg',
+  author_id: user2.id})
+photo32 = Photo.create({
+  title: 'Morbi sed ultricies nibh, id vulputate leo',
+  description: 'Sed ut blandit quam, nec suscipit libero. Nam ac sollicitudin elit. Proin eros arcu, tristique vitae orci eget, molestie molestie turpis. Integer fermentum pharetra nisi quis eleifend. Fusce accumsan eros et diam tincidunt, et accumsan lorem pellentesque.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jason-blackeye-209586.jpg',
+  author_id: user3.id})
 
 # user1's follows
 follow1 = Follow.create({follower_id: user1.id, followee_id: user2.id })
@@ -101,6 +216,6 @@ follow19 = Follow.create({follower_id: user6.id, followee_id: user5.id })
 comment1 = Comment.create({photo_id: photo1.id, author_id: user1.id, body: "Wow nice picture!"})
 comment2 = Comment.create({photo_id: photo1.id, author_id: user2.id, body: "Coooooool!"})
 comment3 = Comment.create({photo_id: photo1.id, author_id: user3.id, body: "How did you take this picture?"})
-comment4 = Comment.create({photo_id: photo1.id, author_id: user4.id, body: "This is wack."})
-comment5 = Comment.create({photo_id: photo1.id, author_id: user5.id, body: "^ lol"})
-comment6 = Comment.create({photo_id: photo1.id, author_id: user6.id, body: ":)"})
+comment4 = Comment.create({photo_id: photo1.id, author_id: user4.id, body: "So nice!"})
+comment5 = Comment.create({photo_id: photo1.id, author_id: user5.id, body: "Wowza"})
+comment6 = Comment.create({photo_id: photo1.id, author_id: user6.id, body: "I like this!"})
