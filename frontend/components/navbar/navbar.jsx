@@ -69,15 +69,15 @@ class NavBar extends React.Component {
 
           <div className='navbar-links'>
             <Link to='/discover'>Discover</Link>
-            <Link to='/about'>About</Link>
+            {/* <Link to='/about'>About</Link> */}
           </div>
         </div>
 
         <div className='navbar-right'>
-          <input
+          {/* <input
             type='search'
             placeholder='Search for photos, location, or people'
-          />
+          /> */}
 
           <div className='user-profile-options'>
             <div className='navbar-profile-photo-container'>
@@ -146,7 +146,7 @@ class NavBar extends React.Component {
 
           <div className='navbar-links-main'>
             <Link to='/discover'>Discover</Link>
-            <Link to='/about'>About</Link>
+            {/* <Link to='/about'>About</Link> */}
           </div>
         </div>
 
@@ -170,15 +170,15 @@ class NavBar extends React.Component {
 
           <div className='navbar-links-alt'>
             <Link to='/discover'>Discover</Link>
-            <Link to='/about'>About</Link>
+            {/* <Link to='/about'>About</Link> */}
           </div>
         </div>
 
         <div className='navbar-alt-right'>
-          <input
+          {/* <input
             type='search'
             placeholder='Search for photos, location, or people'
-          />
+          /> */}
           <button className='navbar-alt-signup'>
             <Link to='/signup'>Sign Up</Link>
           </button>
