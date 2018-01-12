@@ -14,7 +14,6 @@ const commentReducer = (state = {}, action) => {
       let idxOfNewCommentInAction = Object.values(action.comment.comments).length - 1;
       let newComment = action.comment.comments[idxOfNewCommentInAction];
       newState = Object.assign({}, state, {[nextIdxInState]: newComment});
-      debugger
       return newState;
     case RECEIVE_SHOW_PHOTO:
       newState = Object.assign({}, state, action.photo.comments);

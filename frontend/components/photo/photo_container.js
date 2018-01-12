@@ -12,16 +12,13 @@ import {
   deleteComment } from '../../actions/comments/comment_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   let currentPhoto = state.entities.photos[ownProps.match.params.photoId];
   let sessionUser = state.session.currentUser ? state.session.currentUser.username : null;
   let currentUser = state.entities.users[sessionUser];
 
   let photoComments;
-  debugger
   if (
     Object.values(state.entities.comments).length && Object.values(state.entities.comments).every( (comment) => comment !== undefined )) {
-    debugger
     photoComments = Object.values(state.entities.comments).filter( (comment) => comment.photoId === currentPhoto.id);
   }
 

@@ -132,7 +132,7 @@
           input[type=text] {
             background-color: white;
             height: 30px;
-            width: 222px;
+            width: 85%;
             outline: none;
             border: 1px solid #ededed;
             border-radius: 3px;
@@ -153,7 +153,7 @@
         ul {
           li {
             display: flex;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
 
             .comment-author-profile-photo-container {
               width: 20px;
@@ -186,9 +186,11 @@
 
               p {
                 font-size: 12px;
-                margin-bottom: 5px;
+                margin: 5px 0;
                 color: #525558;
                 font-weight: bold;
+                width: 300px;
+                overflow-wrap: break-word;
               }
             }
           }
