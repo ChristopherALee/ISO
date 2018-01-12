@@ -18,10 +18,11 @@ and Instagram. It's built on Ruby on Rails for the back-end and React/Redux for 
 
 ### User Authentication with automated demo-login
 Users can use the demo-login provided to get right into the action.
-![Login/Sign-Up Page](https://github.com/ChristopherALee/ISO/blob/master/app/assets/images/screenshots/login_page.png?raw=true)
+![Login/Sign-Up Page](./screenshots/login_demo_final.gif)
 
 ### User Photo Uploads
 Users can upload photos whether for their profile feed, profile photo, or cover photo.
+![User-Upload](./screenshots/photo-upload.gif)
 
 ### User ability to follow/unfollow users
 Users can follow or unfollow users, which will dynamically change the photos that are appearing on the current user's feed.
