@@ -47,7 +47,7 @@ photo5 = Photo.create({
 photo6 = Photo.create({
   title: 'Check This Out',
   description: 'Maecenas vitae turpis nibh. Ut consectetur scelerisque malesuada. Nunc quam turpis, mattis eget tristique vel, laoreet vitae magna. Proin iaculis, est tempus hendrerit commodo, purus quam maximus leo, interdum bibendum nibh est quis ligula. Ut malesuada ante sed diam pellentesque sollicitudin. Nam dolor diam, commodo et tempus pharetra, dapibus sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque laoreet a sem eget tincidunt. Sed rhoncus, eros non imperdiet congue, nibh libero euismod neque, eget scelerisque lorem velit et sem. Pellentesque mattis, libero vitae malesuada iaculis, ligula ipsum interdum mauris, eget venenatis ex nisi nec turpis. Morbi pharetra convallis diam a sollicitudin. Duis et tempor libero. Duis turpis elit, gravida sed nisi et, egestas elementum lacus.',
-  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/dominik-lange-35224.jpg',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/luca-baggio-211858.jpg',
   author_id: user5.id})
 photo7 = Photo.create({
   title: 'Take Me Back',
@@ -69,11 +69,6 @@ photo10 = Photo.create({
   description: 'Consectetur adipiscing elit. Fusce commodo lacus quis quam fermentum eleifend. Aliquam feugiat vulputate nibh at pharetra. Sed sodales metus quis tincidunt varius. Duis a volutpat velit. Proin et rutrum sem. Donec ut nisl id nibh vehicula venenatis. Donec convallis vitae sapien vitae eleifend. Etiam quis lacus sit amet tellus dictum elementum. Integer laoreet lorem id fringilla tristique. Donec porta sagittis elit, a ullamcorper erat bibendum luctus. Maecenas eu nulla vitae metus rutrum tempus.',
   image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/aaron-burden-391488.jpg',
   author_id: user1.id})
-photo11 = Photo.create({
-  title: 'Aenean finibus id odio',
-  description: 'Nunc nunc sem, eleifend quis viverra id, malesuada ut turpis. Ut consequat nunc magna, sit amet tincidunt massa fringilla vitae. Nulla justo augue, porttitor et porta sed, dignissim vel lacus. Vivamus efficitur eleifend nulla, porttitor pharetra dui fermentum vestibulum. Sed pellentesque dapibus nunc eget porta. In lobortis tincidunt venenatis. Sed justo mi, suscipit in nulla non, maximus sagittis justo. Nam a felis viverra, semper nulla nec, imperdiet nulla. Quisque gravida arcu lacus, in blandit nunc tincidunt ac. Fusce lacus lorem, ultricies vitae purus nec, fringilla placerat arcu. Duis feugiat a massa a volutpat.',
-  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/adi-constantin-65004.jpg',
-  author_id: user2.id})
 photo12 = Photo.create({
   title: 'Proin commodo suscipit eros vel suscipit.',
   description: 'Pellentesque sollicitudin turpis eget lorem maximus luctus. Phasellus volutpat justo quis nunc viverra cursus at nec risus. Donec mollis, sem id gravida rhoncus, mi ex dignissim odio, quis iaculis nulla dolor vel ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis vitae diam sagittis, fringilla justo et, accumsan ipsum. Quisque id est a augue iaculis accumsan iaculis vitae lacus.',
@@ -99,11 +94,6 @@ photo16 = Photo.create({
   description: 'Mauris tristique ligula ut fermentum tempor. Cras orci velit, aliquam sed magna id, maximus ornare neque. In vestibulum urna id gravida pellentesque. Mauris in nulla a risus placerat ornare a eget enim. Pellentesque ac lorem vehicula, interdum risus in, pretium ipsum. Aenean ultricies vulputate odio sed faucibus. Phasellus blandit tellus vitae enim gravida elementum. Vivamus a nisl a sapien egestas dapibus sed sed ipsum. Sed ut nisl sit amet lorem malesuada iaculis.',
   image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/chris-holgersson-249309.jpg',
   author_id: user1.id})
-photo17 = Photo.create({
-  title: 'Nunc condimentum arcu vitae erat dapibus pellentesque.',
-  description: 'Curabitur scelerisque orci nec eros viverra, sit amet convallis orci dignissim. Praesent cursus efficitur mauris ut rhoncus. Vivamus quis justo eget libero auctor vestibulum. Donec porta justo id metus placerat laoreet. Pellentesque metus sapien, consequat dignissim aliquam id, bibendum id urna. Aliquam ut pellentesque metus. Etiam eleifend rhoncus pulvinar.',
-  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/daniel-zacatenco-363505.jpg',
-  author_id: user1.id})
 photo18 = Photo.create({
   title: 'Suspendisse dapibus leo massa, eget pretium erat tempus ac',
   description: 'Fusce a nunc at massa pellentesque ornare. Curabitur tempus eleifend dictum. Donec vulputate dui a nisi sollicitudin placerat. Quisque ac vestibulum sem. Cras hendrerit metus ut porta dapibus. Nullam vel sem consequat, consequat velit id, ultricies arcu. Curabitur lorem massa, aliquet lacinia porta eu, gravida nec neque. Etiam in tortor nibh.',
@@ -112,7 +102,7 @@ photo18 = Photo.create({
 photo19 = Photo.create({
   title: 'Aliquam erat volutpat',
   description: 'Curabitur eu tincidunt risus. Sed vitae magna luctus risus posuere facilisis. Sed vestibulum egestas dapibus. Aenean sit amet porttitor purus. Nullam nec massa imperdiet, lacinia ex quis, tempus odio',
-  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/dominik-lange-35224.jpg',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/luca-baggio-211858.jpg',
   author_id: user3.id})
 photo20 = Photo.create({
   title: 'Fusce et nunc mauris',
@@ -139,11 +129,6 @@ photo24 = Photo.create({
   description: 'Aenean porttitor quis nunc sed scelerisque. Donec a sodales elit. Morbi at nisi ullamcorper diam gravida congue non id mi. In ac tellus at nulla placerat faucibus sed quis nibh. Fusce eget ante et massa volutpat viverra sit amet at mi. Nam faucibus metus quis augue maximus rhoncus. Mauris in lectus feugiat, vulputate augue sed, dapibus dolor.',
   image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/geran-de-klerk-136351.jpg',
   author_id: user2.id})
-photo25 = Photo.create({
-  title: 'Maecenas condimentum lorem ut felis faucibus pellentesque.',
-  description: 'Sed fringilla purus quis lorem lobortis sagittis. Vestibulum id accumsan erat, sit amet ultrices ex. Duis at odio rhoncus, mollis lacus non, egestas sapien. Morbi egestas sagittis nibh eget ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas',
-  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/henning-witzel-38848.jpg',
-  author_id: user3.id})
 photo26 = Photo.create({
   title: 'Vivamus lacus massa, malesuada nec dapibus eget, sollicitudin eu neque',
   description: 'Suspendisse lobortis, eros vitae euismod luctus, tortor velit maximus orci, id egestas elit felis maximus dui. Morbi iaculis mauris sed lobortis accumsan. ',
