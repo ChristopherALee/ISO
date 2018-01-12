@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Comments = (props) => {
   const comments = props.photoComments.map( (comment, idx) => {
@@ -13,7 +14,7 @@ const Comments = (props) => {
         </div>
 
         <div className="comment-text-contents">
-          <p>{comment.authorName}</p>
+          <Link to={`/${comment.authorName}`}>{comment.authorName}</Link>
           <p>{comment.body}</p>
         </div>
       </li>

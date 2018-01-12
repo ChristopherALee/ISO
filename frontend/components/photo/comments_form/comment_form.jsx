@@ -29,6 +29,7 @@ class CommentForm extends React.Component {
     return (
       <div className="comment-form-container">
         <form className="comment-form" onSubmit={this.handleSubmit}>
+          <i class="fa fa-lg fa-comments" aria-hidden="true"></i>
           <input
             type="text"
             value={this.state.body}
