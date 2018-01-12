@@ -90,7 +90,7 @@ class NavBar extends React.Component {
             </div>
             <div className='user-profile-dropdown'>
               <ul>
-                <li>Hi, {this.props.currentUsername}</li>
+                <li>{this.props.currentUsername}</li>
                 <li onClick={this.handleProfileLink}>Profile</li>
                 <li onClick={this.handleLogOut}>Log Out</li>
               </ul>
