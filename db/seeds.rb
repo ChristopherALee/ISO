@@ -12,11 +12,11 @@ Follow.destroy_all
 Comment.destroy_all
 
 user1 = User.create({username: 'guest', password: 'password123'})
-user2 = User.create({username: 'Chris', password: 'lily010115'})
-user3 = User.create({username: 'Lily', password: 'chris010115'})
-user4 = User.create({username: 'Batman', password: 'robin123'})
-user5 = User.create({username: 'Superman', password: 'superdog1213'})
-user6 = User.create({username: 'Wonderwoman', password: 'invisibleplane'})
+user2 = User.create({username: 'Chris', password: 'lily010115', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/teddy-kelley-181683.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jeremy-bishop-262119.jpg'})
+user3 = User.create({username: 'Lily', password: 'chris010115', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jad-limcaco-272413.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/andre-benz-248759.jpg'})
+user4 = User.create({username: 'Batman', password: 'robin123', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/vincent-guth-314899.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/mohammad-alizade-341348.jpg'})
+user5 = User.create({username: 'Superman', password: 'superdog123', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/puk-patrick-191902.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/ray-hennessy-229596.jpg'})
+user6 = User.create({username: 'Wonderwoman', password: 'invisibleplane', cover_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/matthew-kane-205770.jpg', profile_photo: 'https://s3.amazonaws.com/iso-frame-dev/seeds/samuel-edwards-371139.jpg'})
 
 photo1 = Photo.create({
   title: 'Beautiful',
@@ -179,6 +179,36 @@ photo32 = Photo.create({
   description: 'Sed ut blandit quam, nec suscipit libero. Nam ac sollicitudin elit. Proin eros arcu, tristique vitae orci eget, molestie molestie turpis. Integer fermentum pharetra nisi quis eleifend. Fusce accumsan eros et diam tincidunt, et accumsan lorem pellentesque.',
   image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jason-blackeye-209586.jpg',
   author_id: user3.id})
+photo33 = Photo.create({
+  title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+  description: 'Cras eget neque turpis. Sed euismod convallis sapien, consequat rutrum sem porttitor ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum eu eros dui. Maecenas lobortis auctor odio, ac pharetra lorem maximus venenatis.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/jeremy-bishop-262119.jpg',
+  author_id: user4.id})
+photo34 = Photo.create({
+  title: 'Proin eu leo quis velit varius porttitor non vel lacus',
+  description: 'In hac habitasse platea dictumst. Aliquam placerat, libero eget pretium accumsan, quam lacus ultrices enim, vitae sodales turpis sapien ut tellus. Aliquam vestibulum elit tincidunt arcu sollicitudin tincidunt. Fusce in faucibus ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/joe-green-475962.jpg',
+  author_id: user5.id})
+photo35 = Photo.create({
+  title: 'Ut egestas ipsum eget est pulvinar, vel lobortis mauris luctus',
+  description: 'Etiam lectus sapien, scelerisque vel mauris in, euismod tincidunt tellus. Quisque placerat vel erat eget bibendum. Sed id lectus ut lectus elementum varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam a velit libero',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/joey-kyber-132520.jpg',
+  author_id: user6.id})
+photo36 = Photo.create({
+  title: 'Suspendisse venenatis urna a magna egestas convallis',
+  description: 'Nam vehicula, nibh in luctus facilisis, lectus diam dapibus ligula, ut pulvinar dui eros nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Quisque eu mattis est. Curabitur viverra eros nisl, id euismod leo dignissim mollis. Aliquam faucibus nibh sed lectus tempus tempor. Sed efficitur ipsum erat, ac porta nunc lacinia ut.',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/john-towner-128480.jpg',
+  author_id: user1.id})
+photo37 = Photo.create({
+  title: 'Duis rhoncus posuere mi, id hendrerit magna semper ac.',
+  description: 'Fusce nec libero blandit, volutpat libero sit amet, vehicula libero. Aenean tincidunt ullamcorper imperdiet. Donec congue a erat vel aliquet. Cras auctor ac dui vitae ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/joshua-earle-183442.jpg',
+  author_id: user2.id})
+photo38 = Photo.create({
+  title: 'Nullam pretium sapien eu lorem molestie, id aliquet sapien imperdiet',
+  description: 'Ut viverra ex sed diam ultrices, nec faucibus magna tempor. Mauris sollicitudin commodo fermentum. Morbi feugiat efficitur porttitor. In vitae imperdiet mauris. Etiam ultricies a dui non elementum. Nam tincidunt, mi in ultrices pharetra, lacus libero placerat quam, maximus congue risus purus vel risus. Nulla aliquet nibh metus, ac mollis erat dignissim ut',
+  image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/kalen-emsley-99660.jpg',
+  author_id: user3.id})
 
 # user1's follows
 follow1 = Follow.create({follower_id: user1.id, followee_id: user2.id })
@@ -213,9 +243,16 @@ follow19 = Follow.create({follower_id: user6.id, followee_id: user3.id })
 follow19 = Follow.create({follower_id: user6.id, followee_id: user4.id })
 follow19 = Follow.create({follower_id: user6.id, followee_id: user5.id })
 
-comment1 = Comment.create({photo_id: photo1.id, author_id: user1.id, body: "Wow nice picture!"})
-comment2 = Comment.create({photo_id: photo1.id, author_id: user2.id, body: "Coooooool!"})
-comment3 = Comment.create({photo_id: photo1.id, author_id: user3.id, body: "How did you take this picture?"})
-comment4 = Comment.create({photo_id: photo1.id, author_id: user4.id, body: "So nice!"})
-comment5 = Comment.create({photo_id: photo1.id, author_id: user5.id, body: "Wowza"})
-comment6 = Comment.create({photo_id: photo1.id, author_id: user6.id, body: "I like this!"})
+comment1 = Comment.create({photo_id: photo1.id, author_id: user2.id, body: "Wow nice picture!"})
+comment2 = Comment.create({photo_id: photo1.id, author_id: user3.id, body: "Coooooool!"})
+comment3 = Comment.create({photo_id: photo1.id, author_id: user4.id, body: "How did you take this picture?"})
+comment4 = Comment.create({photo_id: photo1.id, author_id: user5.id, body: "So nice!"})
+comment5 = Comment.create({photo_id: photo1.id, author_id: user6.id, body: "Wowza"})
+comment6 = Comment.create({photo_id: photo2.id, author_id: user1.id, body: "I like this!"})
+comment7 = Comment.create({photo_id: photo2.id, author_id: user3.id, body: "Great picture!"})
+comment8 = Comment.create({photo_id: photo2.id, author_id: user4.id, body: "Amazing"})
+comment9 = Comment.create({photo_id: photo2.id, author_id: user5.id, body: "Woah"})
+comment10 = Comment.create({photo_id: photo2.id, author_id: user6.id, body: "Where is this?!"})
+comment11 = Comment.create({photo_id: photo3.id, author_id: user6.id, body: "Wow!!!"})
+comment12 = Comment.create({photo_id: photo3.id, author_id: user3.id, body: "Awesome!!!"})
+comment12 = Comment.create({photo_id: photo4.id, author_id: user6.id, body: "How can I take photos like this?"})
