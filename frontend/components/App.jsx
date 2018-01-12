@@ -24,15 +24,14 @@ const App = () => {
       <Route path='/' component={NavBarContainer}/>
       <Route exact path='/' component={LandingPageContainer} />
 
-      {/* <Route path='/' component={MainContainer} /> */}
       <Switch>
         <ProtectedRoute exact path='/feed' component={FeedContainer} />
-        <Route exact path='/discover' component={DiscoverContainer} />
+        <ProtectedRoute exact path='/discover' component={DiscoverContainer} />
         <AuthRoute path='/signup' component={SessionFormContainer} />
         <AuthRoute path='/login' component={SessionFormContainer} />
-        <Route exact path='/about' component={About} />
-        <Route exact path='/:username' component={ProfileContainer} />
-        <Route exact path='/photos/:photoId' component={PhotoContainer} />
+        {/* <Route exact path='/about' component={About} /> */}
+        <ProtectedRoute exact path='/:username' component={ProfileContainer} />
+        <ProtectedRoute exact path='/photos/:photoId' component={PhotoContainer} />
       </Switch>
 
     </div>
