@@ -3,6 +3,7 @@ import {
   RECEIVE_SINGLE_PHOTO,
   RECEIVE_SHOW_PHOTO,
   REMOVE_PHOTO } from '../../actions/photos/photo_actions';
+import { LOG_OUT } from '../../actions/session/session_actions';
 
 const photosReducer = (state = {}, action) => {
   let newState;
@@ -22,6 +23,9 @@ const photosReducer = (state = {}, action) => {
     case REMOVE_PHOTO:
       newState = Object.assign({}, state);
       delete newState[action.photoId];
+      return newState;
+    case LOG_OUT:
+      newState = {};
       return newState;
     default:
       return state;

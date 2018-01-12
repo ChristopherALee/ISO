@@ -2,6 +2,7 @@ import {
   RECEIVE_ALL_USERS,
   RECEIVE_SINGLE_USER } from '../../actions/user/user_actions';
 import { RECEIVE_SINGLE_PHOTO, RECEIVE_SHOW_PHOTO } from '../../actions/photos/photo_actions';
+import { LOG_OUT } from '../../actions/session/session_actions';
 
 const userReducer = (state = {}, action) => {
   let newState;
@@ -18,6 +19,9 @@ const userReducer = (state = {}, action) => {
       newState = Object.assign({}, state);
       debugger
       newState[authorName].photoIds.push(action.photo.photo.id);
+      return newState;
+    case LOG_OUT:
+      newState = {};
       return newState;
     default:
       return state;

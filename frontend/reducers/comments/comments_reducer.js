@@ -2,6 +2,7 @@ import {
   RECEIVE_SINGLE_COMMENT,
   REMOVE_COMMENT } from '../../actions/comments/comment_actions';
 import { RECEIVE_SHOW_PHOTO } from '../../actions/photos/photo_actions';
+import { LOG_OUT } from '../../actions/session/session_actions';
 
 const commentReducer = (state = {}, action) => {
   let newState;
@@ -17,6 +18,9 @@ const commentReducer = (state = {}, action) => {
       return newState;
     case RECEIVE_SHOW_PHOTO:
       newState = Object.assign({}, state, action.photo.comments);
+      return newState;
+    case LOG_OUT:
+      newState = {};
       return newState;
     default:
       return state;
