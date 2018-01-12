@@ -38,6 +38,11 @@
           background-size: cover;
           color: transparent;
           text-decoration: none;
+          transition: 0.2s;
+
+          &:hover {
+            background-image: image_url('logo/ISO_Logo_Blue_FINAL')
+          }
         }
       }
 
@@ -351,6 +356,11 @@
         background-size: cover;
         color: transparent;
         text-decoration: none;
+        transition: 0.2s;
+        
+        &:hover {
+          background-image: image_url('logo/ISO_Logo_Blue_FINAL')
+        }
       }
 
       .navbar-links-alt {
