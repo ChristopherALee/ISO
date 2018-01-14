@@ -1,4 +1,7 @@
-# ![Logo](./app/assets/images/logo/ISO_Black.png | width=500)
+<div style="display: flex; align-items: center; justify-content: center; width:300px; height:300px;">
+    ![Logo](./app/assets/images/logo/ISO_Black.png)
+</div>
+
 
 [ISO Live-Demo](https://iso-frame.herokuapp.com/)
 ![Landing-Page](./screenshots/landing_page_ss.png)
