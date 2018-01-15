@@ -33,7 +33,7 @@ Users can follow or unfollow users, which will dynamically change the photos tha
 ### Mobile Responsiveness
 ISO's photo gallery is responsive to varying screen sizes. Users can share similar experiences on ISO from the computer or on the mobile devices.
 
-![Mobile-Responsive](./screenshots/mobile_responsive.gif)
+![Mobile-Responsive](./screenshots/mobile_resp_hd.gif)
 
 ### Future Implementations
 I plan to continue adding and revising features to ISO.
