@@ -1,4 +1,4 @@
-![Logo](./app/assets/images/logo/ISO_Black.png)
+![Logo](./app/assets/images/logo/ISO_Black.png){:width="36%"}
 
 ![Landing-Page](./screenshots/landing_page_ss.png)
 
