@@ -1,11 +1,10 @@
 ![Logo](./app/assets/images/logo/ISO_Black.png)
 
-
-[ISO Live-Demo](https://iso-frame.herokuapp.com/)
 ![Landing-Page](./screenshots/landing_page_ss.png)
 
-ISO is a full-stack single-page app inspired by photo sharing sites like 500px
-and Instagram. It's built on Ruby on Rails for the back-end and React/Redux for the front-end to produce a 'RESTful' JSON API.
+ISO is a full-stack single-page app inspired by photo sharing websites like 500px. It's built on Ruby on Rails for the back-end and React/Redux for the front-end to produce a 'RESTful' JSON API.
+
+[ISO Live-Demo](https://iso-frame.herokuapp.com/)
 
 ## Features
 - User Authentication with automated demo-login
@@ -19,10 +18,12 @@ and Instagram. It's built on Ruby on Rails for the back-end and React/Redux for 
 
 ### User Authentication with automated demo-login
 Users can use the demo-login provided to get right into the action.
+
 ![Login/Sign-Up Page](./screenshots/login_demo_final.gif)
 
 ### User Photo Uploads
 Users can upload photos whether for their profile feed, profile photo, or cover photo.
+
 ![User-Upload](./screenshots/photo-upload.gif)
 
 ### User ability to follow/unfollow users
@@ -32,6 +33,7 @@ Users can follow or unfollow users, which will dynamically change the photos tha
 
 ### Mobile Responsiveness
 ISO's photo gallery is responsive to varying screen sizes. Users can share similar experiences on ISO from the computer or on the mobile devices.
+
 ![Mobile-Responsive](./screenshots/mobile_responsive.gif)
 
 ### Future Implementations
