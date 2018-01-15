@@ -29,6 +29,7 @@ Users can upload photos whether for their profile feed, profile photo, or cover 
 
 ### User ability to follow/unfollow users
 Users can follow or unfollow users, which will dynamically change the photos that are appearing on the current user's feed.
+![Follow](./screenshots/follow.gif)
 
 ### Mobile Responsiveness
 ISO's photo gallery is responsive to varying screen sizes. Users can share similar experiences on ISO from the computer or on the mobile devices.
