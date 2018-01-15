@@ -1,6 +1,4 @@
-<div style="display: flex; align-items: center; justify-content: center; width:300px; height:300px;">
-    ![Logo](./app/assets/images/logo/ISO_Black.png)
-</div>
+![Logo](./app/assets/images/logo/ISO_Black.png)
 
 
 [ISO Live-Demo](https://iso-frame.herokuapp.com/)
@@ -29,6 +27,7 @@ Users can upload photos whether for their profile feed, profile photo, or cover 
 
 ### User ability to follow/unfollow users
 Users can follow or unfollow users, which will dynamically change the photos that are appearing on the current user's feed.
+
 ![Follow](./screenshots/follow.gif)
 
 ### Mobile Responsiveness
