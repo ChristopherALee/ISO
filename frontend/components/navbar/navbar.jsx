@@ -151,8 +151,20 @@ class NavBar extends React.Component {
         </div>
 
         <div className='navbar-right'>
+          <div className="github-link">
+            <a href="https://www.linkedin.com/in/christopheradamlee/">
+              <i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://github.com/ChristopherALee">
+              <i className="fa fa-2x fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div className="login-signup-buttons">
             <Link to='/login' className='navbar-login'>Log In</Link>
             <Link to='/signup' className='navbar-signup'>Sign Up</Link>
+          </div>
         </div>
       </nav>
     );

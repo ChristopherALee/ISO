@@ -267,40 +267,61 @@
 
     .navbar-right {
       margin-right: 50px;
+      display: flex;
 
-      a {
-        text-decoration: none;
-        font-size: 13px;
+      .github-link {
+        margin-top: 11px;
+
+        a {
+          margin-left: 10px;
+          color: white;
+          transition: 0.3s;
+
+          &:hover {
+            color: #0399e5;
+          }
+        }
       }
 
-      .navbar-login {
-        width: 80px;
-        height: 30px;
-        margin-left: 30px;
-        color: white;
+
+      .login-signup-buttons {
+        margin-top: 20px;
 
         a {
           text-decoration: none;
+          font-size: 13px;
+        }
+
+        .navbar-login {
+          width: 80px;
+          height: 30px;
+          margin-left: 30px;
+          color: white;
+
+          a {
+            text-decoration: none;
+            letter-spacing: 0.5px;
+          }
+        }
+
+        .navbar-signup {
+          background-color: #0399e5;
+          border-radius: 20px;
+          width: 80px;
+          height: 30px;
+          margin-left: 30px;
+          padding: 5px 15px;
+          text-decoration: none;
+          color: white;
+          font-size: 13px;
           letter-spacing: 0.5px;
+
+          &:hover {
+            background-color: #04aaff;
+          }
         }
       }
 
-      .navbar-signup {
-        background-color: #0399e5;
-        border-radius: 20px;
-        width: 80px;
-        height: 30px;
-        margin-left: 30px;
-        padding: 5px 15px;
-        text-decoration: none;
-        color: white;
-        font-size: 13px;
-        letter-spacing: 0.5px;
-
-        &:hover {
-          background-color: #04aaff;
-        }
-      }
     }
 
     input {
