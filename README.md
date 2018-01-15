@@ -1,3 +1,4 @@
+# [Logo](./app/assets/images/logo/ISO_Black.png)
 
 [ISO Live-Demo](https://iso-frame.herokuapp.com/)
 
