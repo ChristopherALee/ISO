@@ -211,6 +211,9 @@ class Profile extends React.Component {
           ariaHideApp={false}
           isOpen={this.state.modalOpen}
           shouldCloseOnOverlayClick={true}
+          onRequestClose={() => {
+            this.setState({ modalOpen: false });
+          }}
           >
 
           <div className='close-modal'>
@@ -241,6 +244,9 @@ class Profile extends React.Component {
             ariaHideApp={false}
             isOpen={this.state.modalOpenCoverPhoto}
             shouldCloseOnOverlayClick={true}
+            onRequestClose={() => {
+              this.setState({ modalOpenCoverPhoto: false });
+            }}
             >
 
             <div className='close-modal'>
@@ -264,6 +270,9 @@ class Profile extends React.Component {
             ariaHideApp={false}
             isOpen={this.state.modalOpenProfilePhoto}
             shouldCloseOnOverlayClick={true}
+            onRequestClose={() => {
+              this.setState({ modalOpenProfilePhoto: false });
+            }}
             >
 
             <div className='close-modal'>

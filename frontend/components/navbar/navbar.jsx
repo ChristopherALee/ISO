@@ -118,6 +118,9 @@ class NavBar extends React.Component {
             ariaHideApp={false}
             isOpen={this.state.modalOpen}
             shouldCloseOnOverlayClick={true}
+            onRequestClose={() => {
+              this.setState({ modalOpen: false });
+            }}
             >
 
             <div className='close-modal'>
