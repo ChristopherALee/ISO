@@ -34,6 +34,7 @@ class CommentForm extends React.Component {
             type="text"
             value={this.state.body}
             onChange={this.handleChange('body')}
+            placeholder="Add Comment..."
            />
 
            <input type="submit" value="Submit" />
