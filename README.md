@@ -1,4 +1,6 @@
-![Logo](./app/assets/images/logo/ISO_Black.png){:width="36%"}
+
+<img src="./app/assets/images/logo/ISO_BLACK.png" width="400">
+<!-- ![Logo](./app/assets/images/logo/ISO_Black.png) -->
 
 ![Landing-Page](./screenshots/landing_page_ss.png)
 
