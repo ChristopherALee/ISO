@@ -1,12 +1,9 @@
 
-<img src="./app/assets/images/logo/ISO_BLACK.png" width="400">
-<!-- ![Logo](./app/assets/images/logo/ISO_Black.png) -->
+[ISO Live-Demo](https://iso-frame.herokuapp.com/)
 
 ![Landing-Page](./screenshots/landing_page_ss.png)
 
 ISO is a full-stack single-page app inspired by photo sharing websites like 500px. It's built on Ruby on Rails for the back-end and React/Redux for the front-end to produce a 'RESTful' JSON API.
-
-[ISO Live-Demo](https://iso-frame.herokuapp.com/)
 
 ## Features
 - User Authentication with automated demo-login
