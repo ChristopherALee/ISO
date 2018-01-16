@@ -20,7 +20,7 @@ ISO is a full-stack single-page app inspired by photo sharing websites like 500p
 ### User Authentication with automated demo-login
 Users can use the demo-login provided to get right into the action.
 
-
+![Login](./screenshots/login.gif)
 
 ### User Photo Uploads
 Users can upload photos whether for their profile feed, profile photo, or cover photo.
