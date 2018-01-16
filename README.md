@@ -25,17 +25,17 @@ Users can use the demo-login provided to get right into the action.
 ### User Photo Uploads
 Users can upload photos whether for their profile feed, profile photo, or cover photo.
 
-![User-Upload](./screenshots/photo-upload.gif)
+
 
 ### User ability to follow/unfollow users
 Users can follow or unfollow users, which will dynamically change the photos that are appearing on the current user's feed.
 
-![Follow](./screenshots/following.gif)
+![Follow](./screenshots/follow.gif)
 
 ### Mobile Responsiveness
 ISO's photo gallery is responsive to varying screen sizes. Users can share similar experiences on ISO from the computer or on the mobile devices.
 
-![Mobile-Responsive](./screenshots/mobile_responsive.gif)
+
 
 ### Future Implementations
 I plan to continue adding and revising features to ISO.
