@@ -25,6 +25,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     currentPhoto: currentPhoto,
     currentUser: currentUser,
+    sessionUser: sessionUser,
     photoId: ownProps.match.params.photoId,
     photoComments: photoComments
   };

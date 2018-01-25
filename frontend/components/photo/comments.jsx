@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Comments = (props) => {
   const deleteCommentButton = (comment) => {
-    debugger
-    if (props.currentUser && comment && props.currentUser.username === comment.authorName) {
+    if (comment && props.sessionUser && props.sessionUser === comment.authorName) {
       return (
         <div className="delete-comment-button">X</div>
       );

@@ -64,6 +64,7 @@ class Photo extends React.Component {
       return (
         <Comments
           currentUser={this.props.currentUser}
+          sessionUser={this.props.sessionUser}
           photoComments={this.props.photoComments}
           deleteComment={this.props.deleteComment}
         />
