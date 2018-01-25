@@ -9,6 +9,7 @@ class Photo extends React.Component {
 
     this.handleFollow = this.handleFollow.bind(this);
     this.handleUnFollow = this.handleUnFollow.bind(this);
+    this.close = this.close.bind(this);
   }
 
   componentDidMount() {
@@ -69,6 +70,10 @@ class Photo extends React.Component {
     }
   }
 
+  close() {
+    this.props.history.goBack();
+  }
+
   render() {
     if (this.props.currentPhoto) {
       return (
@@ -77,7 +82,7 @@ class Photo extends React.Component {
             <div
               style={{ backgroundImage: `url(${this.props.currentPhoto.image_url})`}}
               >
-
+                <div className="go-back-from-photo-show" onClick={this.close}>X</div>
             </div>
           </div>
 

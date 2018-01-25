@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
   let currentPhoto = state.entities.photos[ownProps.match.params.photoId];
   let sessionUser = state.session.currentUser ? state.session.currentUser.username : null;
   let currentUser = state.entities.users[sessionUser];
-
+  
   let photoComments;
   if (
     Object.values(state.entities.comments).length && Object.values(state.entities.comments).every( (comment) => comment !== undefined )) {
