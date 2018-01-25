@@ -20,9 +20,10 @@ const receiveSingleComment = (comment) => {
 };
 
 const removeComment = (comment) => {
+  debugger
   return {
     type: REMOVE_COMMENT,
-    comment: comment
+    comment: comment.comments
   };
 };
 
@@ -77,9 +78,11 @@ export const updateComment = (comment) => dispatch => {
 };
 
 export const deleteComment = (commentId) => dispatch => {
+  debugger
   return (
     CommentsApiUtil.deleteComment(commentId).then(
       (comment) => {
+        debugger
         dispatch(removeComment(comment));
         return comment;
       }

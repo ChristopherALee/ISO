@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Comments = (props) => {
   const deleteCommentButton = (comment) => {
+    const deleteCommentAction = () => {
+      props.deleteComment(comment.id);
+    };
+
     if (comment && props.sessionUser && props.sessionUser === comment.authorName) {
       return (
-        <div className="delete-comment-button">X</div>
+        <div className="delete-comment-button" onClick={deleteCommentAction}>X</div>
       );
     } else {
       return null;

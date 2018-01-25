@@ -32,8 +32,10 @@ class Api::CommentsController < ApplicationController
   end
 
   def destroy
+    debugger
     @comment = Comment.find(params[:id])
-
+    debugger
+    @photo = @comment.photo
     if @comment.author_id == current_user.id && @comment.destroy
       render 'api/photos/show'
     else
@@ -43,6 +45,7 @@ class Api::CommentsController < ApplicationController
 
   private
   def comment_params
+    debugger
     params.require(:comment).permit(:photo_id, :body)
   end
 end
