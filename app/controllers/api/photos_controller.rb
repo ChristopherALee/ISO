@@ -35,6 +35,7 @@ class Api::PhotosController < ApplicationController
 
     if @photo && @photo.author_id == current_user.id
       @photo.destroy
+      render 'api/photos/show'
     else
       render json: ['Cannot delete photo'], status: 403
     end

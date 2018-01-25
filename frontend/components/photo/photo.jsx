@@ -78,7 +78,7 @@ class Photo extends React.Component {
   deleteButton() {
     if (this.props.currentUser && this.props.currentUser.username === this.props.currentPhoto.authorName) {
       return (
-        <button className="delete-photo-button" onClick={this.deletePhoto}>Remove Photo</button>
+        <button className="delete-photo-button" onClick={this.delete}>Remove Photo</button>
       );
     } else {
       return null;
@@ -86,8 +86,8 @@ class Photo extends React.Component {
   }
 
   delete() {
-    this.props.deletePhoto(this.currentPhoto);
-    this.props.history.push(`/${this.props.currentUser}`);
+    this.props.deletePhoto(this.props.currentPhoto);
+    this.props.history.push(`/${this.props.currentUser.username}`);
   }
 
   render() {

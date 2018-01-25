@@ -31,7 +31,7 @@ export const receiveShowPhoto = (photo) => {
 export const removePhoto = (photo) => {
   return {
     type: REMOVE_PHOTO,
-    photoId: photo.id
+    photo: photo
   };
 };
 
