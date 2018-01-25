@@ -23,6 +23,21 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+
+    .go-back-from-photo-show {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+
+      &:hover {
+        cursor: pointer;
+        color: red;
+        transition: 0.2s;
+      }
+    }
   }
 
   .photo-contents {
