@@ -104,7 +104,11 @@ export const updatePhoto = (photo) => dispatch => {
 export const deletePhoto = (photo) => dispatch => {
   return (
     PhotosApiUtil.deletePhoto(photo.id).then(
-      (photo) => dispatch(removePhoto(photo))
+      photo =>
+      {
+        dispatch(removePhoto(photo));
+        return photo;
+      }
     )
   );
 };
