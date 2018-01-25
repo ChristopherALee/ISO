@@ -80,6 +80,27 @@
             }
           }
 
+          .delete-photo-button {
+            background-color: #fc5e52;
+            // background-color: #fa4235;
+            color: white;
+            border: 0px solid black;
+            border-radius: 3px;
+            font-size: 12px;
+            font-family: 'Open Sans', sans-serif;
+            padding: 2px 8px;
+            letter-spacing: 0.5px;
+            outline: none;
+            margin-top: 8px;
+
+            &:hover {
+              background-color: #ff1200;
+              // background-color: #fe837a;
+              cursor: pointer;
+              transition: 0.3s;
+            }
+          }
+
           .unfollow-button {
             background-color: #0399e5;
             color: white;
