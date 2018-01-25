@@ -10,6 +10,7 @@ class Photo extends React.Component {
     this.handleFollow = this.handleFollow.bind(this);
     this.handleUnFollow = this.handleUnFollow.bind(this);
     this.close = this.close.bind(this);
+    this.delete = this.delete.bind(this);
   }
 
   componentDidMount() {
@@ -74,6 +75,21 @@ class Photo extends React.Component {
     this.props.history.goBack();
   }
 
+  deleteButton() {
+    if (this.props.currentUser && this.props.currentUser.username === this.props.currentPhoto.authorName) {
+      return (
+        <button className="delete-photo-button" onClick={this.deletePhoto}>Remove Photo</button>
+      );
+    } else {
+      return null;
+    }
+  }
+
+  delete() {
+    this.props.deletePhoto(this.currentPhoto);
+    this.props.history.push(`/${this.props.currentUser}`);
+  }
+
   render() {
     if (this.props.currentPhoto) {
       return (
@@ -104,6 +120,7 @@ class Photo extends React.Component {
                     <p>{this.props.currentPhoto.authorName}</p>
                   </Link>
                   {this.toggleEditFollowButton()}
+                  {this.deleteButton()}
                 </div>
               </div>
             </div>

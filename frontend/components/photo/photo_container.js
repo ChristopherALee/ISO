@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Photo from './photo';
-import { fetchShowPhoto } from '../../actions/photos/photo_actions';
+import { fetchShowPhoto, deletePhoto } from '../../actions/photos/photo_actions';
 import { fetchSingleUser } from '../../actions/user/user_actions';
 import {
   createFollow,
@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
   let currentPhoto = state.entities.photos[ownProps.match.params.photoId];
   let sessionUser = state.session.currentUser ? state.session.currentUser.username : null;
   let currentUser = state.entities.users[sessionUser];
-  
+
   let photoComments;
   if (
     Object.values(state.entities.comments).length && Object.values(state.entities.comments).every( (comment) => comment !== undefined )) {
@@ -34,6 +34,7 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchSingleUser: (username) => dispatch(fetchSingleUser(username)),
     fetchShowPhoto: (photoId) => dispatch(fetchShowPhoto(photoId)),
+    deletePhoto: (photo) => dispatch(deletePhoto(photo)),
     createFollow: (follow) => dispatch(createFollow(follow)),
     deleteFollow: (follow) => dispatch(deleteFollow(follow)),
     createComment: (comment) => dispatch(createComment(comment)),
