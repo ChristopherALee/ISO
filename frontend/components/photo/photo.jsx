@@ -63,7 +63,9 @@ class Photo extends React.Component {
     if (this.props.photoComments) {
       return (
         <Comments
+          currentUser={this.props.currentUser}
           photoComments={this.props.photoComments}
+          deleteComment={this.props.deleteComment}
         />
       );
     } else {

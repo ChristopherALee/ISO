@@ -193,6 +193,7 @@
           li {
             display: flex;
             margin-bottom: 10px;
+            width: 340px;
 
             .comment-author-profile-photo-container {
               width: 20px;
@@ -211,6 +212,7 @@
             .comment-text-contents {
               margin-left: 7px;
               margin-top: 1px;
+              width: 86%;
 
               a {
                 font-size: 12px;
@@ -228,9 +230,15 @@
                 margin: 5px 0;
                 color: #525558;
                 font-weight: bold;
-                width: 300px;
+                width: 100%;
                 overflow-wrap: break-word;
               }
+            }
+
+            .delete-comment-button {
+              display: flex;
+              justify-content: center;
+              margin-top: 5px;
             }
           }
         }

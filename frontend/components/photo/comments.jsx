@@ -2,6 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Comments = (props) => {
+  const deleteCommentButton = (comment) => {
+    debugger
+    if (props.currentUser && comment && props.currentUser.username === comment.authorName) {
+      return (
+        <div className="delete-comment-button">X</div>
+      );
+    } else {
+      return null;
+    }
+  };
+
   const comments = props.photoComments.map( (comment, idx) => {
     return (
       <li key={idx}>
@@ -17,6 +28,8 @@ const Comments = (props) => {
           <Link to={`/${comment.authorName}`}>{comment.authorName}</Link>
           <p>{comment.body}</p>
         </div>
+
+        {deleteCommentButton(comment)}
       </li>
     );
   });
