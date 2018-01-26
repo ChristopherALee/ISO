@@ -1,5 +1,5 @@
 .photo-show-container {
-  min-width: 1800px;
+  min-width: 90vw;
   margin-top: 83px;
   width: 90vw;
   height: 90vh;
@@ -158,6 +158,8 @@
 
     .photo-contents-comments {
       background-color: #f7f8fa;
+      min-width: 0;
+      min-height: 0;
 
       .comment-form-container {
         margin-top: 10px;
@@ -188,12 +190,15 @@
       .comments-content {
         padding: 20px;
         background-color: #f7f8fa;
+        width: 93%;
 
         ul {
+          width: 100%;
+
           li {
             display: flex;
             margin-bottom: 10px;
-            width: 340px;
+            // width: 340px;
 
             .comment-author-profile-photo-container {
               width: 20px;
