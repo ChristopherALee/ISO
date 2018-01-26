@@ -208,7 +208,7 @@ class NavBar extends React.Component {
   render() {
     let currentNavBar;
 
-    if (this.props.currentUser) {
+    if (this.props.currentUser && this.props.currentUserProfilePhoto) {
       currentNavBar = this.mainNavLoggedIn();
     } else if (this.props.isAlt.isAlt) {
       currentNavBar = this.altNav();
