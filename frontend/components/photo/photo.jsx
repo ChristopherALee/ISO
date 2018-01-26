@@ -14,6 +14,7 @@ class Photo extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchSingleUser(this.props.sessionUser);
     this.props.fetchShowPhoto(parseInt(this.props.photoId)).then(
       (photo) => {
         this.props.fetchSingleUser(photo.photo.authorName);
