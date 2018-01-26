@@ -18,16 +18,19 @@ class NavBar extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.location.pathname === '/') {
-      this.props.fetchAllPhotos();
-      this.props.fetchSingleUser(this.props.currentUsername);
-    } else if (this.props.location.pathname.includes("/photos") && this.props.location.pathname.includes("/discover")) {
+    if (this.props.location.pathname.includes("/photos") || this.props.location.pathname.includes("/discover")) {
       this.props.fetchSingleUser(this.props.currentUsername);
     }
   }
 
   componentDidMount() {
     if (this.props.location.pathname.includes("/discover")) {
+      this.props.fetchSingleUser(this.props.currentUsername);
+    }
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.props.location.pathname !== newProps.location.pathname && this.props.currentUser) {
       this.props.fetchSingleUser(this.props.currentUsername);
     }
   }
