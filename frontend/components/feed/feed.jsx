@@ -8,7 +8,6 @@ class Feed extends React.Component {
 
   componentDidMount() {
     if (this.props.location.pathname === '/feed') {
-      // this.props.fetchAllUsers();
       this.props.fetchSingleUser(this.props.sessionUser.username);
       this.props.fetchAllPhotos();
     }

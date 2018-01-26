@@ -48,7 +48,6 @@ class NavBar extends React.Component {
   }
 
   handleModal(boolean = false) {
-    // debugger
     this.setState({modalOpen: boolean});
   }
 

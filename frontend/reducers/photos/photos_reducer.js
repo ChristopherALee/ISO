@@ -22,7 +22,7 @@ const photosReducer = (state = {}, action) => {
       return newState;
     case REMOVE_PHOTO:
       newState = Object.assign({}, state);
-      delete newState[action.photoId];
+      delete newState[action.photo.photo.id];
       return newState;
     case LOG_OUT:
       newState = {};
