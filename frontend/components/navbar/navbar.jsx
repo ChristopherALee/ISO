@@ -32,6 +32,7 @@ class NavBar extends React.Component {
   componentWillReceiveProps(newProps) {
     if (this.props.location.pathname !== newProps.location.pathname && this.props.currentUser) {
       this.props.fetchSingleUser(this.props.currentUsername);
+      this.setState({['modalOpen']: false});
     }
   }
 
