@@ -239,6 +239,14 @@
               display: flex;
               justify-content: center;
               margin-top: 5px;
+              color: #bfbfbf;
+              cursor: pointer;
+
+              &:hover {
+                color: red;
+                transition: 0.3s;
+                cursor: pointer;
+              }
             }
           }
         }
