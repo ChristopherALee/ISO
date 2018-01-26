@@ -15,15 +15,15 @@ const commentReducer = (state = {}, action) => {
       // let newComment = action.comment.comments[idxOfNewCommentInAction];
       // newState = Object.assign({}, state, {[nextIdxInState]: newComment});
       newState = Object.assign({}, state, {[action.comment.comments[action.comment.comments.length - 1].id]: action.comment.comments[action.comment.comments.length - 1]});
-      debugger
       return newState;
     case RECEIVE_SHOW_PHOTO:
       newState = Object.assign({}, state, action.photo.comments);
       return newState;
     case REMOVE_COMMENT:
       newState = Object.assign({}, state);
-      debugger
-      delete newState[action.comment[0].id];
+      newState = Object.values(newState).filter(
+        (comment) => action.comment.includes(comment.id)
+      );
       return newState;
     case LOG_OUT:
       newState = {};
