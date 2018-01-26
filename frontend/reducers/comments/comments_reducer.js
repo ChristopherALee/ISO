@@ -12,6 +12,9 @@ const commentReducer = (state = {}, action) => {
     case RECEIVE_SINGLE_COMMENT:
       newState = Object.assign({}, state, {[action.comment.comments[action.comment.comments.length - 1].id]: action.comment.comments[action.comment.comments.length - 1]});
       return newState;
+    case RECEIVE_SHOW_PHOTO:
+      newState = Object.assign({}, state, action.photo.comments);
+      return newState;
     case REMOVE_COMMENT:
       newState = Object.assign({}, state);
       newState = Object.values(newState).filter(
