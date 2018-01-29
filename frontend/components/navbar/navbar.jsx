@@ -159,7 +159,10 @@ class NavBar extends React.Component {
         <div className='navbar-right'>
           <div className="github-link">
             <a href="http://www.christopheradamlee.com/">
-              <i class="fa fa-2x fa-user" aria-hidden="true"></i>
+              <div className="cal-logo">
+
+              </div>
+              {/* <i class="fa fa-2x fa-user" aria-hidden="true"></i> */}
             </a>
 
             <a href="https://www.linkedin.com/in/christopheradamlee/">
