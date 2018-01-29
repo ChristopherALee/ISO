@@ -57,6 +57,10 @@ class UploadForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    // disable submit button
+    $('#upload-form-submit-button').attr("disabled", "disabled");
+
     const formData = new FormData();
     formData.append('photo[title]', this.state.title);
     formData.append('photo[description]', this.state.description);
@@ -68,10 +72,12 @@ class UploadForm extends React.Component {
     this.props.createPhoto(formData).then(
       (resp) => {
         this.redirectToProfile();
+        $('#upload-form-submit-button').removeAttr("disabled");
         return resp;
       }
     ).fail(
       (errors) => {
+        $('#upload-form-submit-button').removeAttr("disabled");
         return (
           this.setState({
             ['errors']: errors.responseJSON,
@@ -135,7 +141,7 @@ class UploadForm extends React.Component {
   render() {
 
     return (
-      <form className='upload-form' onSubmit={this.handleSubmit}>
+      <form className='upload-form' ref="btn" onSubmit={this.handleSubmit}>
 
         {this.loading()}
 
@@ -157,7 +163,7 @@ class UploadForm extends React.Component {
 
         <div className='upload-form-contents'>
           <label htmlFor='submit'>
-            <input type='submit' value='Submit' />
+            <input id="upload-form-submit-button" type='submit' value='Submit'/>
           </label>
 
           <label htmlFor='upload-form-contents-title'>
