@@ -4,7 +4,7 @@
 
 <br>
 
-![Landing-Page](./screenshots/landing_page_ss.png)
+![Landing-Page](./screenshots/iso-ss-final.png)
 
 [ISO Live-Demo](https://iso-frame.herokuapp.com/)
 
