@@ -12,7 +12,8 @@ class UploadForm extends React.Component {
       imageUrl: "",
       imageFile: null,
       isValid: 'true',
-      errors: {}
+      errors: {},
+      submitEnabled: true
     };
 
     this.readFile = this.readFile.bind(this);
@@ -46,8 +47,6 @@ class UploadForm extends React.Component {
 
   redirectToProfile() {
     if (this.props.currentUser === this.props.location.pathname.slice(1)) {
-      // will find a better alternative
-      // window.location.reload();
       this.props.closeModal();
     } else {
       this.props.closeModal();
@@ -59,7 +58,7 @@ class UploadForm extends React.Component {
     e.preventDefault();
 
     // disable submit button
-    $('#upload-form-submit-button').attr("disabled", "disabled");
+    this.setState({['submitEnabled']: false });
 
     const formData = new FormData();
     formData.append('photo[title]', this.state.title);
@@ -72,12 +71,10 @@ class UploadForm extends React.Component {
     this.props.createPhoto(formData).then(
       (resp) => {
         this.redirectToProfile();
-        $('#upload-form-submit-button').removeAttr("disabled");
         return resp;
       }
     ).fail(
       (errors) => {
-        $('#upload-form-submit-button').removeAttr("disabled");
         return (
           this.setState({
             ['errors']: errors.responseJSON,
@@ -138,49 +135,101 @@ class UploadForm extends React.Component {
     }
   }
 
+  toggleSubmitButton() {
+    if (this.state.submitEnabled) {
+      return (
+        <form className='upload-form' ref="btn" onSubmit={this.handleSubmit}>
+
+          {this.loading()}
+
+          <div className='upload-form-image'>
+            {this.image()}
+            <ul className={'upload-form-image-errors'}>{this.imageErrors()}</ul>
+            <input
+              type='submit'
+              className='fake-select-photo'
+              value='Select Photo'
+            />
+            <input
+              type='file'
+              accept='.jpg, .jpeg, .png'
+              onChange={this.readFile}
+              multiple
+            />
+          </div>
+
+          <div className='upload-form-contents'>
+            {/* {this.toggleSubmitButton()} */}
+            <label htmlFor='submit'>
+              <input id="upload-form-submit-button" type='submit' value='Submit'/>
+            </label>
+
+            <label htmlFor='upload-form-contents-title'>
+              <p>Title</p>
+              <input type='text' className={this.state.isValid} value={this.state.title} onChange={this.handleChange('title')}/>
+              <ul className={'upload-form-contents-title-errors'}>{this.titleErrors()}</ul>
+            </label>
+
+            <label htmlFor='upload-form-contents-description'>
+              <p>Description</p>
+              <textarea
+                onChange={this.handleChange('description')}
+              >
+              </textarea>
+            </label>
+          </div>
+        </form>
+      );
+    } else if (!this.state.submitEnabled) {
+      return (
+        <form className='upload-form' ref="btn">
+
+          {this.loading()}
+
+          <div className='upload-form-image'>
+            {this.image()}
+            <ul className={'upload-form-image-errors'}>{this.imageErrors()}</ul>
+            <input
+              type='submit'
+              className='fake-select-photo'
+              value='Select Photo'
+            />
+            <input
+              type='file'
+              accept='.jpg, .jpeg, .png'
+              onChange={this.readFile}
+              multiple
+            />
+          </div>
+
+          <div className='upload-form-contents'>
+            {/* {this.toggleSubmitButton()} */}
+            <label htmlFor='submit'>
+              <input id="upload-form-submit-button" type='submit' value='Submit' disabled/>
+            </label>
+
+            <label htmlFor='upload-form-contents-title'>
+              <p>Title</p>
+              <input type='text' className={this.state.isValid} value={this.state.title} onChange={this.handleChange('title')}/>
+              <ul className={'upload-form-contents-title-errors'}>{this.titleErrors()}</ul>
+            </label>
+
+            <label htmlFor='upload-form-contents-description'>
+              <p>Description</p>
+              <textarea
+                onChange={this.handleChange('description')}
+              >
+              </textarea>
+            </label>
+          </div>
+        </form>
+      );
+    }
+  }
+
   render() {
-
     return (
-      <form className='upload-form' ref="btn" onSubmit={this.handleSubmit}>
-
-        {this.loading()}
-
-        <div className='upload-form-image'>
-          {this.image()}
-          <ul className={'upload-form-image-errors'}>{this.imageErrors()}</ul>
-          <input
-            type='submit'
-            className='fake-select-photo'
-            value='Select Photo'
-          />
-          <input
-            type='file'
-            accept='.jpg, .jpeg, .png'
-            onChange={this.readFile}
-            multiple
-          />
-        </div>
-
-        <div className='upload-form-contents'>
-          <label htmlFor='submit'>
-            <input id="upload-form-submit-button" type='submit' value='Submit'/>
-          </label>
-
-          <label htmlFor='upload-form-contents-title'>
-            <p>Title</p>
-            <input type='text' className={this.state.isValid} value={this.state.title} onChange={this.handleChange('title')}/>
-            <ul className={'upload-form-contents-title-errors'}>{this.titleErrors()}</ul>
-          </label>
-
-          <label htmlFor='upload-form-contents-description'>
-            <p>Description</p>
-            <textarea
-              onChange={this.handleChange('description')}
-            >
-            </textarea>
-          </label>
-        </div>
-      </form>
+      this.toggleSubmitButton()
     );
   }
 }

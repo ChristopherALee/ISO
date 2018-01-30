@@ -24,9 +24,7 @@ class NavBar extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.location.pathname.includes("/discover")) {
       this.props.fetchSingleUser(this.props.currentUsername);
-    }
   }
 
   componentWillReceiveProps(newProps) {
