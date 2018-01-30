@@ -51,7 +51,10 @@ export const startLoadingUpload = () => {
 export const fetchAllPhotos = () => dispatch => {
   return (
     PhotosApiUtil.fetchAllPhotos().then(
-      photos => dispatch(receiveAllPhotos(photos))
+      photos => {
+        dispatch(receiveAllPhotos(photos));
+        return photos;
+      }
     )
   );
 };

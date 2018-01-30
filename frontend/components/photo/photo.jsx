@@ -90,8 +90,9 @@ class Photo extends React.Component {
   }
 
   delete() {
-    this.props.deletePhoto(this.props.currentPhoto);
-    this.props.history.push(`/${this.props.currentUser.username}`);
+    this.props.deletePhoto(this.props.currentPhoto).then(
+      (photo) => this.props.history.push(`/${this.props.currentUser.username}`)
+    );
   }
 
   render() {
