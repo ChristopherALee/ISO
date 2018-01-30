@@ -13,7 +13,13 @@ const commentReducer = (state = {}, action) => {
       newState = Object.assign({}, state, {[action.comment.comments[action.comment.comments.length - 1].id]: action.comment.comments[action.comment.comments.length - 1]});
       return newState;
     case RECEIVE_SHOW_PHOTO:
-      newState = Object.assign({}, state, action.photo.comments);
+      let newSet = {};
+      action.photo.comments.forEach((comment) => {
+        return (
+          newSet[comment.id] = comment
+        );
+      });
+      newState = Object.assign({}, state, newSet);
       return newState;
     case REMOVE_COMMENT:
       newState = Object.assign({}, state);

@@ -32,7 +32,7 @@ gem 'font-awesome-sass'
 
 # photo uploads/management
 gem 'figaro'
-gem 'paperclip', "~> 5.0.0"
+gem 'paperclip', "5.1.0"
 gem 'aws-sdk', '< 3.0'
 
 # Use Capistrano for deployment
