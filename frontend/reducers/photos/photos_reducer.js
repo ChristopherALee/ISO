@@ -12,7 +12,6 @@ const photosReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_ALL_PHOTOS:
-      debugger
       newState = Object.assign({}, state, action.photos);
       return newState;
     case RECEIVE_SINGLE_PHOTO:
@@ -22,7 +21,6 @@ const photosReducer = (state = {}, action) => {
       newState = Object.assign({}, state, {[action.photo.photo.id]: action.photo.photo});
       return newState;
     case REMOVE_PHOTO:
-      debugger
       newState = Object.assign({}, state);
       delete newState[action.photo.photo.id];
       return newState;
