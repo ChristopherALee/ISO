@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
+import { AuthSignUpRoute } from '../util/signup_route_util';
 import { ProtectedRoute } from '../util/protected_route_util';
 import NavBarContainer from './navbar/navbar_container';
 import LandingPageContainer from './landing_page/landing_page_container';
@@ -26,8 +27,8 @@ const App = () => {
 
       <Switch>
         <ProtectedRoute exact path='/feed' component={FeedContainer} />
-        <ProtectedRoute exact path='/discover' component={DiscoverContainer} />
-        <AuthRoute path='/signup' component={SessionFormContainer} />
+        <Route exact path='/discover' component={DiscoverContainer} />
+        <AuthSignUpRoute path='/signup' component={SessionFormContainer} />
         <AuthRoute path='/login' component={SessionFormContainer} />
         {/* <Route exact path='/about' component={About} /> */}
         <ProtectedRoute exact path='/:username' component={ProfileContainer} />
