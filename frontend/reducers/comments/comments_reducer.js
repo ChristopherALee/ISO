@@ -6,6 +6,7 @@ import { LOG_OUT } from '../../actions/session/session_actions';
 
 const commentReducer = (state = {}, action) => {
   let newState;
+  let newSet = {};
   Object.freeze(state);
 
   switch (action.type) {
@@ -13,12 +14,13 @@ const commentReducer = (state = {}, action) => {
       newState = Object.assign({}, state, {[action.comment.comments[action.comment.comments.length - 1].id]: action.comment.comments[action.comment.comments.length - 1]});
       return newState;
     case RECEIVE_SHOW_PHOTO:
-      let newSet = {};
+      newSet = {};
       action.photo.comments.forEach((comment) => {
         return (
           newSet[comment.id] = comment
         );
       });
+
       newState = Object.assign({}, state, newSet);
       return newState;
     case REMOVE_COMMENT:
@@ -26,7 +28,15 @@ const commentReducer = (state = {}, action) => {
       newState = Object.values(newState).filter(
         (comment) => action.comment.includes(comment.id)
       );
-      return newState;
+
+      newSet = {};
+      newState.forEach((comment) => {
+        return (
+          newSet[comment.id] = comment
+        );
+      });
+      
+      return newSet;
     case LOG_OUT:
       newState = {};
       return newState;
