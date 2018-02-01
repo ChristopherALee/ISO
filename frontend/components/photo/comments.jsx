@@ -16,6 +16,18 @@ const Comments = (props) => {
     }
   };
 
+  const toggleAuthorName = (comment) => {
+    if (comment.authorName && comment.authorName.length > 15) {
+      return (
+        comment.authorName.slice(0, 15) + "..."
+      );
+    } else {
+      return (
+        comment.authorName
+      );
+    }
+  };
+
   const comments = props.photoComments.map( (comment, idx) => {
     return (
       <li key={idx}>
@@ -28,7 +40,7 @@ const Comments = (props) => {
         </div>
 
         <div className="comment-text-contents">
-          <Link to={`/${comment.authorName}`}>{comment.authorName}</Link>
+          <Link to={`/${comment.authorName}`}>{toggleAuthorName(comment)}</Link>
           <p>{comment.body}</p>
         </div>
 

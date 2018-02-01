@@ -96,7 +96,7 @@ class Photo extends React.Component {
   }
 
   toggleAuthorName() {
-    if (this.props.currentPhoto.authorName.length > 15) {
+    if (this.props.currentPhoto.authorName && this.props.currentPhoto.authorName.length > 15) {
       return (
         this.props.currentPhoto.authorName.slice(0, 15) + "..."
       );
@@ -155,9 +155,6 @@ class Photo extends React.Component {
             <div className="photo-contents-comments">
               <CommentFormContainer
                 currentPhoto={this.props.currentPhoto}
-                // createComment={this.props.createComment}
-                // updateComment={this.props.updateComment}
-                // deleteComment={this.props.deleteComment}
               />
 
               {this.showComments()}

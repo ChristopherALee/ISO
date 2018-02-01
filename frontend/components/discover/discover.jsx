@@ -15,6 +15,13 @@ class Discover extends React.Component {
     let photos;
     if (this.props.allPhotos) {
       photos = this.props.allPhotos.map( (photo, idx) => {
+        let authorName;
+        if (photo.author && photo.author.length > 15) {
+          authorName = photo.author.slice(0, 15) + "...";
+        } else {
+          authorName = photo.author;
+        }
+
         return (
           <div className="discover-photo-overlay-container" key={idx}>
             <Link to={`/photos/${photo.id}`} key={idx}>
@@ -29,7 +36,7 @@ class Discover extends React.Component {
                       >
                       </div>
                   </div>
-                  <Link to={`/${photo.author}`}>{photo.author}</Link>
+                  <Link to={`/${photo.author}`}>{authorName}</Link>
                 </div>
               </div>
             </Link>
