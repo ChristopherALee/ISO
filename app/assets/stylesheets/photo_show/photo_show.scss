@@ -149,10 +149,18 @@
         font-size: 18px;
         color: #535659;
         margin-bottom: 20px;
+
+        p {
+          word-wrap: break-word;
+        }
       }
 
       .photo-contents-description-description {
         font-size: 12px;
+
+        p {
+          word-wrap: break-word;
+        }
       }
     }
 
