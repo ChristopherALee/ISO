@@ -39,7 +39,7 @@ photo15 = Photo.create({
   image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/aperture-vintage-346923.jpg',
   author_id: user6.id})
 photo16 = Photo.create({
-  title: 'Peace in the middle of no where',
+  title: 'Peace in the middle of nowhere',
   description: 'A vacation is like love: anticipated with pleasure, experienced with discomfort, and remembered with nostalgia.',
   image: 'https://s3.amazonaws.com/iso-frame-dev/seeds/chris-holgersson-249309.jpg',
   author_id: user1.id})
@@ -146,8 +146,6 @@ photo38 = Photo.create({
 
 # user1's follows
 follow1 = Follow.create({follower_id: user1.id, followee_id: user2.id })
-follow2 = Follow.create({follower_id: user1.id, followee_id: user3.id })
-follow5 = Follow.create({follower_id: user1.id, followee_id: user6.id })
 
 # user2's follows
 follow6 = Follow.create({follower_id: user2.id, followee_id: user1.id })
