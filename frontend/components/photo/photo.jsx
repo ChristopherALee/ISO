@@ -95,6 +95,18 @@ class Photo extends React.Component {
     );
   }
 
+  toggleAuthorName() {
+    if (this.props.currentPhoto.authorName.length > 15) {
+      return (
+        this.props.currentPhoto.authorName.slice(0, 15) + "..."
+      );
+    } else {
+      return (
+        this.props.currentPhoto.authorName
+      );
+    }
+  }
+
   render() {
     if (this.props.currentPhoto) {
       return (
@@ -122,7 +134,7 @@ class Photo extends React.Component {
 
                 <div className="photo-contents-user-username">
                   <Link to={`/${this.props.currentPhoto.authorName}`}>
-                    <p>{this.props.currentPhoto.authorName}</p>
+                    <p>{this.toggleAuthorName()}</p>
                   </Link>
                   {this.toggleEditFollowButton()}
                   {this.deleteButton()}

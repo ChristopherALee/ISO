@@ -188,8 +188,10 @@ class Profile extends React.Component {
 
   render() {
     let user;
-    if (this.props.user) {
+    if (this.props.user && this.props.user.username.length < 15) {
       user = this.props.user.username;
+    } else if (this.props.user && this.props.user.username.length > 15) {
+      user = this.props.user.username.slice(0, 15) + "...";
     } else {
       user = null;
     }
