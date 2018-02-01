@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FeedItemContainer = (props) => {
+  let authorName;
+  if (props.photo.author && props.photo.author.length > 15) {
+    authorName = props.photo.author.slice(0, 15) + "...";
+  } else {
+    authorName = props.photo.author;
+  }
+
   return (
     <div className="feed-item">
       <div className="feed-item-header">
@@ -13,7 +20,7 @@ const FeedItemContainer = (props) => {
           </div>
           {/* <img src={`${props.photo.authorProfilePhoto}`}></img> */}
         </div>
-        <Link to={`/${props.photo.author}`}>{props.photo.author}</Link>
+        <Link to={`/${props.photo.author}`}>{authorName}</Link>
       </div>
 
       <div className="feed-item-image">
