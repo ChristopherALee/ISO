@@ -71,6 +71,7 @@ class UploadForm extends React.Component {
     this.props.createPhoto(formData).then(
       (resp) => {
         this.redirectToProfile();
+        this.setState({['submitEnabled']: true});
         return resp;
       }
     ).fail(
@@ -78,7 +79,8 @@ class UploadForm extends React.Component {
         return (
           this.setState({
             ['errors']: errors.responseJSON,
-            ['isValid']: 'false'
+            ['isValid']: 'false',
+            ['submitEnabled']: true
           })
         );
       }
