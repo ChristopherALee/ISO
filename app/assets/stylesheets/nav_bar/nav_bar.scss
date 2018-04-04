@@ -6,7 +6,7 @@
 
   #navbar-main-logged-in {
     display: flex;
-    align-self:flex-start;
+    align-self: flex-start;
     min-width: 600px;
     width: 100%;
     background-color: white;
@@ -14,7 +14,7 @@
     justify-content: space-between;
     // padding: 10px 0 10px 0;
     height: 50px;
-    position:fixed;
+    position: fixed;
     border-bottom: 1px solid #ededed;
     z-index: 8;
 
@@ -34,14 +34,14 @@
         .logo-logged-in {
           width: 100%;
           height: 40px;
-          background-image: image_url('logo/ISO_Black.png');
+          background-image: image_url("logo/ISO_Black.png");
           background-size: cover;
           color: transparent;
           text-decoration: none;
           transition: 0.2s;
 
           &:hover {
-            background-image: image_url('logo/ISO_Logo_Blue_FINAL')
+            background-image: image_url("logo/ISO_Logo_Blue_FINAL");
           }
         }
       }
@@ -53,7 +53,7 @@
           text-decoration: none;
           color: black;
           transition: 0.1s;
-          font-family: 'Open Sans', sans-serif;
+          font-family: "Open Sans", sans-serif;
           margin-right: 10px;
           font-size: 13px;
 
@@ -70,6 +70,36 @@
       align-items: center;
       margin-right: 20px;
       height: 100%;
+
+      .creator-links {
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+
+        .cal-logo {
+          width: 50px;
+          height: 50px;
+          background-image: image_url("navbar/CAL_Logo_black.png");
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          &:hover {
+            background-image: image_url("navbar/CAL_Logo_blue.png");
+            transition: 0.3s;
+          }
+        }
+
+        a {
+          margin-left: 20px;
+          color: rgb(56, 56, 56);
+          transition: 0.3s;
+
+          &:hover {
+            color: #0399e5;
+          }
+        }
+      }
 
       input {
         padding-left: 10px;
@@ -92,7 +122,7 @@
         margin-left: 30px;
 
         &:hover .user-profile-dropdown {
-          display:block;
+          display: block;
         }
 
         .navbar-profile-photo-container {
@@ -125,7 +155,7 @@
 
         .user-profile-dropdown {
           display: none;
-          font-family: 'Open Sans', sans-serif;
+          font-family: "Open Sans", sans-serif;
           font-size: 12px;
           right: 130px;
           margin-top: -5px;
@@ -154,10 +184,9 @@
               overflow: hidden;
               text-overflow: ellipsis;
 
-
               &:hover:nth-child(2) {
                 color: #0399e5;
-                cursor: pointer
+                cursor: pointer;
               }
 
               &:hover:nth-child(3) {
@@ -174,7 +203,6 @@
           }
         }
       }
-
 
       .navbar-right-logout {
         margin-left: 60px;
@@ -209,7 +237,7 @@
 
         p {
           margin-left: 8px;
-          font-family: 'Open Sans', sans-serif;
+          font-family: "Open Sans", sans-serif;
           letter-spacing: 0.5px;
           font-size: 12px;
         }
@@ -219,7 +247,7 @@
 
   #navbar-main {
     display: flex;
-    align-self:flex-start;
+    align-self: flex-start;
     min-width: 600px;
     width: 100%;
     background-color: transparent;
@@ -245,14 +273,14 @@
         .logo-main {
           width: 100%;
           height: 40px;
-          background-image: image_url('logo/ISO_White.png');
+          background-image: image_url("logo/ISO_White.png");
           background-size: cover;
           color: transparent;
           text-decoration: none;
           transition: 0.3s;
 
           &:hover {
-            background-image: image_url('logo/ISO_Cyan.png');
+            background-image: image_url("logo/ISO_Cyan.png");
           }
         }
       }
@@ -287,13 +315,13 @@
         .cal-logo {
           width: 50px;
           height: 50px;
-          background-image: image_url('navbar/CAL_Logo_white.png');
+          background-image: image_url("navbar/CAL_Logo_white.png");
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
 
           &:hover {
-            background-image: image_url('navbar/CAL_Logo_blue.png');
+            background-image: image_url("navbar/CAL_Logo_blue.png");
             transition: 0.3s;
           }
         }
@@ -308,7 +336,6 @@
           }
         }
       }
-
 
       .login-signup-buttons {
         margin-top: 20px;
@@ -347,7 +374,6 @@
           }
         }
       }
-
     }
 
     input {
@@ -366,13 +392,11 @@
         transition: border-color 0.2s;
       }
     }
-
-
   }
 
   #navbar-alt {
     display: flex;
-    align-self:flex-start;
+    align-self: flex-start;
     min-width: 600px;
     width: 100%;
     margin-bottom: 200px;
@@ -399,14 +423,14 @@
       .logo-alt {
         width: 100%;
         height: 40px;
-        background-image: image_url('logo/ISO_Black.png');
+        background-image: image_url("logo/ISO_Black.png");
         background-size: cover;
         color: transparent;
         text-decoration: none;
         transition: 0.2s;
 
         &:hover {
-          background-image: image_url('logo/ISO_Logo_Blue_FINAL')
+          background-image: image_url("logo/ISO_Logo_Blue_FINAL");
         }
       }
 
@@ -464,7 +488,7 @@
       }
 
       &:hover {
-        cursor:pointer;
+        cursor: pointer;
         background-color: #38cf4f;
       }
     }
