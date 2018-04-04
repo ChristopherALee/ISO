@@ -76,19 +76,13 @@ class NavBar extends React.Component {
 
           <div className="navbar-links">
             <Link to="/discover">Discover</Link>
-            {/* <Link to='/about'>About</Link> */}
           </div>
         </div>
 
         <div className="navbar-right">
-          {/* <input
-            type='search'
-            placeholder='Search for photos, location, or people'
-          /> */}
           <div className="creator-links">
             <a href="http://www.christopheradamlee.com/" target="_blank">
               <div className="cal-logo" />
-              {/* <i class="fa fa-2x fa-user" aria-hidden="true"></i> */}
             </a>
 
             <a
@@ -154,9 +148,7 @@ class NavBar extends React.Component {
               </p>
             </div>
 
-            {/* <div className='upload-form-container' onChange={this.readFile}> */}
             <UploadFormContainer closeModal={this.closeModal} />
-            {/* </div> */}
           </Modal>
         </div>
       </nav>
@@ -166,7 +158,6 @@ class NavBar extends React.Component {
   mainNav() {
     return (
       <nav id="navbar-main">
-        {/* <img src='../../../app/assets/images/navbar/gallery.png'></img> */}
         <div className="navbar-left">
           <div id="logo">
             <Link to="/">
@@ -176,22 +167,23 @@ class NavBar extends React.Component {
 
           <div className="navbar-links-main">
             <Link to="/discover">Discover</Link>
-            {/* <Link to='/about'>About</Link> */}
           </div>
         </div>
 
         <div className="navbar-right">
           <div className="github-link">
-            <a href="http://www.christopheradamlee.com/">
+            <a href="http://www.christopheradamlee.com/" target="_blank">
               <div className="cal-logo" />
-              {/* <i class="fa fa-2x fa-user" aria-hidden="true"></i> */}
             </a>
 
-            <a href="https://www.linkedin.com/in/christopheradamlee/">
+            <a
+              href="https://www.linkedin.com/in/christopheradamlee/"
+              target="_blank"
+            >
               <i className="fa fa-2x fa-linkedin-square" aria-hidden="true" />
             </a>
 
-            <a href="https://github.com/ChristopherALee">
+            <a href="https://github.com/ChristopherALee" target="_blank">
               <i className="fa fa-2x fa-github" aria-hidden="true" />
             </a>
           </div>
@@ -221,15 +213,27 @@ class NavBar extends React.Component {
 
           <div className="navbar-links-alt">
             <Link to="/discover">Discover</Link>
-            {/* <Link to='/about'>About</Link> */}
           </div>
         </div>
 
         <div className="navbar-alt-right">
-          {/* <input
-            type='search'
-            placeholder='Search for photos, location, or people'
-          /> */}
+          <div className="creator-links">
+            <a href="http://www.christopheradamlee.com/" target="_blank">
+              <div className="cal-logo" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/christopheradamlee/"
+              target="_blank"
+            >
+              <i className="fa fa-2x fa-linkedin-square" aria-hidden="true" />
+            </a>
+
+            <a href="https://github.com/ChristopherALee" target="_blank">
+              <i className="fa fa-2x fa-github" aria-hidden="true" />
+            </a>
+          </div>
+
           <button className="navbar-alt-signup">
             <Link to="/signup">Sign Up</Link>
           </button>

@@ -453,7 +453,40 @@
     }
 
     .navbar-alt-right {
+      display: flex;
       margin-right: 50px;
+      align-items: center;
+      height: 100%;
+
+      .creator-links {
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+
+        .cal-logo {
+          width: 50px;
+          height: 50px;
+          background-image: image_url("navbar/CAL_Logo_black.png");
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          &:hover {
+            background-image: image_url("navbar/CAL_Logo_blue.png");
+            transition: 0.3s;
+          }
+        }
+
+        a {
+          margin-left: 20px;
+          color: rgb(56, 56, 56);
+          transition: 0.3s;
+
+          &:hover {
+            color: #0399e5;
+          }
+        }
+      }
     }
 
     input {
